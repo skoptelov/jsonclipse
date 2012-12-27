@@ -34,7 +34,7 @@ public class JsonLabelProvider extends DefaultEObjectLabelProvider {
 
             for (ObjectProperty prop : value.getObjectValue().getProperties()) {
                 if (prop.getPropValue() != null && prop.getPropValue().getStringValue() != null) {
-                    return prop.getPropValue() + ": " + prop.getPropValue().getStringValue();
+                    return prop.getPropName() + ": " + prop.getPropValue().getStringValue();
                 }
             }
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.jsonclipse.sdk_0.0.1.jar" id="org.jsonclipse.sdk" version="0.0.1">
+   <feature url="features/org.jsonclipse.sdk_0.0.3.jar" id="org.jsonclipse.sdk" version="0.0.3">
       <category name="org.jsonclipse"/>
    </feature>
    <category-def name="org.jsonclipse" label="JSON Editor"/>

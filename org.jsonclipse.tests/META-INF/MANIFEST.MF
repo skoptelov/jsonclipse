@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: org.jsonclipse.tests
 Bundle-Vendor: skoptelov@github
-Bundle-Version: 0.0.1
+Bundle-Version: 0.0.3
 Bundle-SymbolicName: org.jsonclipse.tests; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.jsonclipse,
