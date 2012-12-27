@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: org.jsonclipse.ui
-Bundle-Vendor: My Company
-Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: skoptelov@github
+Bundle-Version: 0.0.1
 Bundle-SymbolicName: org.jsonclipse.ui; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.jsonclipse;visibility:=reexport,
