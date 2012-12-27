@@ -11,7 +11,8 @@
             default="true"
             extensions="json"
             id="org.jsonclipse.Json"
-            name="Json Editor">
+            name="Json Editor"
+            icon="icons/json.gif">
         </editor>
     </extension>
     <extension
