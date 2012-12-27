@@ -1,0 +1,70 @@
+grammar org.jsonclipse.Json with org.eclipse.xtext.common.Terminals
+
+generate json "http://www.jsonclipse.org/Json"
+
+Model:
+    root=Value;
+
+Value:
+    'false' | 'null' | 'true' | objectValue=Object | arrayValue=Array | numberValue=Number | stringValue=STRING;
+
+Number:
+    MINUS? Integer Frac? Exp?;
+
+Exp:
+    E (PLUS | MINUS)? DIGIT+;
+
+Frac:
+    DOT DIGIT+;
+
+Integer:
+    ZERO | (DIGIT19 DIGIT*);
+
+Object:
+    OBJECT_START (properties+=ObjectProperty (VALUE_SEP properties+=ObjectProperty)*)? OBJECT_END;
+
+ObjectProperty:
+    propName=STRING NAME_SEP propValue=Value;
+
+Array:
+    ARRAY_START (elements+=Value (VALUE_SEP elements+=Value)*)? ARRAY_END;
+
+terminal ARRAY_START:
+    "[";
+
+terminal ARRAY_END:
+    "]";
+
+terminal OBJECT_START:
+    "{";
+
+terminal OBJECT_END:
+    "}";
+
+terminal NAME_SEP:
+    ":";
+
+terminal VALUE_SEP:
+    ",";
+
+terminal MINUS:
+    "-";
+
+terminal PLUS:
+    "-";
+
+terminal ZERO:
+    "0";
+
+terminal E:
+    "e" | "E";
+
+terminal DIGIT19:
+    "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9";
+
+terminal DIGIT:
+    "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "0";
+
+terminal DOT:
+    ".";
+    

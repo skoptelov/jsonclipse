@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.jsonclipse/src-gen" editDirectory="/org.jsonclipse.edit/src"
+    editorDirectory="/org.jsonclipse.editor/src" modelPluginID="org.jsonclipse" forceOverwrite="true"
+    modelName="Json" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.jsonclipse.edit"
+    editorPluginID="org.jsonclipse.editor" runtimeVersion="2.9">
+  <genPackages prefix="Json" basePackage="org.jsonclipse" disposableProviderFactory="true"
+      fileExtensions="json" ecorePackage="Json.ecore#/">
+    <genClasses ecoreClass="Json.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Json.ecore#//Model/root"/>
+    </genClasses>
+    <genClasses ecoreClass="Json.ecore#//Value">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Json.ecore#//Value/objectValue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Json.ecore#//Value/arrayValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Json.ecore#//Value/numberValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Json.ecore#//Value/stringValue"/>
+    </genClasses>
+    <genClasses ecoreClass="Json.ecore#//Object">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Json.ecore#//Object/properties"/>
+    </genClasses>
+    <genClasses ecoreClass="Json.ecore#//ObjectProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Json.ecore#//ObjectProperty/propName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Json.ecore#//ObjectProperty/propValue"/>
+    </genClasses>
+    <genClasses ecoreClass="Json.ecore#//Array">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Json.ecore#//Array/elements"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.jsonclipse.sdk_1.0.0.201212261338.jar" id="org.jsonclipse.sdk" version="1.0.0.201212261338">
+      <category name="org.jsonclipse"/>
+   </feature>
+   <category-def name="org.jsonclipse" label="JSON Editor"/>
+</site>
