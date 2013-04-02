@@ -4,6 +4,7 @@
 package org.jsonclipse.ui;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
+import org.eclipse.xtext.ui.editor.IXtextEditorCallback;
 
 /**
  * Use this class to register components to be used within the IDE.
@@ -11,5 +12,9 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 public class JsonUiModule extends org.jsonclipse.ui.AbstractJsonUiModule {
 	public JsonUiModule(AbstractUIPlugin plugin) {
 		super(plugin);
+	}
+
+	public Class<? extends IXtextEditorCallback> bindIXtextEditorCallback() {
+		return NullNatureAddingEditorCallback.class;
 	}
 }
