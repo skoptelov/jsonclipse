@@ -98,11 +98,6 @@ public abstract class AbstractJsonUiModule extends DefaultUiModule {
 		return org.jsonclipse.ui.outline.JsonOutlineTreeProvider.class;
 	}
 
-	// contributed by org.eclipse.xtext.ui.generator.quickfix.QuickfixProviderFragment
-	public Class<? extends org.eclipse.xtext.ui.editor.quickfix.IssueResolutionProvider> bindIssueResolutionProvider() {
-		return org.jsonclipse.ui.quickfix.JsonQuickfixProvider.class;
-	}
-
 	// contributed by org.eclipse.xtext.ui.generator.contentAssist.ContentAssistFragment
 	public Class<? extends org.eclipse.xtext.ui.editor.contentassist.IContentProposalProvider> bindIContentProposalProvider() {
 		return org.jsonclipse.ui.contentassist.JsonProposalProvider.class;
@@ -206,31 +201,6 @@ public abstract class AbstractJsonUiModule extends DefaultUiModule {
 	// contributed by org.eclipse.xtext.generator.types.TypesGeneratorFragment
 	public Class<? extends org.eclipse.xtext.common.types.ui.query.IJavaSearchParticipation> bindIJavaSearchParticipation() {
 		return org.eclipse.xtext.common.types.ui.query.IJavaSearchParticipation.Yes.class;
-	}
-
-	// contributed by org.eclipse.xtext.ui.generator.templates.CodetemplatesGeneratorFragment
-	public com.google.inject.Provider<org.eclipse.xtext.ui.codetemplates.ui.preferences.TemplatesLanguageConfiguration> provideTemplatesLanguageConfiguration() {
-		return org.eclipse.xtext.ui.codetemplates.ui.AccessibleCodetemplatesActivator.getTemplatesLanguageConfigurationProvider();
-	}
-
-	// contributed by org.eclipse.xtext.ui.generator.templates.CodetemplatesGeneratorFragment
-	public com.google.inject.Provider<org.eclipse.xtext.ui.codetemplates.ui.registry.LanguageRegistry> provideLanguageRegistry() {
-		return org.eclipse.xtext.ui.codetemplates.ui.AccessibleCodetemplatesActivator.getLanguageRegistry();
-	}
-
-	// contributed by org.eclipse.xtext.ui.generator.templates.CodetemplatesGeneratorFragment
-	@org.eclipse.xtext.service.SingletonBinding(eager=true)	public Class<? extends org.eclipse.xtext.ui.codetemplates.ui.registry.LanguageRegistrar> bindLanguageRegistrar() {
-		return org.eclipse.xtext.ui.codetemplates.ui.registry.LanguageRegistrar.class;
-	}
-
-	// contributed by org.eclipse.xtext.ui.generator.templates.CodetemplatesGeneratorFragment
-	public Class<? extends org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage> bindXtextTemplatePreferencePage() {
-		return org.eclipse.xtext.ui.codetemplates.ui.preferences.AdvancedTemplatesPreferencePage.class;
-	}
-
-	// contributed by org.eclipse.xtext.ui.generator.templates.CodetemplatesGeneratorFragment
-	public Class<? extends org.eclipse.xtext.ui.codetemplates.ui.partialEditing.IPartialContentAssistParser> bindIPartialContentAssistParser() {
-		return org.jsonclipse.ui.contentassist.antlr.PartialJsonContentAssistParser.class;
 	}
 
 	// contributed by org.eclipse.xtext.ui.generator.compare.CompareFragment

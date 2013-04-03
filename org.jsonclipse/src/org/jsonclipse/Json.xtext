@@ -2,23 +2,16 @@ grammar org.jsonclipse.Json with org.eclipse.xtext.common.Terminals
 
 generate json "http://www.jsonclipse.org/Json"
 
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
 Model:
     root=Value;
 
 Value:
     'false' | 'null' | 'true' | objectValue=Object | arrayValue=Array | numberValue=Number | stringValue=STRING;
 
-Number:
-    MINUS? Integer Frac? Exp?;
-
-Exp:
-    E (PLUS | MINUS)? DIGIT+;
-
-Frac:
-    DOT DIGIT+;
-
-Integer:
-    ZERO | (DIGIT19 DIGIT*);
+Number returns ecore::EString:
+    '-'? INT ('.' INT)? (('e'|'E') ('+' | '-')? INT)?;
 
 Object:
     OBJECT_START (properties+=ObjectProperty (VALUE_SEP properties+=ObjectProperty)*)? OBJECT_END;
@@ -46,25 +39,4 @@ terminal NAME_SEP:
 
 terminal VALUE_SEP:
     ",";
-
-terminal MINUS:
-    "-";
-
-terminal PLUS:
-    "-";
-
-terminal ZERO:
-    "0";
-
-terminal E:
-    "e" | "E";
-
-terminal DIGIT19:
-    "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9";
-
-terminal DIGIT:
-    "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "0";
-
-terminal DOT:
-    ".";
     

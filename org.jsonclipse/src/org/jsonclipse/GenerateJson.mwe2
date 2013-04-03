@@ -94,7 +94,7 @@ Workflow {
     		fragment = outline.QuickOutlineFragment auto-inject {}
     
     		// quickfix API
-    		fragment = quickfix.QuickfixProviderFragment auto-inject {}
+    		// fragment = quickfix.QuickfixProviderFragment auto-inject {}
     
     		// content assist API
     		fragment = contentAssist.ContentAssistFragment auto-inject {}
@@ -103,7 +103,7 @@ Workflow {
     		fragment = parser.antlr.XtextAntlrUiGeneratorFragment auto-inject {}
     
     		// generates junit test support classes into Generator#pathTestProject
-    		fragment = junit.Junit4Fragment auto-inject {}
+    		// fragment = junit.Junit4Fragment auto-inject {}
     
     		// project wizard (optional)
     		// fragment = projectWizard.SimpleProjectWizardFragment auto-inject {
@@ -117,10 +117,10 @@ Workflow {
     		fragment = types.TypesGeneratorFragment auto-inject {}
     
     		// generates the required bindings only if the grammar inherits from Xbase
-    		fragment = xbase.XbaseGeneratorFragment auto-inject {}
+    		// fragment = xbase.XbaseGeneratorFragment auto-inject {}
     
     		// provides a preference page for template proposals
-    		fragment = templates.CodetemplatesGeneratorFragment auto-inject {}
+    		// fragment = templates.CodetemplatesGeneratorFragment auto-inject {}
     
     		// provides a compare view
     		fragment = compare.CompareFragment auto-inject {}

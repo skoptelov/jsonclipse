@@ -24,7 +24,8 @@ class JsonFormatter extends AbstractDeclarativeFormatter {
 	@Inject extension JsonGrammarAccess
 	
 	override protected void configureFormatting(FormattingConfig c) {
-        c.setSpace("    ");
+	    c.setAutoLinewrap(120);
+        c.setSpace("  ");
 
         c.setIndentationIncrement().after(OBJECT_STARTRule);
         c.setIndentationDecrement().before(OBJECT_ENDRule);

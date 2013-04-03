@@ -38,12 +38,11 @@ public class JsonParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getValueAccess().getAlternatives(), "rule__Value__Alternatives");
-					put(grammarAccess.getExpAccess().getAlternatives_1(), "rule__Exp__Alternatives_1");
-					put(grammarAccess.getIntegerAccess().getAlternatives(), "rule__Integer__Alternatives");
+					put(grammarAccess.getNumberAccess().getAlternatives_3_0(), "rule__Number__Alternatives_3_0");
+					put(grammarAccess.getNumberAccess().getAlternatives_3_1(), "rule__Number__Alternatives_3_1");
 					put(grammarAccess.getNumberAccess().getGroup(), "rule__Number__Group__0");
-					put(grammarAccess.getExpAccess().getGroup(), "rule__Exp__Group__0");
-					put(grammarAccess.getFracAccess().getGroup(), "rule__Frac__Group__0");
-					put(grammarAccess.getIntegerAccess().getGroup_1(), "rule__Integer__Group_1__0");
+					put(grammarAccess.getNumberAccess().getGroup_2(), "rule__Number__Group_2__0");
+					put(grammarAccess.getNumberAccess().getGroup_3(), "rule__Number__Group_3__0");
 					put(grammarAccess.getObjectAccess().getGroup(), "rule__Object__Group__0");
 					put(grammarAccess.getObjectAccess().getGroup_1(), "rule__Object__Group_1__0");
 					put(grammarAccess.getObjectAccess().getGroup_1_1(), "rule__Object__Group_1_1__0");

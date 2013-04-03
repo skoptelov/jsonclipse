@@ -21,32 +21,30 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalJsonParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_MINUS", "RULE_E", "RULE_PLUS", "RULE_DIGIT", "RULE_DOT", "RULE_ZERO", "RULE_DIGIT19", "RULE_OBJECT_START", "RULE_VALUE_SEP", "RULE_OBJECT_END", "RULE_NAME_SEP", "RULE_ARRAY_START", "RULE_ARRAY_END", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'false'", "'null'", "'true'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_INT", "RULE_OBJECT_START", "RULE_VALUE_SEP", "RULE_OBJECT_END", "RULE_NAME_SEP", "RULE_ARRAY_START", "RULE_ARRAY_END", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'false'", "'null'", "'true'", "'-'", "'.'", "'e'", "'E'", "'+'"
     };
-    public static final int RULE_ID=18;
-    public static final int RULE_ZERO=10;
-    public static final int T__26=26;
-    public static final int T__25=25;
+    public static final int RULE_ID=12;
     public static final int T__24=24;
-    public static final int RULE_ANY_OTHER=23;
-    public static final int RULE_PLUS=7;
-    public static final int RULE_SL_COMMENT=21;
+    public static final int T__23=23;
+    public static final int T__22=22;
+    public static final int RULE_ANY_OTHER=16;
+    public static final int T__21=21;
+    public static final int T__20=20;
+    public static final int RULE_SL_COMMENT=14;
     public static final int EOF=-1;
-    public static final int RULE_OBJECT_END=14;
-    public static final int RULE_ARRAY_START=16;
-    public static final int RULE_ML_COMMENT=20;
-    public static final int RULE_ARRAY_END=17;
-    public static final int RULE_MINUS=5;
+    public static final int RULE_OBJECT_END=8;
+    public static final int RULE_ARRAY_START=10;
+    public static final int RULE_ML_COMMENT=13;
+    public static final int RULE_ARRAY_END=11;
+    public static final int T__19=19;
     public static final int RULE_STRING=4;
-    public static final int RULE_E=6;
-    public static final int RULE_DOT=9;
-    public static final int RULE_OBJECT_START=12;
-    public static final int RULE_VALUE_SEP=13;
-    public static final int RULE_INT=19;
-    public static final int RULE_DIGIT19=11;
-    public static final int RULE_WS=22;
-    public static final int RULE_DIGIT=8;
-    public static final int RULE_NAME_SEP=15;
+    public static final int T__18=18;
+    public static final int T__17=17;
+    public static final int RULE_OBJECT_START=6;
+    public static final int RULE_VALUE_SEP=7;
+    public static final int RULE_INT=5;
+    public static final int RULE_WS=15;
+    public static final int RULE_NAME_SEP=9;
 
     // delegates
     // delegators
@@ -245,17 +243,17 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
             // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:119:1: (otherlv_0= 'false' | otherlv_1= 'null' | otherlv_2= 'true' | ( (lv_objectValue_3_0= ruleObject ) ) | ( (lv_arrayValue_4_0= ruleArray ) ) | ( (lv_numberValue_5_0= ruleNumber ) ) | ( (lv_stringValue_6_0= RULE_STRING ) ) )
             int alt1=7;
             switch ( input.LA(1) ) {
-            case 24:
+            case 17:
                 {
                 alt1=1;
                 }
                 break;
-            case 25:
+            case 18:
                 {
                 alt1=2;
                 }
                 break;
-            case 26:
+            case 19:
                 {
                 alt1=3;
                 }
@@ -270,9 +268,8 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
                 alt1=5;
                 }
                 break;
-            case RULE_MINUS:
-            case RULE_ZERO:
-            case RULE_DIGIT19:
+            case RULE_INT:
+            case 20:
                 {
                 alt1=6;
                 }
@@ -293,7 +290,7 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:119:3: otherlv_0= 'false'
                     {
-                    otherlv_0=(Token)match(input,24,FOLLOW_24_in_ruleValue212); 
+                    otherlv_0=(Token)match(input,17,FOLLOW_17_in_ruleValue212); 
 
                         	newLeafNode(otherlv_0, grammarAccess.getValueAccess().getFalseKeyword_0());
                         
@@ -303,7 +300,7 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
                 case 2 :
                     // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:124:7: otherlv_1= 'null'
                     {
-                    otherlv_1=(Token)match(input,25,FOLLOW_25_in_ruleValue230); 
+                    otherlv_1=(Token)match(input,18,FOLLOW_18_in_ruleValue230); 
 
                         	newLeafNode(otherlv_1, grammarAccess.getValueAccess().getNullKeyword_1());
                         
@@ -313,7 +310,7 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
                 case 3 :
                     // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:129:7: otherlv_2= 'true'
                     {
-                    otherlv_2=(Token)match(input,26,FOLLOW_26_in_ruleValue248); 
+                    otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleValue248); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getValueAccess().getTrueKeyword_2());
                         
@@ -520,44 +517,39 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNumber"
-    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:226:1: ruleNumber returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_MINUS_0= RULE_MINUS )? this_Integer_1= ruleInteger (this_Frac_2= ruleFrac )? (this_Exp_3= ruleExp )? ) ;
+    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:226:1: ruleNumber returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (kw= '-' )? this_INT_1= RULE_INT (kw= '.' this_INT_3= RULE_INT )? ( (kw= 'e' | kw= 'E' ) (kw= '+' | kw= '-' )? this_INT_8= RULE_INT )? ) ;
     public final AntlrDatatypeRuleToken ruleNumber() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
-        Token this_MINUS_0=null;
-        AntlrDatatypeRuleToken this_Integer_1 = null;
-
-        AntlrDatatypeRuleToken this_Frac_2 = null;
-
-        AntlrDatatypeRuleToken this_Exp_3 = null;
-
+        Token kw=null;
+        Token this_INT_1=null;
+        Token this_INT_3=null;
+        Token this_INT_8=null;
 
          enterRule(); 
             
         try {
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:229:28: ( ( (this_MINUS_0= RULE_MINUS )? this_Integer_1= ruleInteger (this_Frac_2= ruleFrac )? (this_Exp_3= ruleExp )? ) )
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:230:1: ( (this_MINUS_0= RULE_MINUS )? this_Integer_1= ruleInteger (this_Frac_2= ruleFrac )? (this_Exp_3= ruleExp )? )
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:229:28: ( ( (kw= '-' )? this_INT_1= RULE_INT (kw= '.' this_INT_3= RULE_INT )? ( (kw= 'e' | kw= 'E' ) (kw= '+' | kw= '-' )? this_INT_8= RULE_INT )? ) )
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:230:1: ( (kw= '-' )? this_INT_1= RULE_INT (kw= '.' this_INT_3= RULE_INT )? ( (kw= 'e' | kw= 'E' ) (kw= '+' | kw= '-' )? this_INT_8= RULE_INT )? )
             {
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:230:1: ( (this_MINUS_0= RULE_MINUS )? this_Integer_1= ruleInteger (this_Frac_2= ruleFrac )? (this_Exp_3= ruleExp )? )
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:230:2: (this_MINUS_0= RULE_MINUS )? this_Integer_1= ruleInteger (this_Frac_2= ruleFrac )? (this_Exp_3= ruleExp )?
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:230:1: ( (kw= '-' )? this_INT_1= RULE_INT (kw= '.' this_INT_3= RULE_INT )? ( (kw= 'e' | kw= 'E' ) (kw= '+' | kw= '-' )? this_INT_8= RULE_INT )? )
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:230:2: (kw= '-' )? this_INT_1= RULE_INT (kw= '.' this_INT_3= RULE_INT )? ( (kw= 'e' | kw= 'E' ) (kw= '+' | kw= '-' )? this_INT_8= RULE_INT )?
             {
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:230:2: (this_MINUS_0= RULE_MINUS )?
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:230:2: (kw= '-' )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
-            if ( (LA2_0==RULE_MINUS) ) {
+            if ( (LA2_0==20) ) {
                 alt2=1;
             }
             switch (alt2) {
                 case 1 :
-                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:230:7: this_MINUS_0= RULE_MINUS
+                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:231:2: kw= '-'
                     {
-                    this_MINUS_0=(Token)match(input,RULE_MINUS,FOLLOW_RULE_MINUS_in_ruleNumber446); 
+                    kw=(Token)match(input,20,FOLLOW_20_in_ruleNumber444); 
 
-                    		current.merge(this_MINUS_0);
-                        
-                     
-                        newLeafNode(this_MINUS_0, grammarAccess.getNumberAccess().getMINUSTerminalRuleCall_0()); 
+                            current.merge(kw);
+                            newLeafNode(kw, grammarAccess.getNumberAccess().getHyphenMinusKeyword_0()); 
                         
 
                     }
@@ -565,44 +557,35 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
 
             }
 
-             
-                    newCompositeNode(grammarAccess.getNumberAccess().getIntegerParserRuleCall_1()); 
-                
-            pushFollow(FOLLOW_ruleInteger_in_ruleNumber475);
-            this_Integer_1=ruleInteger();
+            this_INT_1=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleNumber461); 
 
-            state._fsp--;
-
-
-            		current.merge(this_Integer_1);
+            		current.merge(this_INT_1);
                 
              
-                    afterParserOrEnumRuleCall();
+                newLeafNode(this_INT_1, grammarAccess.getNumberAccess().getINTTerminalRuleCall_1()); 
                 
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:248:1: (this_Frac_2= ruleFrac )?
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:243:1: (kw= '.' this_INT_3= RULE_INT )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
-            if ( (LA3_0==RULE_DOT) ) {
+            if ( (LA3_0==21) ) {
                 alt3=1;
             }
             switch (alt3) {
                 case 1 :
-                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:249:5: this_Frac_2= ruleFrac
+                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:244:2: kw= '.' this_INT_3= RULE_INT
                     {
-                     
-                            newCompositeNode(grammarAccess.getNumberAccess().getFracParserRuleCall_2()); 
+                    kw=(Token)match(input,21,FOLLOW_21_in_ruleNumber480); 
+
+                            current.merge(kw);
+                            newLeafNode(kw, grammarAccess.getNumberAccess().getFullStopKeyword_2_0()); 
                         
-                    pushFollow(FOLLOW_ruleFrac_in_ruleNumber503);
-                    this_Frac_2=ruleFrac();
+                    this_INT_3=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleNumber495); 
 
-                    state._fsp--;
-
-
-                    		current.merge(this_Frac_2);
+                    		current.merge(this_INT_3);
                         
                      
-                            afterParserOrEnumRuleCall();
+                        newLeafNode(this_INT_3, grammarAccess.getNumberAccess().getINTTerminalRuleCall_2_1()); 
                         
 
                     }
@@ -610,30 +593,101 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:259:3: (this_Exp_3= ruleExp )?
-            int alt4=2;
-            int LA4_0 = input.LA(1);
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:256:3: ( (kw= 'e' | kw= 'E' ) (kw= '+' | kw= '-' )? this_INT_8= RULE_INT )?
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
-            if ( (LA4_0==RULE_E) ) {
-                alt4=1;
+            if ( ((LA6_0>=22 && LA6_0<=23)) ) {
+                alt6=1;
             }
-            switch (alt4) {
+            switch (alt6) {
                 case 1 :
-                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:260:5: this_Exp_3= ruleExp
+                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:256:4: (kw= 'e' | kw= 'E' ) (kw= '+' | kw= '-' )? this_INT_8= RULE_INT
                     {
-                     
-                            newCompositeNode(grammarAccess.getNumberAccess().getExpParserRuleCall_3()); 
+                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:256:4: (kw= 'e' | kw= 'E' )
+                    int alt4=2;
+                    int LA4_0 = input.LA(1);
+
+                    if ( (LA4_0==22) ) {
+                        alt4=1;
+                    }
+                    else if ( (LA4_0==23) ) {
+                        alt4=2;
+                    }
+                    else {
+                        NoViableAltException nvae =
+                            new NoViableAltException("", 4, 0, input);
+
+                        throw nvae;
+                    }
+                    switch (alt4) {
+                        case 1 :
+                            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:257:2: kw= 'e'
+                            {
+                            kw=(Token)match(input,22,FOLLOW_22_in_ruleNumber517); 
+
+                                    current.merge(kw);
+                                    newLeafNode(kw, grammarAccess.getNumberAccess().getEKeyword_3_0_0()); 
+                                
+
+                            }
+                            break;
+                        case 2 :
+                            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:264:2: kw= 'E'
+                            {
+                            kw=(Token)match(input,23,FOLLOW_23_in_ruleNumber536); 
+
+                                    current.merge(kw);
+                                    newLeafNode(kw, grammarAccess.getNumberAccess().getEKeyword_3_0_1()); 
+                                
+
+                            }
+                            break;
+
+                    }
+
+                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:269:2: (kw= '+' | kw= '-' )?
+                    int alt5=3;
+                    int LA5_0 = input.LA(1);
+
+                    if ( (LA5_0==24) ) {
+                        alt5=1;
+                    }
+                    else if ( (LA5_0==20) ) {
+                        alt5=2;
+                    }
+                    switch (alt5) {
+                        case 1 :
+                            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:270:2: kw= '+'
+                            {
+                            kw=(Token)match(input,24,FOLLOW_24_in_ruleNumber551); 
+
+                                    current.merge(kw);
+                                    newLeafNode(kw, grammarAccess.getNumberAccess().getPlusSignKeyword_3_1_0()); 
+                                
+
+                            }
+                            break;
+                        case 2 :
+                            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:277:2: kw= '-'
+                            {
+                            kw=(Token)match(input,20,FOLLOW_20_in_ruleNumber570); 
+
+                                    current.merge(kw);
+                                    newLeafNode(kw, grammarAccess.getNumberAccess().getHyphenMinusKeyword_3_1_1()); 
+                                
+
+                            }
+                            break;
+
+                    }
+
+                    this_INT_8=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleNumber587); 
+
+                    		current.merge(this_INT_8);
                         
-                    pushFollow(FOLLOW_ruleExp_in_ruleNumber533);
-                    this_Exp_3=ruleExp();
-
-                    state._fsp--;
-
-
-                    		current.merge(this_Exp_3);
-                        
                      
-                            afterParserOrEnumRuleCall();
+                        newLeafNode(this_INT_8, grammarAccess.getNumberAccess().getINTTerminalRuleCall_3_2()); 
                         
 
                     }
@@ -661,433 +715,8 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleNumber"
 
 
-    // $ANTLR start "entryRuleExp"
-    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:278:1: entryRuleExp returns [String current=null] : iv_ruleExp= ruleExp EOF ;
-    public final String entryRuleExp() throws RecognitionException {
-        String current = null;
-
-        AntlrDatatypeRuleToken iv_ruleExp = null;
-
-
-        try {
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:279:2: (iv_ruleExp= ruleExp EOF )
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:280:2: iv_ruleExp= ruleExp EOF
-            {
-             newCompositeNode(grammarAccess.getExpRule()); 
-            pushFollow(FOLLOW_ruleExp_in_entryRuleExp581);
-            iv_ruleExp=ruleExp();
-
-            state._fsp--;
-
-             current =iv_ruleExp.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleExp592); 
-
-            }
-
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleExp"
-
-
-    // $ANTLR start "ruleExp"
-    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:287:1: ruleExp returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_E_0= RULE_E (this_PLUS_1= RULE_PLUS | this_MINUS_2= RULE_MINUS )? (this_DIGIT_3= RULE_DIGIT )+ ) ;
-    public final AntlrDatatypeRuleToken ruleExp() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
-
-        Token this_E_0=null;
-        Token this_PLUS_1=null;
-        Token this_MINUS_2=null;
-        Token this_DIGIT_3=null;
-
-         enterRule(); 
-            
-        try {
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:290:28: ( (this_E_0= RULE_E (this_PLUS_1= RULE_PLUS | this_MINUS_2= RULE_MINUS )? (this_DIGIT_3= RULE_DIGIT )+ ) )
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:291:1: (this_E_0= RULE_E (this_PLUS_1= RULE_PLUS | this_MINUS_2= RULE_MINUS )? (this_DIGIT_3= RULE_DIGIT )+ )
-            {
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:291:1: (this_E_0= RULE_E (this_PLUS_1= RULE_PLUS | this_MINUS_2= RULE_MINUS )? (this_DIGIT_3= RULE_DIGIT )+ )
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:291:6: this_E_0= RULE_E (this_PLUS_1= RULE_PLUS | this_MINUS_2= RULE_MINUS )? (this_DIGIT_3= RULE_DIGIT )+
-            {
-            this_E_0=(Token)match(input,RULE_E,FOLLOW_RULE_E_in_ruleExp632); 
-
-            		current.merge(this_E_0);
-                
-             
-                newLeafNode(this_E_0, grammarAccess.getExpAccess().getETerminalRuleCall_0()); 
-                
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:298:1: (this_PLUS_1= RULE_PLUS | this_MINUS_2= RULE_MINUS )?
-            int alt5=3;
-            int LA5_0 = input.LA(1);
-
-            if ( (LA5_0==RULE_PLUS) ) {
-                alt5=1;
-            }
-            else if ( (LA5_0==RULE_MINUS) ) {
-                alt5=2;
-            }
-            switch (alt5) {
-                case 1 :
-                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:298:6: this_PLUS_1= RULE_PLUS
-                    {
-                    this_PLUS_1=(Token)match(input,RULE_PLUS,FOLLOW_RULE_PLUS_in_ruleExp653); 
-
-                    		current.merge(this_PLUS_1);
-                        
-                     
-                        newLeafNode(this_PLUS_1, grammarAccess.getExpAccess().getPLUSTerminalRuleCall_1_0()); 
-                        
-
-                    }
-                    break;
-                case 2 :
-                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:306:10: this_MINUS_2= RULE_MINUS
-                    {
-                    this_MINUS_2=(Token)match(input,RULE_MINUS,FOLLOW_RULE_MINUS_in_ruleExp679); 
-
-                    		current.merge(this_MINUS_2);
-                        
-                     
-                        newLeafNode(this_MINUS_2, grammarAccess.getExpAccess().getMINUSTerminalRuleCall_1_1()); 
-                        
-
-                    }
-                    break;
-
-            }
-
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:313:3: (this_DIGIT_3= RULE_DIGIT )+
-            int cnt6=0;
-            loop6:
-            do {
-                int alt6=2;
-                int LA6_0 = input.LA(1);
-
-                if ( (LA6_0==RULE_DIGIT) ) {
-                    alt6=1;
-                }
-
-
-                switch (alt6) {
-            	case 1 :
-            	    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:313:8: this_DIGIT_3= RULE_DIGIT
-            	    {
-            	    this_DIGIT_3=(Token)match(input,RULE_DIGIT,FOLLOW_RULE_DIGIT_in_ruleExp702); 
-
-            	    		current.merge(this_DIGIT_3);
-            	        
-            	     
-            	        newLeafNode(this_DIGIT_3, grammarAccess.getExpAccess().getDIGITTerminalRuleCall_2()); 
-            	        
-
-            	    }
-            	    break;
-
-            	default :
-            	    if ( cnt6 >= 1 ) break loop6;
-                        EarlyExitException eee =
-                            new EarlyExitException(6, input);
-                        throw eee;
-                }
-                cnt6++;
-            } while (true);
-
-
-            }
-
-
-            }
-
-             leaveRule(); 
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleExp"
-
-
-    // $ANTLR start "entryRuleFrac"
-    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:328:1: entryRuleFrac returns [String current=null] : iv_ruleFrac= ruleFrac EOF ;
-    public final String entryRuleFrac() throws RecognitionException {
-        String current = null;
-
-        AntlrDatatypeRuleToken iv_ruleFrac = null;
-
-
-        try {
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:329:2: (iv_ruleFrac= ruleFrac EOF )
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:330:2: iv_ruleFrac= ruleFrac EOF
-            {
-             newCompositeNode(grammarAccess.getFracRule()); 
-            pushFollow(FOLLOW_ruleFrac_in_entryRuleFrac750);
-            iv_ruleFrac=ruleFrac();
-
-            state._fsp--;
-
-             current =iv_ruleFrac.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFrac761); 
-
-            }
-
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleFrac"
-
-
-    // $ANTLR start "ruleFrac"
-    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:337:1: ruleFrac returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_DOT_0= RULE_DOT (this_DIGIT_1= RULE_DIGIT )+ ) ;
-    public final AntlrDatatypeRuleToken ruleFrac() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
-
-        Token this_DOT_0=null;
-        Token this_DIGIT_1=null;
-
-         enterRule(); 
-            
-        try {
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:340:28: ( (this_DOT_0= RULE_DOT (this_DIGIT_1= RULE_DIGIT )+ ) )
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:341:1: (this_DOT_0= RULE_DOT (this_DIGIT_1= RULE_DIGIT )+ )
-            {
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:341:1: (this_DOT_0= RULE_DOT (this_DIGIT_1= RULE_DIGIT )+ )
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:341:6: this_DOT_0= RULE_DOT (this_DIGIT_1= RULE_DIGIT )+
-            {
-            this_DOT_0=(Token)match(input,RULE_DOT,FOLLOW_RULE_DOT_in_ruleFrac801); 
-
-            		current.merge(this_DOT_0);
-                
-             
-                newLeafNode(this_DOT_0, grammarAccess.getFracAccess().getDOTTerminalRuleCall_0()); 
-                
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:348:1: (this_DIGIT_1= RULE_DIGIT )+
-            int cnt7=0;
-            loop7:
-            do {
-                int alt7=2;
-                int LA7_0 = input.LA(1);
-
-                if ( (LA7_0==RULE_DIGIT) ) {
-                    alt7=1;
-                }
-
-
-                switch (alt7) {
-            	case 1 :
-            	    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:348:6: this_DIGIT_1= RULE_DIGIT
-            	    {
-            	    this_DIGIT_1=(Token)match(input,RULE_DIGIT,FOLLOW_RULE_DIGIT_in_ruleFrac822); 
-
-            	    		current.merge(this_DIGIT_1);
-            	        
-            	     
-            	        newLeafNode(this_DIGIT_1, grammarAccess.getFracAccess().getDIGITTerminalRuleCall_1()); 
-            	        
-
-            	    }
-            	    break;
-
-            	default :
-            	    if ( cnt7 >= 1 ) break loop7;
-                        EarlyExitException eee =
-                            new EarlyExitException(7, input);
-                        throw eee;
-                }
-                cnt7++;
-            } while (true);
-
-
-            }
-
-
-            }
-
-             leaveRule(); 
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleFrac"
-
-
-    // $ANTLR start "entryRuleInteger"
-    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:363:1: entryRuleInteger returns [String current=null] : iv_ruleInteger= ruleInteger EOF ;
-    public final String entryRuleInteger() throws RecognitionException {
-        String current = null;
-
-        AntlrDatatypeRuleToken iv_ruleInteger = null;
-
-
-        try {
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:364:2: (iv_ruleInteger= ruleInteger EOF )
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:365:2: iv_ruleInteger= ruleInteger EOF
-            {
-             newCompositeNode(grammarAccess.getIntegerRule()); 
-            pushFollow(FOLLOW_ruleInteger_in_entryRuleInteger870);
-            iv_ruleInteger=ruleInteger();
-
-            state._fsp--;
-
-             current =iv_ruleInteger.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleInteger881); 
-
-            }
-
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleInteger"
-
-
-    // $ANTLR start "ruleInteger"
-    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:372:1: ruleInteger returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ZERO_0= RULE_ZERO | (this_DIGIT19_1= RULE_DIGIT19 (this_DIGIT_2= RULE_DIGIT )* ) ) ;
-    public final AntlrDatatypeRuleToken ruleInteger() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
-
-        Token this_ZERO_0=null;
-        Token this_DIGIT19_1=null;
-        Token this_DIGIT_2=null;
-
-         enterRule(); 
-            
-        try {
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:375:28: ( (this_ZERO_0= RULE_ZERO | (this_DIGIT19_1= RULE_DIGIT19 (this_DIGIT_2= RULE_DIGIT )* ) ) )
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:376:1: (this_ZERO_0= RULE_ZERO | (this_DIGIT19_1= RULE_DIGIT19 (this_DIGIT_2= RULE_DIGIT )* ) )
-            {
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:376:1: (this_ZERO_0= RULE_ZERO | (this_DIGIT19_1= RULE_DIGIT19 (this_DIGIT_2= RULE_DIGIT )* ) )
-            int alt9=2;
-            int LA9_0 = input.LA(1);
-
-            if ( (LA9_0==RULE_ZERO) ) {
-                alt9=1;
-            }
-            else if ( (LA9_0==RULE_DIGIT19) ) {
-                alt9=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 9, 0, input);
-
-                throw nvae;
-            }
-            switch (alt9) {
-                case 1 :
-                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:376:6: this_ZERO_0= RULE_ZERO
-                    {
-                    this_ZERO_0=(Token)match(input,RULE_ZERO,FOLLOW_RULE_ZERO_in_ruleInteger921); 
-
-                    		current.merge(this_ZERO_0);
-                        
-                     
-                        newLeafNode(this_ZERO_0, grammarAccess.getIntegerAccess().getZEROTerminalRuleCall_0()); 
-                        
-
-                    }
-                    break;
-                case 2 :
-                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:384:6: (this_DIGIT19_1= RULE_DIGIT19 (this_DIGIT_2= RULE_DIGIT )* )
-                    {
-                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:384:6: (this_DIGIT19_1= RULE_DIGIT19 (this_DIGIT_2= RULE_DIGIT )* )
-                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:384:11: this_DIGIT19_1= RULE_DIGIT19 (this_DIGIT_2= RULE_DIGIT )*
-                    {
-                    this_DIGIT19_1=(Token)match(input,RULE_DIGIT19,FOLLOW_RULE_DIGIT19_in_ruleInteger948); 
-
-                    		current.merge(this_DIGIT19_1);
-                        
-                     
-                        newLeafNode(this_DIGIT19_1, grammarAccess.getIntegerAccess().getDIGIT19TerminalRuleCall_1_0()); 
-                        
-                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:391:1: (this_DIGIT_2= RULE_DIGIT )*
-                    loop8:
-                    do {
-                        int alt8=2;
-                        int LA8_0 = input.LA(1);
-
-                        if ( (LA8_0==RULE_DIGIT) ) {
-                            alt8=1;
-                        }
-
-
-                        switch (alt8) {
-                    	case 1 :
-                    	    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:391:6: this_DIGIT_2= RULE_DIGIT
-                    	    {
-                    	    this_DIGIT_2=(Token)match(input,RULE_DIGIT,FOLLOW_RULE_DIGIT_in_ruleInteger969); 
-
-                    	    		current.merge(this_DIGIT_2);
-                    	        
-                    	     
-                    	        newLeafNode(this_DIGIT_2, grammarAccess.getIntegerAccess().getDIGITTerminalRuleCall_1_1()); 
-                    	        
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop8;
-                        }
-                    } while (true);
-
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-
-
-            }
-
-             leaveRule(); 
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleInteger"
-
-
     // $ANTLR start "entryRuleObject"
-    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:406:1: entryRuleObject returns [EObject current=null] : iv_ruleObject= ruleObject EOF ;
+    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:297:1: entryRuleObject returns [EObject current=null] : iv_ruleObject= ruleObject EOF ;
     public final EObject entryRuleObject() throws RecognitionException {
         EObject current = null;
 
@@ -1095,17 +724,17 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:407:2: (iv_ruleObject= ruleObject EOF )
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:408:2: iv_ruleObject= ruleObject EOF
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:298:2: (iv_ruleObject= ruleObject EOF )
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:299:2: iv_ruleObject= ruleObject EOF
             {
              newCompositeNode(grammarAccess.getObjectRule()); 
-            pushFollow(FOLLOW_ruleObject_in_entryRuleObject1017);
+            pushFollow(FOLLOW_ruleObject_in_entryRuleObject634);
             iv_ruleObject=ruleObject();
 
             state._fsp--;
 
              current =iv_ruleObject; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleObject1027); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleObject644); 
 
             }
 
@@ -1123,7 +752,7 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleObject"
-    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:415:1: ruleObject returns [EObject current=null] : (this_OBJECT_START_0= RULE_OBJECT_START ( ( (lv_properties_1_0= ruleObjectProperty ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_properties_3_0= ruleObjectProperty ) ) )* )? this_OBJECT_END_4= RULE_OBJECT_END ) ;
+    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:306:1: ruleObject returns [EObject current=null] : (this_OBJECT_START_0= RULE_OBJECT_START ( ( (lv_properties_1_0= ruleObjectProperty ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_properties_3_0= ruleObjectProperty ) ) )* )? this_OBJECT_END_4= RULE_OBJECT_END ) ;
     public final EObject ruleObject() throws RecognitionException {
         EObject current = null;
 
@@ -1138,37 +767,37 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:418:28: ( (this_OBJECT_START_0= RULE_OBJECT_START ( ( (lv_properties_1_0= ruleObjectProperty ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_properties_3_0= ruleObjectProperty ) ) )* )? this_OBJECT_END_4= RULE_OBJECT_END ) )
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:419:1: (this_OBJECT_START_0= RULE_OBJECT_START ( ( (lv_properties_1_0= ruleObjectProperty ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_properties_3_0= ruleObjectProperty ) ) )* )? this_OBJECT_END_4= RULE_OBJECT_END )
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:309:28: ( (this_OBJECT_START_0= RULE_OBJECT_START ( ( (lv_properties_1_0= ruleObjectProperty ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_properties_3_0= ruleObjectProperty ) ) )* )? this_OBJECT_END_4= RULE_OBJECT_END ) )
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:310:1: (this_OBJECT_START_0= RULE_OBJECT_START ( ( (lv_properties_1_0= ruleObjectProperty ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_properties_3_0= ruleObjectProperty ) ) )* )? this_OBJECT_END_4= RULE_OBJECT_END )
             {
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:419:1: (this_OBJECT_START_0= RULE_OBJECT_START ( ( (lv_properties_1_0= ruleObjectProperty ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_properties_3_0= ruleObjectProperty ) ) )* )? this_OBJECT_END_4= RULE_OBJECT_END )
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:419:2: this_OBJECT_START_0= RULE_OBJECT_START ( ( (lv_properties_1_0= ruleObjectProperty ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_properties_3_0= ruleObjectProperty ) ) )* )? this_OBJECT_END_4= RULE_OBJECT_END
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:310:1: (this_OBJECT_START_0= RULE_OBJECT_START ( ( (lv_properties_1_0= ruleObjectProperty ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_properties_3_0= ruleObjectProperty ) ) )* )? this_OBJECT_END_4= RULE_OBJECT_END )
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:310:2: this_OBJECT_START_0= RULE_OBJECT_START ( ( (lv_properties_1_0= ruleObjectProperty ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_properties_3_0= ruleObjectProperty ) ) )* )? this_OBJECT_END_4= RULE_OBJECT_END
             {
-            this_OBJECT_START_0=(Token)match(input,RULE_OBJECT_START,FOLLOW_RULE_OBJECT_START_in_ruleObject1063); 
+            this_OBJECT_START_0=(Token)match(input,RULE_OBJECT_START,FOLLOW_RULE_OBJECT_START_in_ruleObject680); 
              
                 newLeafNode(this_OBJECT_START_0, grammarAccess.getObjectAccess().getOBJECT_STARTTerminalRuleCall_0()); 
                 
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:423:1: ( ( (lv_properties_1_0= ruleObjectProperty ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_properties_3_0= ruleObjectProperty ) ) )* )?
-            int alt11=2;
-            int LA11_0 = input.LA(1);
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:314:1: ( ( (lv_properties_1_0= ruleObjectProperty ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_properties_3_0= ruleObjectProperty ) ) )* )?
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            if ( (LA11_0==RULE_STRING) ) {
-                alt11=1;
+            if ( (LA8_0==RULE_STRING) ) {
+                alt8=1;
             }
-            switch (alt11) {
+            switch (alt8) {
                 case 1 :
-                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:423:2: ( (lv_properties_1_0= ruleObjectProperty ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_properties_3_0= ruleObjectProperty ) ) )*
+                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:314:2: ( (lv_properties_1_0= ruleObjectProperty ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_properties_3_0= ruleObjectProperty ) ) )*
                     {
-                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:423:2: ( (lv_properties_1_0= ruleObjectProperty ) )
-                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:424:1: (lv_properties_1_0= ruleObjectProperty )
+                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:314:2: ( (lv_properties_1_0= ruleObjectProperty ) )
+                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:315:1: (lv_properties_1_0= ruleObjectProperty )
                     {
-                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:424:1: (lv_properties_1_0= ruleObjectProperty )
-                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:425:3: lv_properties_1_0= ruleObjectProperty
+                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:315:1: (lv_properties_1_0= ruleObjectProperty )
+                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:316:3: lv_properties_1_0= ruleObjectProperty
                     {
                      
                     	        newCompositeNode(grammarAccess.getObjectAccess().getPropertiesObjectPropertyParserRuleCall_1_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleObjectProperty_in_ruleObject1084);
+                    pushFollow(FOLLOW_ruleObjectProperty_in_ruleObject701);
                     lv_properties_1_0=ruleObjectProperty();
 
                     state._fsp--;
@@ -1190,35 +819,35 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:441:2: (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_properties_3_0= ruleObjectProperty ) ) )*
-                    loop10:
+                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:332:2: (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_properties_3_0= ruleObjectProperty ) ) )*
+                    loop7:
                     do {
-                        int alt10=2;
-                        int LA10_0 = input.LA(1);
+                        int alt7=2;
+                        int LA7_0 = input.LA(1);
 
-                        if ( (LA10_0==RULE_VALUE_SEP) ) {
-                            alt10=1;
+                        if ( (LA7_0==RULE_VALUE_SEP) ) {
+                            alt7=1;
                         }
 
 
-                        switch (alt10) {
+                        switch (alt7) {
                     	case 1 :
-                    	    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:441:3: this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_properties_3_0= ruleObjectProperty ) )
+                    	    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:332:3: this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_properties_3_0= ruleObjectProperty ) )
                     	    {
-                    	    this_VALUE_SEP_2=(Token)match(input,RULE_VALUE_SEP,FOLLOW_RULE_VALUE_SEP_in_ruleObject1096); 
+                    	    this_VALUE_SEP_2=(Token)match(input,RULE_VALUE_SEP,FOLLOW_RULE_VALUE_SEP_in_ruleObject713); 
                     	     
                     	        newLeafNode(this_VALUE_SEP_2, grammarAccess.getObjectAccess().getVALUE_SEPTerminalRuleCall_1_1_0()); 
                     	        
-                    	    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:445:1: ( (lv_properties_3_0= ruleObjectProperty ) )
-                    	    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:446:1: (lv_properties_3_0= ruleObjectProperty )
+                    	    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:336:1: ( (lv_properties_3_0= ruleObjectProperty ) )
+                    	    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:337:1: (lv_properties_3_0= ruleObjectProperty )
                     	    {
-                    	    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:446:1: (lv_properties_3_0= ruleObjectProperty )
-                    	    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:447:3: lv_properties_3_0= ruleObjectProperty
+                    	    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:337:1: (lv_properties_3_0= ruleObjectProperty )
+                    	    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:338:3: lv_properties_3_0= ruleObjectProperty
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getObjectAccess().getPropertiesObjectPropertyParserRuleCall_1_1_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleObjectProperty_in_ruleObject1116);
+                    	    pushFollow(FOLLOW_ruleObjectProperty_in_ruleObject733);
                     	    lv_properties_3_0=ruleObjectProperty();
 
                     	    state._fsp--;
@@ -1245,7 +874,7 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop10;
+                    	    break loop7;
                         }
                     } while (true);
 
@@ -1255,7 +884,7 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_OBJECT_END_4=(Token)match(input,RULE_OBJECT_END,FOLLOW_RULE_OBJECT_END_in_ruleObject1131); 
+            this_OBJECT_END_4=(Token)match(input,RULE_OBJECT_END,FOLLOW_RULE_OBJECT_END_in_ruleObject748); 
              
                 newLeafNode(this_OBJECT_END_4, grammarAccess.getObjectAccess().getOBJECT_ENDTerminalRuleCall_2()); 
                 
@@ -1280,7 +909,7 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleObjectProperty"
-    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:475:1: entryRuleObjectProperty returns [EObject current=null] : iv_ruleObjectProperty= ruleObjectProperty EOF ;
+    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:366:1: entryRuleObjectProperty returns [EObject current=null] : iv_ruleObjectProperty= ruleObjectProperty EOF ;
     public final EObject entryRuleObjectProperty() throws RecognitionException {
         EObject current = null;
 
@@ -1288,17 +917,17 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:476:2: (iv_ruleObjectProperty= ruleObjectProperty EOF )
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:477:2: iv_ruleObjectProperty= ruleObjectProperty EOF
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:367:2: (iv_ruleObjectProperty= ruleObjectProperty EOF )
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:368:2: iv_ruleObjectProperty= ruleObjectProperty EOF
             {
              newCompositeNode(grammarAccess.getObjectPropertyRule()); 
-            pushFollow(FOLLOW_ruleObjectProperty_in_entryRuleObjectProperty1166);
+            pushFollow(FOLLOW_ruleObjectProperty_in_entryRuleObjectProperty783);
             iv_ruleObjectProperty=ruleObjectProperty();
 
             state._fsp--;
 
              current =iv_ruleObjectProperty; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleObjectProperty1176); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleObjectProperty793); 
 
             }
 
@@ -1316,7 +945,7 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleObjectProperty"
-    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:484:1: ruleObjectProperty returns [EObject current=null] : ( ( (lv_propName_0_0= RULE_STRING ) ) this_NAME_SEP_1= RULE_NAME_SEP ( (lv_propValue_2_0= ruleValue ) ) ) ;
+    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:375:1: ruleObjectProperty returns [EObject current=null] : ( ( (lv_propName_0_0= RULE_STRING ) ) this_NAME_SEP_1= RULE_NAME_SEP ( (lv_propValue_2_0= ruleValue ) ) ) ;
     public final EObject ruleObjectProperty() throws RecognitionException {
         EObject current = null;
 
@@ -1328,19 +957,19 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:487:28: ( ( ( (lv_propName_0_0= RULE_STRING ) ) this_NAME_SEP_1= RULE_NAME_SEP ( (lv_propValue_2_0= ruleValue ) ) ) )
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:488:1: ( ( (lv_propName_0_0= RULE_STRING ) ) this_NAME_SEP_1= RULE_NAME_SEP ( (lv_propValue_2_0= ruleValue ) ) )
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:378:28: ( ( ( (lv_propName_0_0= RULE_STRING ) ) this_NAME_SEP_1= RULE_NAME_SEP ( (lv_propValue_2_0= ruleValue ) ) ) )
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:379:1: ( ( (lv_propName_0_0= RULE_STRING ) ) this_NAME_SEP_1= RULE_NAME_SEP ( (lv_propValue_2_0= ruleValue ) ) )
             {
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:488:1: ( ( (lv_propName_0_0= RULE_STRING ) ) this_NAME_SEP_1= RULE_NAME_SEP ( (lv_propValue_2_0= ruleValue ) ) )
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:488:2: ( (lv_propName_0_0= RULE_STRING ) ) this_NAME_SEP_1= RULE_NAME_SEP ( (lv_propValue_2_0= ruleValue ) )
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:379:1: ( ( (lv_propName_0_0= RULE_STRING ) ) this_NAME_SEP_1= RULE_NAME_SEP ( (lv_propValue_2_0= ruleValue ) ) )
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:379:2: ( (lv_propName_0_0= RULE_STRING ) ) this_NAME_SEP_1= RULE_NAME_SEP ( (lv_propValue_2_0= ruleValue ) )
             {
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:488:2: ( (lv_propName_0_0= RULE_STRING ) )
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:489:1: (lv_propName_0_0= RULE_STRING )
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:379:2: ( (lv_propName_0_0= RULE_STRING ) )
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:380:1: (lv_propName_0_0= RULE_STRING )
             {
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:489:1: (lv_propName_0_0= RULE_STRING )
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:490:3: lv_propName_0_0= RULE_STRING
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:380:1: (lv_propName_0_0= RULE_STRING )
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:381:3: lv_propName_0_0= RULE_STRING
             {
-            lv_propName_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleObjectProperty1218); 
+            lv_propName_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleObjectProperty835); 
 
             			newLeafNode(lv_propName_0_0, grammarAccess.getObjectPropertyAccess().getPropNameSTRINGTerminalRuleCall_0_0()); 
             		
@@ -1360,20 +989,20 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_NAME_SEP_1=(Token)match(input,RULE_NAME_SEP,FOLLOW_RULE_NAME_SEP_in_ruleObjectProperty1234); 
+            this_NAME_SEP_1=(Token)match(input,RULE_NAME_SEP,FOLLOW_RULE_NAME_SEP_in_ruleObjectProperty851); 
              
                 newLeafNode(this_NAME_SEP_1, grammarAccess.getObjectPropertyAccess().getNAME_SEPTerminalRuleCall_1()); 
                 
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:510:1: ( (lv_propValue_2_0= ruleValue ) )
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:511:1: (lv_propValue_2_0= ruleValue )
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:401:1: ( (lv_propValue_2_0= ruleValue ) )
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:402:1: (lv_propValue_2_0= ruleValue )
             {
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:511:1: (lv_propValue_2_0= ruleValue )
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:512:3: lv_propValue_2_0= ruleValue
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:402:1: (lv_propValue_2_0= ruleValue )
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:403:3: lv_propValue_2_0= ruleValue
             {
              
             	        newCompositeNode(grammarAccess.getObjectPropertyAccess().getPropValueValueParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleValue_in_ruleObjectProperty1254);
+            pushFollow(FOLLOW_ruleValue_in_ruleObjectProperty871);
             lv_propValue_2_0=ruleValue();
 
             state._fsp--;
@@ -1416,7 +1045,7 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleArray"
-    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:536:1: entryRuleArray returns [EObject current=null] : iv_ruleArray= ruleArray EOF ;
+    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:427:1: entryRuleArray returns [EObject current=null] : iv_ruleArray= ruleArray EOF ;
     public final EObject entryRuleArray() throws RecognitionException {
         EObject current = null;
 
@@ -1424,17 +1053,17 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:537:2: (iv_ruleArray= ruleArray EOF )
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:538:2: iv_ruleArray= ruleArray EOF
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:428:2: (iv_ruleArray= ruleArray EOF )
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:429:2: iv_ruleArray= ruleArray EOF
             {
              newCompositeNode(grammarAccess.getArrayRule()); 
-            pushFollow(FOLLOW_ruleArray_in_entryRuleArray1290);
+            pushFollow(FOLLOW_ruleArray_in_entryRuleArray907);
             iv_ruleArray=ruleArray();
 
             state._fsp--;
 
              current =iv_ruleArray; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleArray1300); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleArray917); 
 
             }
 
@@ -1452,7 +1081,7 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleArray"
-    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:545:1: ruleArray returns [EObject current=null] : (this_ARRAY_START_0= RULE_ARRAY_START ( ( (lv_elements_1_0= ruleValue ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_elements_3_0= ruleValue ) ) )* )? this_ARRAY_END_4= RULE_ARRAY_END ) ;
+    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:436:1: ruleArray returns [EObject current=null] : (this_ARRAY_START_0= RULE_ARRAY_START ( ( (lv_elements_1_0= ruleValue ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_elements_3_0= ruleValue ) ) )* )? this_ARRAY_END_4= RULE_ARRAY_END ) ;
     public final EObject ruleArray() throws RecognitionException {
         EObject current = null;
 
@@ -1467,37 +1096,37 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:548:28: ( (this_ARRAY_START_0= RULE_ARRAY_START ( ( (lv_elements_1_0= ruleValue ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_elements_3_0= ruleValue ) ) )* )? this_ARRAY_END_4= RULE_ARRAY_END ) )
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:549:1: (this_ARRAY_START_0= RULE_ARRAY_START ( ( (lv_elements_1_0= ruleValue ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_elements_3_0= ruleValue ) ) )* )? this_ARRAY_END_4= RULE_ARRAY_END )
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:439:28: ( (this_ARRAY_START_0= RULE_ARRAY_START ( ( (lv_elements_1_0= ruleValue ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_elements_3_0= ruleValue ) ) )* )? this_ARRAY_END_4= RULE_ARRAY_END ) )
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:440:1: (this_ARRAY_START_0= RULE_ARRAY_START ( ( (lv_elements_1_0= ruleValue ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_elements_3_0= ruleValue ) ) )* )? this_ARRAY_END_4= RULE_ARRAY_END )
             {
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:549:1: (this_ARRAY_START_0= RULE_ARRAY_START ( ( (lv_elements_1_0= ruleValue ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_elements_3_0= ruleValue ) ) )* )? this_ARRAY_END_4= RULE_ARRAY_END )
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:549:2: this_ARRAY_START_0= RULE_ARRAY_START ( ( (lv_elements_1_0= ruleValue ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_elements_3_0= ruleValue ) ) )* )? this_ARRAY_END_4= RULE_ARRAY_END
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:440:1: (this_ARRAY_START_0= RULE_ARRAY_START ( ( (lv_elements_1_0= ruleValue ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_elements_3_0= ruleValue ) ) )* )? this_ARRAY_END_4= RULE_ARRAY_END )
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:440:2: this_ARRAY_START_0= RULE_ARRAY_START ( ( (lv_elements_1_0= ruleValue ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_elements_3_0= ruleValue ) ) )* )? this_ARRAY_END_4= RULE_ARRAY_END
             {
-            this_ARRAY_START_0=(Token)match(input,RULE_ARRAY_START,FOLLOW_RULE_ARRAY_START_in_ruleArray1336); 
+            this_ARRAY_START_0=(Token)match(input,RULE_ARRAY_START,FOLLOW_RULE_ARRAY_START_in_ruleArray953); 
              
                 newLeafNode(this_ARRAY_START_0, grammarAccess.getArrayAccess().getARRAY_STARTTerminalRuleCall_0()); 
                 
-            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:553:1: ( ( (lv_elements_1_0= ruleValue ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_elements_3_0= ruleValue ) ) )* )?
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:444:1: ( ( (lv_elements_1_0= ruleValue ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_elements_3_0= ruleValue ) ) )* )?
+            int alt10=2;
+            int LA10_0 = input.LA(1);
 
-            if ( ((LA13_0>=RULE_STRING && LA13_0<=RULE_MINUS)||(LA13_0>=RULE_ZERO && LA13_0<=RULE_OBJECT_START)||LA13_0==RULE_ARRAY_START||(LA13_0>=24 && LA13_0<=26)) ) {
-                alt13=1;
+            if ( ((LA10_0>=RULE_STRING && LA10_0<=RULE_OBJECT_START)||LA10_0==RULE_ARRAY_START||(LA10_0>=17 && LA10_0<=20)) ) {
+                alt10=1;
             }
-            switch (alt13) {
+            switch (alt10) {
                 case 1 :
-                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:553:2: ( (lv_elements_1_0= ruleValue ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_elements_3_0= ruleValue ) ) )*
+                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:444:2: ( (lv_elements_1_0= ruleValue ) ) (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_elements_3_0= ruleValue ) ) )*
                     {
-                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:553:2: ( (lv_elements_1_0= ruleValue ) )
-                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:554:1: (lv_elements_1_0= ruleValue )
+                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:444:2: ( (lv_elements_1_0= ruleValue ) )
+                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:445:1: (lv_elements_1_0= ruleValue )
                     {
-                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:554:1: (lv_elements_1_0= ruleValue )
-                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:555:3: lv_elements_1_0= ruleValue
+                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:445:1: (lv_elements_1_0= ruleValue )
+                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:446:3: lv_elements_1_0= ruleValue
                     {
                      
                     	        newCompositeNode(grammarAccess.getArrayAccess().getElementsValueParserRuleCall_1_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleValue_in_ruleArray1357);
+                    pushFollow(FOLLOW_ruleValue_in_ruleArray974);
                     lv_elements_1_0=ruleValue();
 
                     state._fsp--;
@@ -1519,35 +1148,35 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:571:2: (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_elements_3_0= ruleValue ) ) )*
-                    loop12:
+                    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:462:2: (this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_elements_3_0= ruleValue ) ) )*
+                    loop9:
                     do {
-                        int alt12=2;
-                        int LA12_0 = input.LA(1);
+                        int alt9=2;
+                        int LA9_0 = input.LA(1);
 
-                        if ( (LA12_0==RULE_VALUE_SEP) ) {
-                            alt12=1;
+                        if ( (LA9_0==RULE_VALUE_SEP) ) {
+                            alt9=1;
                         }
 
 
-                        switch (alt12) {
+                        switch (alt9) {
                     	case 1 :
-                    	    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:571:3: this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_elements_3_0= ruleValue ) )
+                    	    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:462:3: this_VALUE_SEP_2= RULE_VALUE_SEP ( (lv_elements_3_0= ruleValue ) )
                     	    {
-                    	    this_VALUE_SEP_2=(Token)match(input,RULE_VALUE_SEP,FOLLOW_RULE_VALUE_SEP_in_ruleArray1369); 
+                    	    this_VALUE_SEP_2=(Token)match(input,RULE_VALUE_SEP,FOLLOW_RULE_VALUE_SEP_in_ruleArray986); 
                     	     
                     	        newLeafNode(this_VALUE_SEP_2, grammarAccess.getArrayAccess().getVALUE_SEPTerminalRuleCall_1_1_0()); 
                     	        
-                    	    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:575:1: ( (lv_elements_3_0= ruleValue ) )
-                    	    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:576:1: (lv_elements_3_0= ruleValue )
+                    	    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:466:1: ( (lv_elements_3_0= ruleValue ) )
+                    	    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:467:1: (lv_elements_3_0= ruleValue )
                     	    {
-                    	    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:576:1: (lv_elements_3_0= ruleValue )
-                    	    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:577:3: lv_elements_3_0= ruleValue
+                    	    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:467:1: (lv_elements_3_0= ruleValue )
+                    	    // ../org.jsonclipse/src-gen/org/jsonclipse/parser/antlr/internal/InternalJson.g:468:3: lv_elements_3_0= ruleValue
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getArrayAccess().getElementsValueParserRuleCall_1_1_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleValue_in_ruleArray1389);
+                    	    pushFollow(FOLLOW_ruleValue_in_ruleArray1006);
                     	    lv_elements_3_0=ruleValue();
 
                     	    state._fsp--;
@@ -1574,7 +1203,7 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop12;
+                    	    break loop9;
                         }
                     } while (true);
 
@@ -1584,7 +1213,7 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_ARRAY_END_4=(Token)match(input,RULE_ARRAY_END,FOLLOW_RULE_ARRAY_END_in_ruleArray1404); 
+            this_ARRAY_END_4=(Token)match(input,RULE_ARRAY_END,FOLLOW_RULE_ARRAY_END_in_ruleArray1021); 
              
                 newLeafNode(this_ARRAY_END_4, grammarAccess.getArrayAccess().getARRAY_ENDTerminalRuleCall_2()); 
                 
@@ -1617,52 +1246,42 @@ public class InternalJsonParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleValue_in_ruleModel130 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleValue_in_entryRuleValue165 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleValue175 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_ruleValue212 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_ruleValue230 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_ruleValue248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_ruleValue212 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_ruleValue230 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_ruleValue248 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleObject_in_ruleValue275 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleArray_in_ruleValue302 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleNumber_in_ruleValue329 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_STRING_in_ruleValue352 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleNumber_in_entryRuleNumber394 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleNumber405 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_MINUS_in_ruleNumber446 = new BitSet(new long[]{0x0000000000000C00L});
-    public static final BitSet FOLLOW_ruleInteger_in_ruleNumber475 = new BitSet(new long[]{0x0000000000000242L});
-    public static final BitSet FOLLOW_ruleFrac_in_ruleNumber503 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_ruleExp_in_ruleNumber533 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExp_in_entryRuleExp581 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleExp592 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_E_in_ruleExp632 = new BitSet(new long[]{0x00000000000001A0L});
-    public static final BitSet FOLLOW_RULE_PLUS_in_ruleExp653 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_RULE_MINUS_in_ruleExp679 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_RULE_DIGIT_in_ruleExp702 = new BitSet(new long[]{0x0000000000000102L});
-    public static final BitSet FOLLOW_ruleFrac_in_entryRuleFrac750 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFrac761 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_DOT_in_ruleFrac801 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_RULE_DIGIT_in_ruleFrac822 = new BitSet(new long[]{0x0000000000000102L});
-    public static final BitSet FOLLOW_ruleInteger_in_entryRuleInteger870 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleInteger881 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ZERO_in_ruleInteger921 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_DIGIT19_in_ruleInteger948 = new BitSet(new long[]{0x0000000000000102L});
-    public static final BitSet FOLLOW_RULE_DIGIT_in_ruleInteger969 = new BitSet(new long[]{0x0000000000000102L});
-    public static final BitSet FOLLOW_ruleObject_in_entryRuleObject1017 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleObject1027 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_OBJECT_START_in_ruleObject1063 = new BitSet(new long[]{0x0000000000004010L});
-    public static final BitSet FOLLOW_ruleObjectProperty_in_ruleObject1084 = new BitSet(new long[]{0x0000000000006000L});
-    public static final BitSet FOLLOW_RULE_VALUE_SEP_in_ruleObject1096 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleObjectProperty_in_ruleObject1116 = new BitSet(new long[]{0x0000000000006000L});
-    public static final BitSet FOLLOW_RULE_OBJECT_END_in_ruleObject1131 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleObjectProperty_in_entryRuleObjectProperty1166 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleObjectProperty1176 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleObjectProperty1218 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_RULE_NAME_SEP_in_ruleObjectProperty1234 = new BitSet(new long[]{0x0000000007011C30L});
-    public static final BitSet FOLLOW_ruleValue_in_ruleObjectProperty1254 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArray_in_entryRuleArray1290 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleArray1300 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ARRAY_START_in_ruleArray1336 = new BitSet(new long[]{0x0000000007031C30L});
-    public static final BitSet FOLLOW_ruleValue_in_ruleArray1357 = new BitSet(new long[]{0x0000000000022000L});
-    public static final BitSet FOLLOW_RULE_VALUE_SEP_in_ruleArray1369 = new BitSet(new long[]{0x0000000007011C30L});
-    public static final BitSet FOLLOW_ruleValue_in_ruleArray1389 = new BitSet(new long[]{0x0000000000022000L});
-    public static final BitSet FOLLOW_RULE_ARRAY_END_in_ruleArray1404 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_ruleNumber444 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleNumber461 = new BitSet(new long[]{0x0000000000E00002L});
+    public static final BitSet FOLLOW_21_in_ruleNumber480 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleNumber495 = new BitSet(new long[]{0x0000000000C00002L});
+    public static final BitSet FOLLOW_22_in_ruleNumber517 = new BitSet(new long[]{0x0000000001100020L});
+    public static final BitSet FOLLOW_23_in_ruleNumber536 = new BitSet(new long[]{0x0000000001100020L});
+    public static final BitSet FOLLOW_24_in_ruleNumber551 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_20_in_ruleNumber570 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleNumber587 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleObject_in_entryRuleObject634 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleObject644 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_OBJECT_START_in_ruleObject680 = new BitSet(new long[]{0x0000000000000110L});
+    public static final BitSet FOLLOW_ruleObjectProperty_in_ruleObject701 = new BitSet(new long[]{0x0000000000000180L});
+    public static final BitSet FOLLOW_RULE_VALUE_SEP_in_ruleObject713 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleObjectProperty_in_ruleObject733 = new BitSet(new long[]{0x0000000000000180L});
+    public static final BitSet FOLLOW_RULE_OBJECT_END_in_ruleObject748 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleObjectProperty_in_entryRuleObjectProperty783 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleObjectProperty793 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleObjectProperty835 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_RULE_NAME_SEP_in_ruleObjectProperty851 = new BitSet(new long[]{0x00000000001E0470L});
+    public static final BitSet FOLLOW_ruleValue_in_ruleObjectProperty871 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleArray_in_entryRuleArray907 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleArray917 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ARRAY_START_in_ruleArray953 = new BitSet(new long[]{0x00000000001E0C70L});
+    public static final BitSet FOLLOW_ruleValue_in_ruleArray974 = new BitSet(new long[]{0x0000000000000880L});
+    public static final BitSet FOLLOW_RULE_VALUE_SEP_in_ruleArray986 = new BitSet(new long[]{0x00000000001E0470L});
+    public static final BitSet FOLLOW_ruleValue_in_ruleArray1006 = new BitSet(new long[]{0x0000000000000880L});
+    public static final BitSet FOLLOW_RULE_ARRAY_END_in_ruleArray1021 = new BitSet(new long[]{0x0000000000000002L});
 
 }

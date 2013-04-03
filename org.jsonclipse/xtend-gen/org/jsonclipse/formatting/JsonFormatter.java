@@ -11,6 +11,7 @@ import org.eclipse.xtext.formatting.impl.FormattingConfig.IndentationLocatorEnd;
 import org.eclipse.xtext.formatting.impl.FormattingConfig.IndentationLocatorStart;
 import org.eclipse.xtext.formatting.impl.FormattingConfig.LinewrapLocator;
 import org.eclipse.xtext.formatting.impl.FormattingConfig.NoSpaceLocator;
+import org.eclipse.xtext.xbase.lib.Extension;
 import org.jsonclipse.services.JsonGrammarAccess;
 
 /**
@@ -24,10 +25,12 @@ import org.jsonclipse.services.JsonGrammarAccess;
 @SuppressWarnings("all")
 public class JsonFormatter extends AbstractDeclarativeFormatter {
   @Inject
+  @Extension
   private JsonGrammarAccess _jsonGrammarAccess;
   
   protected void configureFormatting(final FormattingConfig c) {
-    c.setSpace("    ");
+    c.setAutoLinewrap(120);
+    c.setSpace("  ");
     IndentationLocatorStart _setIndentationIncrement = c.setIndentationIncrement();
     TerminalRule _oBJECT_STARTRule = this._jsonGrammarAccess.getOBJECT_STARTRule();
     _setIndentationIncrement.after(_oBJECT_STARTRule);

@@ -117,7 +117,7 @@ public class JsonSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	/**
 	 * Syntax:
-	 *     'true' | 'false' | 'null'
+	 *     'false' | 'null' | 'true'
 	 */
 	protected void emit_Value_FalseKeyword_0_or_NullKeyword_1_or_TrueKeyword_2(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

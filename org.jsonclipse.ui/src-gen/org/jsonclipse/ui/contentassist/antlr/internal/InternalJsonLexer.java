@@ -12,30 +12,28 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalJsonLexer extends Lexer {
-    public static final int RULE_ID=18;
-    public static final int RULE_ZERO=6;
-    public static final int T__26=26;
-    public static final int T__25=25;
+    public static final int RULE_ID=12;
     public static final int T__24=24;
-    public static final int RULE_ANY_OTHER=23;
-    public static final int RULE_PLUS=4;
+    public static final int T__23=23;
+    public static final int T__22=22;
+    public static final int RULE_ANY_OTHER=16;
+    public static final int T__21=21;
+    public static final int T__20=20;
     public static final int EOF=-1;
-    public static final int RULE_SL_COMMENT=21;
-    public static final int RULE_OBJECT_END=12;
-    public static final int RULE_ARRAY_START=15;
-    public static final int RULE_ML_COMMENT=20;
-    public static final int RULE_ARRAY_END=16;
-    public static final int RULE_MINUS=5;
-    public static final int RULE_STRING=17;
-    public static final int RULE_E=7;
-    public static final int RULE_DOT=9;
-    public static final int RULE_VALUE_SEP=13;
-    public static final int RULE_OBJECT_START=11;
-    public static final int RULE_INT=19;
-    public static final int RULE_DIGIT19=10;
-    public static final int RULE_WS=22;
-    public static final int RULE_DIGIT=8;
-    public static final int RULE_NAME_SEP=14;
+    public static final int RULE_SL_COMMENT=14;
+    public static final int RULE_OBJECT_END=6;
+    public static final int RULE_ARRAY_START=9;
+    public static final int RULE_ML_COMMENT=13;
+    public static final int RULE_ARRAY_END=10;
+    public static final int T__19=19;
+    public static final int RULE_STRING=11;
+    public static final int T__18=18;
+    public static final int T__17=17;
+    public static final int RULE_VALUE_SEP=7;
+    public static final int RULE_OBJECT_START=5;
+    public static final int RULE_INT=4;
+    public static final int RULE_WS=15;
+    public static final int RULE_NAME_SEP=8;
 
     // delegates
     // delegators
@@ -50,10 +48,10 @@ public class InternalJsonLexer extends Lexer {
     }
     public String getGrammarFileName() { return "../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g"; }
 
-    // $ANTLR start "T__24"
-    public final void mT__24() throws RecognitionException {
+    // $ANTLR start "T__17"
+    public final void mT__17() throws RecognitionException {
         try {
-            int _type = T__24;
+            int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:11:7: ( 'false' )
             // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:11:9: 'false'
@@ -69,12 +67,12 @@ public class InternalJsonLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__24"
+    // $ANTLR end "T__17"
 
-    // $ANTLR start "T__25"
-    public final void mT__25() throws RecognitionException {
+    // $ANTLR start "T__18"
+    public final void mT__18() throws RecognitionException {
         try {
-            int _type = T__25;
+            int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:12:7: ( 'null' )
             // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:12:9: 'null'
@@ -90,12 +88,12 @@ public class InternalJsonLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__25"
+    // $ANTLR end "T__18"
 
-    // $ANTLR start "T__26"
-    public final void mT__26() throws RecognitionException {
+    // $ANTLR start "T__19"
+    public final void mT__19() throws RecognitionException {
         try {
-            int _type = T__26;
+            int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:13:7: ( 'true' )
             // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:13:9: 'true'
@@ -111,15 +109,115 @@ public class InternalJsonLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__26"
+    // $ANTLR end "T__19"
+
+    // $ANTLR start "T__20"
+    public final void mT__20() throws RecognitionException {
+        try {
+            int _type = T__20;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:14:7: ( 'e' )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:14:9: 'e'
+            {
+            match('e'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__20"
+
+    // $ANTLR start "T__21"
+    public final void mT__21() throws RecognitionException {
+        try {
+            int _type = T__21;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:15:7: ( 'E' )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:15:9: 'E'
+            {
+            match('E'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__21"
+
+    // $ANTLR start "T__22"
+    public final void mT__22() throws RecognitionException {
+        try {
+            int _type = T__22;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:16:7: ( '+' )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:16:9: '+'
+            {
+            match('+'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__22"
+
+    // $ANTLR start "T__23"
+    public final void mT__23() throws RecognitionException {
+        try {
+            int _type = T__23;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:17:7: ( '-' )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:17:9: '-'
+            {
+            match('-'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__23"
+
+    // $ANTLR start "T__24"
+    public final void mT__24() throws RecognitionException {
+        try {
+            int _type = T__24;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:18:7: ( '.' )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:18:9: '.'
+            {
+            match('.'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__24"
 
     // $ANTLR start "RULE_ARRAY_START"
     public final void mRULE_ARRAY_START() throws RecognitionException {
         try {
             int _type = RULE_ARRAY_START;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1454:18: ( '[' )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1454:20: '['
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1307:18: ( '[' )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1307:20: '['
             {
             match('['); 
 
@@ -138,8 +236,8 @@ public class InternalJsonLexer extends Lexer {
         try {
             int _type = RULE_ARRAY_END;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1456:16: ( ']' )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1456:18: ']'
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1309:16: ( ']' )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1309:18: ']'
             {
             match(']'); 
 
@@ -158,8 +256,8 @@ public class InternalJsonLexer extends Lexer {
         try {
             int _type = RULE_OBJECT_START;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1458:19: ( '{' )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1458:21: '{'
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1311:19: ( '{' )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1311:21: '{'
             {
             match('{'); 
 
@@ -178,8 +276,8 @@ public class InternalJsonLexer extends Lexer {
         try {
             int _type = RULE_OBJECT_END;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1460:17: ( '}' )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1460:19: '}'
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1313:17: ( '}' )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1313:19: '}'
             {
             match('}'); 
 
@@ -198,8 +296,8 @@ public class InternalJsonLexer extends Lexer {
         try {
             int _type = RULE_NAME_SEP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1462:15: ( ':' )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1462:17: ':'
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1315:15: ( ':' )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1315:17: ':'
             {
             match(':'); 
 
@@ -218,8 +316,8 @@ public class InternalJsonLexer extends Lexer {
         try {
             int _type = RULE_VALUE_SEP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1464:16: ( ',' )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1464:18: ','
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1317:16: ( ',' )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1317:18: ','
             {
             match(','); 
 
@@ -233,179 +331,15 @@ public class InternalJsonLexer extends Lexer {
     }
     // $ANTLR end "RULE_VALUE_SEP"
 
-    // $ANTLR start "RULE_MINUS"
-    public final void mRULE_MINUS() throws RecognitionException {
-        try {
-            int _type = RULE_MINUS;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1466:12: ( '-' )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1466:14: '-'
-            {
-            match('-'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_MINUS"
-
-    // $ANTLR start "RULE_PLUS"
-    public final void mRULE_PLUS() throws RecognitionException {
-        try {
-            int _type = RULE_PLUS;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1468:11: ( '-' )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1468:13: '-'
-            {
-            match('-'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_PLUS"
-
-    // $ANTLR start "RULE_ZERO"
-    public final void mRULE_ZERO() throws RecognitionException {
-        try {
-            int _type = RULE_ZERO;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1470:11: ( '0' )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1470:13: '0'
-            {
-            match('0'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_ZERO"
-
-    // $ANTLR start "RULE_E"
-    public final void mRULE_E() throws RecognitionException {
-        try {
-            int _type = RULE_E;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1472:8: ( ( 'e' | 'E' ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1472:10: ( 'e' | 'E' )
-            {
-            if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
-                input.consume();
-
-            }
-            else {
-                MismatchedSetException mse = new MismatchedSetException(null,input);
-                recover(mse);
-                throw mse;}
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_E"
-
-    // $ANTLR start "RULE_DIGIT19"
-    public final void mRULE_DIGIT19() throws RecognitionException {
-        try {
-            int _type = RULE_DIGIT19;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1474:14: ( ( '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1474:16: ( '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' )
-            {
-            if ( (input.LA(1)>='1' && input.LA(1)<='9') ) {
-                input.consume();
-
-            }
-            else {
-                MismatchedSetException mse = new MismatchedSetException(null,input);
-                recover(mse);
-                throw mse;}
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_DIGIT19"
-
-    // $ANTLR start "RULE_DIGIT"
-    public final void mRULE_DIGIT() throws RecognitionException {
-        try {
-            int _type = RULE_DIGIT;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1476:12: ( ( '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '0' ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1476:14: ( '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '0' )
-            {
-            if ( (input.LA(1)>='0' && input.LA(1)<='9') ) {
-                input.consume();
-
-            }
-            else {
-                MismatchedSetException mse = new MismatchedSetException(null,input);
-                recover(mse);
-                throw mse;}
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_DIGIT"
-
-    // $ANTLR start "RULE_DOT"
-    public final void mRULE_DOT() throws RecognitionException {
-        try {
-            int _type = RULE_DOT;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1478:10: ( '.' )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1478:12: '.'
-            {
-            match('.'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_DOT"
-
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1480:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1480:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1319:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1319:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1480:11: ( '^' )?
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1319:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -414,7 +348,7 @@ public class InternalJsonLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1480:11: '^'
+                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1319:11: '^'
                     {
                     match('^'); 
 
@@ -432,7 +366,7 @@ public class InternalJsonLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1480:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1319:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -481,10 +415,10 @@ public class InternalJsonLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1482:10: ( ( '0' .. '9' )+ )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1482:12: ( '0' .. '9' )+
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1321:10: ( ( '0' .. '9' )+ )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1321:12: ( '0' .. '9' )+
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1482:12: ( '0' .. '9' )+
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1321:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -498,7 +432,7 @@ public class InternalJsonLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1482:13: '0' .. '9'
+            	    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1321:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -530,10 +464,10 @@ public class InternalJsonLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1484:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1484:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1323:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1323:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1484:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1323:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -551,10 +485,10 @@ public class InternalJsonLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1484:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1323:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1484:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1323:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -570,7 +504,7 @@ public class InternalJsonLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1484:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1323:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -586,7 +520,7 @@ public class InternalJsonLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1484:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1323:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -611,10 +545,10 @@ public class InternalJsonLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1484:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1323:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1484:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1323:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -630,7 +564,7 @@ public class InternalJsonLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1484:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1323:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -646,7 +580,7 @@ public class InternalJsonLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1484:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1323:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -689,12 +623,12 @@ public class InternalJsonLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1486:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1486:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1325:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1325:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1486:24: ( options {greedy=false; } : . )*
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1325:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -719,7 +653,7 @@ public class InternalJsonLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1486:52: .
+            	    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1325:52: .
             	    {
             	    matchAny(); 
 
@@ -749,12 +683,12 @@ public class InternalJsonLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1488:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1488:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1327:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1327:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1488:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1327:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -767,7 +701,7 @@ public class InternalJsonLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1488:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1327:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -787,7 +721,7 @@ public class InternalJsonLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1488:40: ( ( '\\r' )? '\\n' )?
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1327:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -796,9 +730,9 @@ public class InternalJsonLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1488:41: ( '\\r' )? '\\n'
+                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1327:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1488:41: ( '\\r' )?
+                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1327:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -807,7 +741,7 @@ public class InternalJsonLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1488:41: '\\r'
+                            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1327:41: '\\r'
                             {
                             match('\r'); 
 
@@ -839,10 +773,10 @@ public class InternalJsonLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1490:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1490:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1329:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1329:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1490:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1329:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -896,8 +830,8 @@ public class InternalJsonLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1492:16: ( . )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1492:18: .
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1331:16: ( . )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1331:18: .
             {
             matchAny(); 
 
@@ -912,166 +846,152 @@ public class InternalJsonLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:8: ( T__24 | T__25 | T__26 | RULE_ARRAY_START | RULE_ARRAY_END | RULE_OBJECT_START | RULE_OBJECT_END | RULE_NAME_SEP | RULE_VALUE_SEP | RULE_MINUS | RULE_PLUS | RULE_ZERO | RULE_E | RULE_DIGIT19 | RULE_DIGIT | RULE_DOT | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=23;
+        // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:8: ( T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | RULE_ARRAY_START | RULE_ARRAY_END | RULE_OBJECT_START | RULE_OBJECT_END | RULE_NAME_SEP | RULE_VALUE_SEP | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt12=21;
         alt12 = dfa12.predict(input);
         switch (alt12) {
             case 1 :
-                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:10: T__24
+                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:10: T__17
+                {
+                mT__17(); 
+
+                }
+                break;
+            case 2 :
+                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:16: T__18
+                {
+                mT__18(); 
+
+                }
+                break;
+            case 3 :
+                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:22: T__19
+                {
+                mT__19(); 
+
+                }
+                break;
+            case 4 :
+                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:28: T__20
+                {
+                mT__20(); 
+
+                }
+                break;
+            case 5 :
+                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:34: T__21
+                {
+                mT__21(); 
+
+                }
+                break;
+            case 6 :
+                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:40: T__22
+                {
+                mT__22(); 
+
+                }
+                break;
+            case 7 :
+                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:46: T__23
+                {
+                mT__23(); 
+
+                }
+                break;
+            case 8 :
+                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:52: T__24
                 {
                 mT__24(); 
 
                 }
                 break;
-            case 2 :
-                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:16: T__25
-                {
-                mT__25(); 
-
-                }
-                break;
-            case 3 :
-                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:22: T__26
-                {
-                mT__26(); 
-
-                }
-                break;
-            case 4 :
-                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:28: RULE_ARRAY_START
+            case 9 :
+                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:58: RULE_ARRAY_START
                 {
                 mRULE_ARRAY_START(); 
 
                 }
                 break;
-            case 5 :
-                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:45: RULE_ARRAY_END
+            case 10 :
+                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:75: RULE_ARRAY_END
                 {
                 mRULE_ARRAY_END(); 
 
                 }
                 break;
-            case 6 :
-                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:60: RULE_OBJECT_START
+            case 11 :
+                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:90: RULE_OBJECT_START
                 {
                 mRULE_OBJECT_START(); 
 
                 }
                 break;
-            case 7 :
-                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:78: RULE_OBJECT_END
+            case 12 :
+                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:108: RULE_OBJECT_END
                 {
                 mRULE_OBJECT_END(); 
 
                 }
                 break;
-            case 8 :
-                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:94: RULE_NAME_SEP
+            case 13 :
+                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:124: RULE_NAME_SEP
                 {
                 mRULE_NAME_SEP(); 
 
                 }
                 break;
-            case 9 :
-                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:108: RULE_VALUE_SEP
+            case 14 :
+                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:138: RULE_VALUE_SEP
                 {
                 mRULE_VALUE_SEP(); 
 
                 }
                 break;
-            case 10 :
-                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:123: RULE_MINUS
-                {
-                mRULE_MINUS(); 
-
-                }
-                break;
-            case 11 :
-                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:134: RULE_PLUS
-                {
-                mRULE_PLUS(); 
-
-                }
-                break;
-            case 12 :
-                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:144: RULE_ZERO
-                {
-                mRULE_ZERO(); 
-
-                }
-                break;
-            case 13 :
-                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:154: RULE_E
-                {
-                mRULE_E(); 
-
-                }
-                break;
-            case 14 :
-                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:161: RULE_DIGIT19
-                {
-                mRULE_DIGIT19(); 
-
-                }
-                break;
             case 15 :
-                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:174: RULE_DIGIT
-                {
-                mRULE_DIGIT(); 
-
-                }
-                break;
-            case 16 :
-                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:185: RULE_DOT
-                {
-                mRULE_DOT(); 
-
-                }
-                break;
-            case 17 :
-                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:194: RULE_ID
+                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:153: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 18 :
-                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:202: RULE_INT
+            case 16 :
+                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:161: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 19 :
-                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:211: RULE_STRING
+            case 17 :
+                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:170: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 20 :
-                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:223: RULE_ML_COMMENT
+            case 18 :
+                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:182: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 21 :
-                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:239: RULE_SL_COMMENT
+            case 19 :
+                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:198: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 22 :
-                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:255: RULE_WS
+            case 20 :
+                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:214: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 23 :
-                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:263: RULE_ANY_OTHER
+            case 21 :
+                // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1:222: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1085,33 +1005,34 @@ public class InternalJsonLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\3\27\7\uffff\1\41\1\43\1\44\1\uffff\1\25\1\uffff\3\25"+
-        "\2\uffff\1\27\1\uffff\2\27\20\uffff\4\27\1\61\1\62\1\63\3\uffff";
+        "\1\uffff\3\30\1\33\1\34\11\uffff\1\26\2\uffff\3\26\2\uffff\1\30"+
+        "\1\uffff\2\30\20\uffff\4\30\1\62\1\63\1\64\3\uffff";
     static final String DFA12_eofS =
-        "\64\uffff";
+        "\65\uffff";
     static final String DFA12_minS =
-        "\1\0\1\141\1\165\1\162\7\uffff\3\60\1\uffff\1\101\1\uffff\2\0\1"+
-        "\52\2\uffff\1\154\1\uffff\1\154\1\165\20\uffff\1\163\1\154\2\145"+
-        "\3\60\3\uffff";
+        "\1\0\1\141\1\165\1\162\2\60\11\uffff\1\101\2\uffff\2\0\1\52\2\uffff"+
+        "\1\154\1\uffff\1\154\1\165\20\uffff\1\163\1\154\2\145\3\60\3\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\141\1\165\1\162\7\uffff\1\71\1\172\1\71\1\uffff\1\172"+
-        "\1\uffff\2\uffff\1\57\2\uffff\1\154\1\uffff\1\154\1\165\20\uffff"+
-        "\1\163\1\154\2\145\3\172\3\uffff";
+        "\1\uffff\1\141\1\165\1\162\2\172\11\uffff\1\172\2\uffff\2\uffff"+
+        "\1\57\2\uffff\1\154\1\uffff\1\154\1\165\20\uffff\1\163\1\154\2\145"+
+        "\3\172\3\uffff";
     static final String DFA12_acceptS =
-        "\4\uffff\1\4\1\5\1\6\1\7\1\10\1\11\1\12\3\uffff\1\20\1\uffff\1"+
-        "\21\3\uffff\1\26\1\27\1\uffff\1\21\2\uffff\1\4\1\5\1\6\1\7\1\10"+
-        "\1\11\1\12\1\14\1\22\1\15\1\16\1\20\1\23\1\24\1\25\1\26\7\uffff"+
+        "\6\uffff\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\uffff\1\17"+
+        "\1\20\3\uffff\1\24\1\25\1\uffff\1\17\2\uffff\1\4\1\5\1\6\1\7\1\10"+
+        "\1\11\1\12\1\13\1\14\1\15\1\16\1\20\1\21\1\22\1\23\1\24\7\uffff"+
         "\1\2\1\3\1\1";
     static final String DFA12_specialS =
-        "\1\2\20\uffff\1\0\1\1\41\uffff}>";
+        "\1\2\21\uffff\1\1\1\0\41\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\25\2\24\2\25\1\24\22\25\1\24\1\25\1\21\4\25\1\22\4\25\1"+
-            "\11\1\12\1\16\1\23\1\13\11\15\1\10\6\25\4\20\1\14\25\20\1\4"+
-            "\1\25\1\5\1\17\1\20\1\25\4\20\1\14\1\1\7\20\1\2\5\20\1\3\6\20"+
-            "\1\6\1\25\1\7\uff82\25",
-            "\1\26",
-            "\1\30",
+            "\11\26\2\25\2\26\1\25\22\26\1\25\1\26\1\22\4\26\1\23\3\26\1"+
+            "\6\1\16\1\7\1\10\1\24\12\21\1\15\6\26\4\20\1\5\25\20\1\11\1"+
+            "\26\1\12\1\17\1\20\1\26\4\20\1\4\1\1\7\20\1\2\5\20\1\3\6\20"+
+            "\1\13\1\26\1\14\uff82\26",
+            "\1\27",
             "\1\31",
+            "\1\32",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
             "",
             "",
             "",
@@ -1119,44 +1040,43 @@ public class InternalJsonLexer extends Lexer {
             "",
             "",
             "",
-            "\12\42",
-            "\12\27\7\uffff\32\27\4\uffff\1\27\1\uffff\32\27",
-            "\12\42",
-            "",
-            "\32\27\4\uffff\1\27\1\uffff\32\27",
-            "",
-            "\0\46",
-            "\0\46",
-            "\1\47\4\uffff\1\50",
             "",
             "",
-            "\1\52",
+            "\32\30\4\uffff\1\30\1\uffff\32\30",
+            "",
+            "",
+            "\0\47",
+            "\0\47",
+            "\1\50\4\uffff\1\51",
+            "",
             "",
             "\1\53",
+            "",
             "\1\54",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
             "\1\55",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\56",
             "\1\57",
             "\1\60",
-            "\12\27\7\uffff\32\27\4\uffff\1\27\1\uffff\32\27",
-            "\12\27\7\uffff\32\27\4\uffff\1\27\1\uffff\32\27",
-            "\12\27\7\uffff\32\27\4\uffff\1\27\1\uffff\32\27",
+            "\1\61",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
             "",
             "",
             ""
@@ -1192,19 +1112,19 @@ public class InternalJsonLexer extends Lexer {
             this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__24 | T__25 | T__26 | RULE_ARRAY_START | RULE_ARRAY_END | RULE_OBJECT_START | RULE_OBJECT_END | RULE_NAME_SEP | RULE_VALUE_SEP | RULE_MINUS | RULE_PLUS | RULE_ZERO | RULE_E | RULE_DIGIT19 | RULE_DIGIT | RULE_DOT | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | RULE_ARRAY_START | RULE_ARRAY_END | RULE_OBJECT_START | RULE_OBJECT_END | RULE_NAME_SEP | RULE_VALUE_SEP | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA12_17 = input.LA(1);
+                        int LA12_19 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_17>='\u0000' && LA12_17<='\uFFFF')) ) {s = 38;}
+                        if ( ((LA12_19>='\u0000' && LA12_19<='\uFFFF')) ) {s = 39;}
 
-                        else s = 21;
+                        else s = 22;
 
                         if ( s>=0 ) return s;
                         break;
@@ -1212,9 +1132,9 @@ public class InternalJsonLexer extends Lexer {
                         int LA12_18 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_18>='\u0000' && LA12_18<='\uFFFF')) ) {s = 38;}
+                        if ( ((LA12_18>='\u0000' && LA12_18<='\uFFFF')) ) {s = 39;}
 
-                        else s = 21;
+                        else s = 22;
 
                         if ( s>=0 ) return s;
                         break;
@@ -1228,41 +1148,43 @@ public class InternalJsonLexer extends Lexer {
 
                         else if ( (LA12_0=='t') ) {s = 3;}
 
-                        else if ( (LA12_0=='[') ) {s = 4;}
+                        else if ( (LA12_0=='e') ) {s = 4;}
 
-                        else if ( (LA12_0==']') ) {s = 5;}
+                        else if ( (LA12_0=='E') ) {s = 5;}
 
-                        else if ( (LA12_0=='{') ) {s = 6;}
+                        else if ( (LA12_0=='+') ) {s = 6;}
 
-                        else if ( (LA12_0=='}') ) {s = 7;}
+                        else if ( (LA12_0=='-') ) {s = 7;}
 
-                        else if ( (LA12_0==':') ) {s = 8;}
+                        else if ( (LA12_0=='.') ) {s = 8;}
 
-                        else if ( (LA12_0==',') ) {s = 9;}
+                        else if ( (LA12_0=='[') ) {s = 9;}
 
-                        else if ( (LA12_0=='-') ) {s = 10;}
+                        else if ( (LA12_0==']') ) {s = 10;}
 
-                        else if ( (LA12_0=='0') ) {s = 11;}
+                        else if ( (LA12_0=='{') ) {s = 11;}
 
-                        else if ( (LA12_0=='E'||LA12_0=='e') ) {s = 12;}
+                        else if ( (LA12_0=='}') ) {s = 12;}
 
-                        else if ( ((LA12_0>='1' && LA12_0<='9')) ) {s = 13;}
+                        else if ( (LA12_0==':') ) {s = 13;}
 
-                        else if ( (LA12_0=='.') ) {s = 14;}
+                        else if ( (LA12_0==',') ) {s = 14;}
 
                         else if ( (LA12_0=='^') ) {s = 15;}
 
                         else if ( ((LA12_0>='A' && LA12_0<='D')||(LA12_0>='F' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='d')||(LA12_0>='g' && LA12_0<='m')||(LA12_0>='o' && LA12_0<='s')||(LA12_0>='u' && LA12_0<='z')) ) {s = 16;}
 
-                        else if ( (LA12_0=='\"') ) {s = 17;}
+                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 17;}
 
-                        else if ( (LA12_0=='\'') ) {s = 18;}
+                        else if ( (LA12_0=='\"') ) {s = 18;}
 
-                        else if ( (LA12_0=='/') ) {s = 19;}
+                        else if ( (LA12_0=='\'') ) {s = 19;}
 
-                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 20;}
+                        else if ( (LA12_0=='/') ) {s = 20;}
 
-                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='+')||(LA12_0>=';' && LA12_0<='@')||LA12_0=='\\'||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 21;}
+                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 21;}
+
+                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='*')||(LA12_0>=';' && LA12_0<='@')||LA12_0=='\\'||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 22;}
 
                         if ( s>=0 ) return s;
                         break;

@@ -95,113 +95,66 @@ public class JsonGrammarAccess extends AbstractGrammarElementFinder {
 	public class NumberElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Number");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cMINUSTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final RuleCall cIntegerParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final RuleCall cFracParserRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
-		private final RuleCall cExpParserRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
+		private final Keyword cHyphenMinusKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cFullStopKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final RuleCall cINTTerminalRuleCall_2_1 = (RuleCall)cGroup_2.eContents().get(1);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Alternatives cAlternatives_3_0 = (Alternatives)cGroup_3.eContents().get(0);
+		private final Keyword cEKeyword_3_0_0 = (Keyword)cAlternatives_3_0.eContents().get(0);
+		private final Keyword cEKeyword_3_0_1 = (Keyword)cAlternatives_3_0.eContents().get(1);
+		private final Alternatives cAlternatives_3_1 = (Alternatives)cGroup_3.eContents().get(1);
+		private final Keyword cPlusSignKeyword_3_1_0 = (Keyword)cAlternatives_3_1.eContents().get(0);
+		private final Keyword cHyphenMinusKeyword_3_1_1 = (Keyword)cAlternatives_3_1.eContents().get(1);
+		private final RuleCall cINTTerminalRuleCall_3_2 = (RuleCall)cGroup_3.eContents().get(2);
 		
-		//Number:
+		//Number returns ecore::EString:
 		//
-		//	MINUS? Integer Frac? Exp?;
+		//	"-"? INT ("." INT)? (("e" | "E") ("+" | "-")? INT)?;
 		public ParserRule getRule() { return rule; }
 
-		//MINUS? Integer Frac? Exp?
+		//"-"? INT ("." INT)? (("e" | "E") ("+" | "-")? INT)?
 		public Group getGroup() { return cGroup; }
 
-		//MINUS?
-		public RuleCall getMINUSTerminalRuleCall_0() { return cMINUSTerminalRuleCall_0; }
+		//"-"?
+		public Keyword getHyphenMinusKeyword_0() { return cHyphenMinusKeyword_0; }
 
-		//Integer
-		public RuleCall getIntegerParserRuleCall_1() { return cIntegerParserRuleCall_1; }
+		//INT
+		public RuleCall getINTTerminalRuleCall_1() { return cINTTerminalRuleCall_1; }
 
-		//Frac?
-		public RuleCall getFracParserRuleCall_2() { return cFracParserRuleCall_2; }
+		//("." INT)?
+		public Group getGroup_2() { return cGroup_2; }
 
-		//Exp?
-		public RuleCall getExpParserRuleCall_3() { return cExpParserRuleCall_3; }
-	}
+		//"."
+		public Keyword getFullStopKeyword_2_0() { return cFullStopKeyword_2_0; }
 
-	public class ExpElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Exp");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cETerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
-		private final RuleCall cPLUSTerminalRuleCall_1_0 = (RuleCall)cAlternatives_1.eContents().get(0);
-		private final RuleCall cMINUSTerminalRuleCall_1_1 = (RuleCall)cAlternatives_1.eContents().get(1);
-		private final RuleCall cDIGITTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
-		
-		//Exp:
-		//
-		//	E (PLUS | MINUS)? DIGIT+;
-		public ParserRule getRule() { return rule; }
+		//INT
+		public RuleCall getINTTerminalRuleCall_2_1() { return cINTTerminalRuleCall_2_1; }
 
-		//E (PLUS | MINUS)? DIGIT+
-		public Group getGroup() { return cGroup; }
+		//(("e" | "E") ("+" | "-")? INT)?
+		public Group getGroup_3() { return cGroup_3; }
 
-		//E
-		public RuleCall getETerminalRuleCall_0() { return cETerminalRuleCall_0; }
+		//"e" | "E"
+		public Alternatives getAlternatives_3_0() { return cAlternatives_3_0; }
 
-		//(PLUS | MINUS)?
-		public Alternatives getAlternatives_1() { return cAlternatives_1; }
+		//"e"
+		public Keyword getEKeyword_3_0_0() { return cEKeyword_3_0_0; }
 
-		//PLUS
-		public RuleCall getPLUSTerminalRuleCall_1_0() { return cPLUSTerminalRuleCall_1_0; }
+		//"E"
+		public Keyword getEKeyword_3_0_1() { return cEKeyword_3_0_1; }
 
-		//MINUS
-		public RuleCall getMINUSTerminalRuleCall_1_1() { return cMINUSTerminalRuleCall_1_1; }
+		//("+" | "-")?
+		public Alternatives getAlternatives_3_1() { return cAlternatives_3_1; }
 
-		//DIGIT+
-		public RuleCall getDIGITTerminalRuleCall_2() { return cDIGITTerminalRuleCall_2; }
-	}
+		//"+"
+		public Keyword getPlusSignKeyword_3_1_0() { return cPlusSignKeyword_3_1_0; }
 
-	public class FracElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Frac");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cDOTTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final RuleCall cDIGITTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		
-		//Frac:
-		//
-		//	DOT DIGIT+;
-		public ParserRule getRule() { return rule; }
+		//"-"
+		public Keyword getHyphenMinusKeyword_3_1_1() { return cHyphenMinusKeyword_3_1_1; }
 
-		//DOT DIGIT+
-		public Group getGroup() { return cGroup; }
-
-		//DOT
-		public RuleCall getDOTTerminalRuleCall_0() { return cDOTTerminalRuleCall_0; }
-
-		//DIGIT+
-		public RuleCall getDIGITTerminalRuleCall_1() { return cDIGITTerminalRuleCall_1; }
-	}
-
-	public class IntegerElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Integer");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cZEROTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
-		private final RuleCall cDIGIT19TerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
-		private final RuleCall cDIGITTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
-		
-		//Integer:
-		//
-		//	ZERO | DIGIT19 DIGIT*;
-		public ParserRule getRule() { return rule; }
-
-		//ZERO | DIGIT19 DIGIT*
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//ZERO
-		public RuleCall getZEROTerminalRuleCall_0() { return cZEROTerminalRuleCall_0; }
-
-		//DIGIT19 DIGIT*
-		public Group getGroup_1() { return cGroup_1; }
-
-		//DIGIT19
-		public RuleCall getDIGIT19TerminalRuleCall_1_0() { return cDIGIT19TerminalRuleCall_1_0; }
-
-		//DIGIT*
-		public RuleCall getDIGITTerminalRuleCall_1_1() { return cDIGITTerminalRuleCall_1_1; }
+		//INT
+		public RuleCall getINTTerminalRuleCall_3_2() { return cINTTerminalRuleCall_3_2; }
 	}
 
 	public class ObjectElements extends AbstractParserRuleElementFinder {
@@ -339,9 +292,6 @@ public class JsonGrammarAccess extends AbstractGrammarElementFinder {
 	private ModelElements pModel;
 	private ValueElements pValue;
 	private NumberElements pNumber;
-	private ExpElements pExp;
-	private FracElements pFrac;
-	private IntegerElements pInteger;
 	private ObjectElements pObject;
 	private ObjectPropertyElements pObjectProperty;
 	private ArrayElements pArray;
@@ -351,13 +301,6 @@ public class JsonGrammarAccess extends AbstractGrammarElementFinder {
 	private TerminalRule tOBJECT_END;
 	private TerminalRule tNAME_SEP;
 	private TerminalRule tVALUE_SEP;
-	private TerminalRule tMINUS;
-	private TerminalRule tPLUS;
-	private TerminalRule tZERO;
-	private TerminalRule tE;
-	private TerminalRule tDIGIT19;
-	private TerminalRule tDIGIT;
-	private TerminalRule tDOT;
 	
 	private final Grammar grammar;
 
@@ -419,48 +362,15 @@ public class JsonGrammarAccess extends AbstractGrammarElementFinder {
 		return getValueAccess().getRule();
 	}
 
-	//Number:
+	//Number returns ecore::EString:
 	//
-	//	MINUS? Integer Frac? Exp?;
+	//	"-"? INT ("." INT)? (("e" | "E") ("+" | "-")? INT)?;
 	public NumberElements getNumberAccess() {
 		return (pNumber != null) ? pNumber : (pNumber = new NumberElements());
 	}
 	
 	public ParserRule getNumberRule() {
 		return getNumberAccess().getRule();
-	}
-
-	//Exp:
-	//
-	//	E (PLUS | MINUS)? DIGIT+;
-	public ExpElements getExpAccess() {
-		return (pExp != null) ? pExp : (pExp = new ExpElements());
-	}
-	
-	public ParserRule getExpRule() {
-		return getExpAccess().getRule();
-	}
-
-	//Frac:
-	//
-	//	DOT DIGIT+;
-	public FracElements getFracAccess() {
-		return (pFrac != null) ? pFrac : (pFrac = new FracElements());
-	}
-	
-	public ParserRule getFracRule() {
-		return getFracAccess().getRule();
-	}
-
-	//Integer:
-	//
-	//	ZERO | DIGIT19 DIGIT*;
-	public IntegerElements getIntegerAccess() {
-		return (pInteger != null) ? pInteger : (pInteger = new IntegerElements());
-	}
-	
-	public ParserRule getIntegerRule() {
-		return getIntegerAccess().getRule();
 	}
 
 	//Object:
@@ -536,55 +446,6 @@ public class JsonGrammarAccess extends AbstractGrammarElementFinder {
 	//	",";
 	public TerminalRule getVALUE_SEPRule() {
 		return (tVALUE_SEP != null) ? tVALUE_SEP : (tVALUE_SEP = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "VALUE_SEP"));
-	} 
-
-	//terminal MINUS:
-	//
-	//	"-";
-	public TerminalRule getMINUSRule() {
-		return (tMINUS != null) ? tMINUS : (tMINUS = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "MINUS"));
-	} 
-
-	//terminal PLUS:
-	//
-	//	"-";
-	public TerminalRule getPLUSRule() {
-		return (tPLUS != null) ? tPLUS : (tPLUS = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "PLUS"));
-	} 
-
-	//terminal ZERO:
-	//
-	//	"0";
-	public TerminalRule getZERORule() {
-		return (tZERO != null) ? tZERO : (tZERO = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ZERO"));
-	} 
-
-	//terminal E:
-	//
-	//	"e" | "E";
-	public TerminalRule getERule() {
-		return (tE != null) ? tE : (tE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "E"));
-	} 
-
-	//terminal DIGIT19:
-	//
-	//	"1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9";
-	public TerminalRule getDIGIT19Rule() {
-		return (tDIGIT19 != null) ? tDIGIT19 : (tDIGIT19 = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "DIGIT19"));
-	} 
-
-	//terminal DIGIT:
-	//
-	//	"1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "0";
-	public TerminalRule getDIGITRule() {
-		return (tDIGIT != null) ? tDIGIT : (tDIGIT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "DIGIT"));
-	} 
-
-	//terminal DOT:
-	//
-	//	".";
-	public TerminalRule getDOTRule() {
-		return (tDOT != null) ? tDOT : (tDOT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "DOT"));
 	} 
 
 	//terminal ID:

@@ -35,7 +35,7 @@ public class JsonFactoryImpl extends EFactoryImpl implements JsonFactory
   {
     try
     {
-      JsonFactory theJsonFactory = (JsonFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.jsonclipse.org/Json"); 
+      JsonFactory theJsonFactory = (JsonFactory)EPackage.Registry.INSTANCE.getEFactory(JsonPackage.eNS_URI);
       if (theJsonFactory != null)
       {
         return theJsonFactory;

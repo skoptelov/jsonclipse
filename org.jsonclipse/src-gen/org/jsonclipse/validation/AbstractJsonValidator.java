@@ -6,9 +6,8 @@ package org.jsonclipse.validation;
 import java.util.ArrayList;
 import java.util.List;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.xtext.validation.AbstractDeclarativeValidator;
 
-public class AbstractJsonValidator extends AbstractDeclarativeValidator {
+public class AbstractJsonValidator extends org.eclipse.xtext.validation.AbstractDeclarativeValidator {
 
 	@Override
 	protected List<EPackage> getEPackages() {
