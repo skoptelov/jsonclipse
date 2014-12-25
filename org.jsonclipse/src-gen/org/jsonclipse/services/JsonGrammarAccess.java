@@ -24,7 +24,6 @@ public class JsonGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRootValueParserRuleCall_0 = (RuleCall)cRootAssignment.eContents().get(0);
 		
 		//Model:
-		//
 		//	root=Value;
 		public ParserRule getRule() { return rule; }
 
@@ -51,7 +50,6 @@ public class JsonGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cStringValueSTRINGTerminalRuleCall_6_0 = (RuleCall)cStringValueAssignment_6.eContents().get(0);
 		
 		//Value:
-		//
 		//	"false" | "null" | "true" | objectValue=Object | arrayValue=Array | numberValue=Number | stringValue=STRING;
 		public ParserRule getRule() { return rule; }
 
@@ -94,67 +92,22 @@ public class JsonGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class NumberElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Number");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cHyphenMinusKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cFullStopKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final RuleCall cINTTerminalRuleCall_2_1 = (RuleCall)cGroup_2.eContents().get(1);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Alternatives cAlternatives_3_0 = (Alternatives)cGroup_3.eContents().get(0);
-		private final Keyword cEKeyword_3_0_0 = (Keyword)cAlternatives_3_0.eContents().get(0);
-		private final Keyword cEKeyword_3_0_1 = (Keyword)cAlternatives_3_0.eContents().get(1);
-		private final Alternatives cAlternatives_3_1 = (Alternatives)cGroup_3.eContents().get(1);
-		private final Keyword cPlusSignKeyword_3_1_0 = (Keyword)cAlternatives_3_1.eContents().get(0);
-		private final Keyword cHyphenMinusKeyword_3_1_1 = (Keyword)cAlternatives_3_1.eContents().get(1);
-		private final RuleCall cINTTerminalRuleCall_3_2 = (RuleCall)cGroup_3.eContents().get(2);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cFLOATTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//Number returns ecore::EString:
-		//
-		//	"-"? INT ("." INT)? (("e" | "E") ("+" | "-")? INT)?;
+		//Number:
+		//	FLOAT | INT;
 		public ParserRule getRule() { return rule; }
 
-		//"-"? INT ("." INT)? (("e" | "E") ("+" | "-")? INT)?
-		public Group getGroup() { return cGroup; }
+		//FLOAT | INT
+		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//"-"?
-		public Keyword getHyphenMinusKeyword_0() { return cHyphenMinusKeyword_0; }
+		//FLOAT
+		public RuleCall getFLOATTerminalRuleCall_0() { return cFLOATTerminalRuleCall_0; }
 
 		//INT
 		public RuleCall getINTTerminalRuleCall_1() { return cINTTerminalRuleCall_1; }
-
-		//("." INT)?
-		public Group getGroup_2() { return cGroup_2; }
-
-		//"."
-		public Keyword getFullStopKeyword_2_0() { return cFullStopKeyword_2_0; }
-
-		//INT
-		public RuleCall getINTTerminalRuleCall_2_1() { return cINTTerminalRuleCall_2_1; }
-
-		//(("e" | "E") ("+" | "-")? INT)?
-		public Group getGroup_3() { return cGroup_3; }
-
-		//"e" | "E"
-		public Alternatives getAlternatives_3_0() { return cAlternatives_3_0; }
-
-		//"e"
-		public Keyword getEKeyword_3_0_0() { return cEKeyword_3_0_0; }
-
-		//"E"
-		public Keyword getEKeyword_3_0_1() { return cEKeyword_3_0_1; }
-
-		//("+" | "-")?
-		public Alternatives getAlternatives_3_1() { return cAlternatives_3_1; }
-
-		//"+"
-		public Keyword getPlusSignKeyword_3_1_0() { return cPlusSignKeyword_3_1_0; }
-
-		//"-"
-		public Keyword getHyphenMinusKeyword_3_1_1() { return cHyphenMinusKeyword_3_1_1; }
-
-		//INT
-		public RuleCall getINTTerminalRuleCall_3_2() { return cINTTerminalRuleCall_3_2; }
 	}
 
 	public class ObjectElements extends AbstractParserRuleElementFinder {
@@ -171,7 +124,6 @@ public class JsonGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cOBJECT_ENDTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
 		
 		//Object:
-		//
 		//	OBJECT_START (properties+=ObjectProperty (VALUE_SEP properties+=ObjectProperty)*)? OBJECT_END;
 		public ParserRule getRule() { return rule; }
 
@@ -216,7 +168,6 @@ public class JsonGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cPropValueValueParserRuleCall_2_0 = (RuleCall)cPropValueAssignment_2.eContents().get(0);
 		
 		//ObjectProperty:
-		//
 		//	propName=STRING NAME_SEP propValue=Value;
 		public ParserRule getRule() { return rule; }
 
@@ -253,7 +204,6 @@ public class JsonGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cARRAY_ENDTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
 		
 		//Array:
-		//
 		//	ARRAY_START (elements+=Value (VALUE_SEP elements+=Value)*)? ARRAY_END;
 		public ParserRule getRule() { return rule; }
 
@@ -301,6 +251,11 @@ public class JsonGrammarAccess extends AbstractGrammarElementFinder {
 	private TerminalRule tOBJECT_END;
 	private TerminalRule tNAME_SEP;
 	private TerminalRule tVALUE_SEP;
+	private TerminalRule tDIGIT;
+	private TerminalRule tHEX;
+	private TerminalRule tE;
+	private TerminalRule tEXPONENT;
+	private TerminalRule tFLOAT;
 	
 	private final Grammar grammar;
 
@@ -341,7 +296,6 @@ public class JsonGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Model:
-	//
 	//	root=Value;
 	public ModelElements getModelAccess() {
 		return (pModel != null) ? pModel : (pModel = new ModelElements());
@@ -352,7 +306,6 @@ public class JsonGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Value:
-	//
 	//	"false" | "null" | "true" | objectValue=Object | arrayValue=Array | numberValue=Number | stringValue=STRING;
 	public ValueElements getValueAccess() {
 		return (pValue != null) ? pValue : (pValue = new ValueElements());
@@ -362,9 +315,8 @@ public class JsonGrammarAccess extends AbstractGrammarElementFinder {
 		return getValueAccess().getRule();
 	}
 
-	//Number returns ecore::EString:
-	//
-	//	"-"? INT ("." INT)? (("e" | "E") ("+" | "-")? INT)?;
+	//Number:
+	//	FLOAT | INT;
 	public NumberElements getNumberAccess() {
 		return (pNumber != null) ? pNumber : (pNumber = new NumberElements());
 	}
@@ -374,7 +326,6 @@ public class JsonGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Object:
-	//
 	//	OBJECT_START (properties+=ObjectProperty (VALUE_SEP properties+=ObjectProperty)*)? OBJECT_END;
 	public ObjectElements getObjectAccess() {
 		return (pObject != null) ? pObject : (pObject = new ObjectElements());
@@ -385,7 +336,6 @@ public class JsonGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ObjectProperty:
-	//
 	//	propName=STRING NAME_SEP propValue=Value;
 	public ObjectPropertyElements getObjectPropertyAccess() {
 		return (pObjectProperty != null) ? pObjectProperty : (pObjectProperty = new ObjectPropertyElements());
@@ -396,7 +346,6 @@ public class JsonGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Array:
-	//
 	//	ARRAY_START (elements+=Value (VALUE_SEP elements+=Value)*)? ARRAY_END;
 	public ArrayElements getArrayAccess() {
 		return (pArray != null) ? pArray : (pArray = new ArrayElements());
@@ -407,93 +356,109 @@ public class JsonGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//terminal ARRAY_START:
-	//
 	//	"[";
 	public TerminalRule getARRAY_STARTRule() {
 		return (tARRAY_START != null) ? tARRAY_START : (tARRAY_START = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ARRAY_START"));
 	} 
 
 	//terminal ARRAY_END:
-	//
 	//	"]";
 	public TerminalRule getARRAY_ENDRule() {
 		return (tARRAY_END != null) ? tARRAY_END : (tARRAY_END = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ARRAY_END"));
 	} 
 
 	//terminal OBJECT_START:
-	//
 	//	"{";
 	public TerminalRule getOBJECT_STARTRule() {
 		return (tOBJECT_START != null) ? tOBJECT_START : (tOBJECT_START = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "OBJECT_START"));
 	} 
 
 	//terminal OBJECT_END:
-	//
 	//	"}";
 	public TerminalRule getOBJECT_ENDRule() {
 		return (tOBJECT_END != null) ? tOBJECT_END : (tOBJECT_END = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "OBJECT_END"));
 	} 
 
 	//terminal NAME_SEP:
-	//
 	//	":";
 	public TerminalRule getNAME_SEPRule() {
 		return (tNAME_SEP != null) ? tNAME_SEP : (tNAME_SEP = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "NAME_SEP"));
 	} 
 
 	//terminal VALUE_SEP:
-	//
 	//	",";
 	public TerminalRule getVALUE_SEPRule() {
 		return (tVALUE_SEP != null) ? tVALUE_SEP : (tVALUE_SEP = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "VALUE_SEP"));
 	} 
 
+	//terminal fragment DIGIT:
+	//	"0".."9";
+	public TerminalRule getDIGITRule() {
+		return (tDIGIT != null) ? tDIGIT : (tDIGIT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "DIGIT"));
+	} 
+
+	//terminal fragment HEX:
+	//	"a".."f" | "A".."F" | "0".."9";
+	public TerminalRule getHEXRule() {
+		return (tHEX != null) ? tHEX : (tHEX = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "HEX"));
+	} 
+
+	//terminal fragment E:
+	//	"e" | "E";
+	public TerminalRule getERule() {
+		return (tE != null) ? tE : (tE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "E"));
+	} 
+
+	//terminal fragment EXPONENT:
+	//	E ("+" | "-")? DIGIT+;
+	public TerminalRule getEXPONENTRule() {
+		return (tEXPONENT != null) ? tEXPONENT : (tEXPONENT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "EXPONENT"));
+	} 
+
+	//terminal FLOAT returns ecore::EFloat:
+	//	INT EXPONENT | INT "." DIGIT* EXPONENT?;
+	public TerminalRule getFLOATRule() {
+		return (tFLOAT != null) ? tFLOAT : (tFLOAT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "FLOAT"));
+	} 
+
 	//terminal ID:
-	//
 	//	"^"? ("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;
 	public TerminalRule getIDRule() {
 		return gaTerminals.getIDRule();
 	} 
 
 	//terminal INT returns ecore::EInt:
-	//
 	//	"0".."9"+;
 	public TerminalRule getINTRule() {
 		return gaTerminals.getINTRule();
 	} 
 
 	//terminal STRING:
-	//
 	//	"\"" ("\\" ("b" | "t" | "n" | "f" | "r" | "u" | "\"" | "\'" | "\\") | !("\\" | "\""))* "\"" | "\'" ("\\" ("b" | "t" |
-	//
 	//	"n" | "f" | "r" | "u" | "\"" | "\'" | "\\") | !("\\" | "\'"))* "\'";
 	public TerminalRule getSTRINGRule() {
 		return gaTerminals.getSTRINGRule();
 	} 
 
 	//terminal ML_COMMENT:
-	//
 	//	"/ *"->"* /";
 	public TerminalRule getML_COMMENTRule() {
 		return gaTerminals.getML_COMMENTRule();
 	} 
 
 	//terminal SL_COMMENT:
-	//
 	//	"//" !("\n" | "\r")* ("\r"? "\n")?;
 	public TerminalRule getSL_COMMENTRule() {
 		return gaTerminals.getSL_COMMENTRule();
 	} 
 
 	//terminal WS:
-	//
 	//	(" " | "\t" | "\r" | "\n")+;
 	public TerminalRule getWSRule() {
 		return gaTerminals.getWSRule();
 	} 
 
 	//terminal ANY_OTHER:
-	//
 	//	.;
 	public TerminalRule getANY_OTHERRule() {
 		return gaTerminals.getANY_OTHERRule();

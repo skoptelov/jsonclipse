@@ -22,30 +22,30 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalJsonParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_OBJECT_START", "RULE_OBJECT_END", "RULE_VALUE_SEP", "RULE_NAME_SEP", "RULE_ARRAY_START", "RULE_ARRAY_END", "RULE_STRING", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'false'", "'null'", "'true'", "'e'", "'E'", "'+'", "'-'", "'.'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_FLOAT", "RULE_INT", "RULE_OBJECT_START", "RULE_OBJECT_END", "RULE_VALUE_SEP", "RULE_NAME_SEP", "RULE_ARRAY_START", "RULE_ARRAY_END", "RULE_STRING", "RULE_DIGIT", "RULE_HEX", "RULE_E", "RULE_EXPONENT", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'false'", "'null'", "'true'"
     };
-    public static final int RULE_ID=12;
+    public static final int RULE_ID=17;
     public static final int T__24=24;
     public static final int T__23=23;
     public static final int T__22=22;
-    public static final int RULE_ANY_OTHER=16;
-    public static final int T__21=21;
-    public static final int T__20=20;
-    public static final int RULE_SL_COMMENT=14;
+    public static final int RULE_ANY_OTHER=21;
+    public static final int RULE_FLOAT=4;
+    public static final int RULE_SL_COMMENT=19;
     public static final int EOF=-1;
-    public static final int RULE_OBJECT_END=6;
-    public static final int RULE_ARRAY_START=9;
-    public static final int RULE_ML_COMMENT=13;
-    public static final int RULE_ARRAY_END=10;
-    public static final int T__19=19;
-    public static final int RULE_STRING=11;
-    public static final int T__18=18;
-    public static final int T__17=17;
-    public static final int RULE_OBJECT_START=5;
-    public static final int RULE_VALUE_SEP=7;
-    public static final int RULE_INT=4;
-    public static final int RULE_WS=15;
-    public static final int RULE_NAME_SEP=8;
+    public static final int RULE_OBJECT_END=7;
+    public static final int RULE_ARRAY_START=10;
+    public static final int RULE_ML_COMMENT=18;
+    public static final int RULE_ARRAY_END=11;
+    public static final int RULE_STRING=12;
+    public static final int RULE_HEX=14;
+    public static final int RULE_E=15;
+    public static final int RULE_EXPONENT=16;
+    public static final int RULE_OBJECT_START=6;
+    public static final int RULE_VALUE_SEP=8;
+    public static final int RULE_INT=5;
+    public static final int RULE_WS=20;
+    public static final int RULE_DIGIT=13;
+    public static final int RULE_NAME_SEP=9;
 
     // delegates
     // delegators
@@ -269,31 +269,31 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleNumber"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:125:1: ruleNumber : ( ( rule__Number__Group__0 ) ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:125:1: ruleNumber : ( ( rule__Number__Alternatives ) ) ;
     public final void ruleNumber() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:129:2: ( ( ( rule__Number__Group__0 ) ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:130:1: ( ( rule__Number__Group__0 ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:129:2: ( ( ( rule__Number__Alternatives ) ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:130:1: ( ( rule__Number__Alternatives ) )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:130:1: ( ( rule__Number__Group__0 ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:131:1: ( rule__Number__Group__0 )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:130:1: ( ( rule__Number__Alternatives ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:131:1: ( rule__Number__Alternatives )
             {
-             before(grammarAccess.getNumberAccess().getGroup()); 
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:132:1: ( rule__Number__Group__0 )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:132:2: rule__Number__Group__0
+             before(grammarAccess.getNumberAccess().getAlternatives()); 
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:132:1: ( rule__Number__Alternatives )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:132:2: rule__Number__Alternatives
             {
-            pushFollow(FOLLOW_rule__Number__Group__0_in_ruleNumber214);
-            rule__Number__Group__0();
+            pushFollow(FOLLOW_rule__Number__Alternatives_in_ruleNumber214);
+            rule__Number__Alternatives();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getNumberAccess().getGroup()); 
+             after(grammarAccess.getNumberAccess().getAlternatives()); 
 
             }
 
@@ -556,17 +556,17 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
             // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:232:1: ( ( 'false' ) | ( 'null' ) | ( 'true' ) | ( ( rule__Value__ObjectValueAssignment_3 ) ) | ( ( rule__Value__ArrayValueAssignment_4 ) ) | ( ( rule__Value__NumberValueAssignment_5 ) ) | ( ( rule__Value__StringValueAssignment_6 ) ) )
             int alt1=7;
             switch ( input.LA(1) ) {
-            case 17:
+            case 22:
                 {
                 alt1=1;
                 }
                 break;
-            case 18:
+            case 23:
                 {
                 alt1=2;
                 }
                 break;
-            case 19:
+            case 24:
                 {
                 alt1=3;
                 }
@@ -581,8 +581,8 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
                 alt1=5;
                 }
                 break;
+            case RULE_FLOAT:
             case RULE_INT:
-            case 23:
                 {
                 alt1=6;
                 }
@@ -607,7 +607,7 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
                     // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:234:1: 'false'
                     {
                      before(grammarAccess.getValueAccess().getFalseKeyword_0()); 
-                    match(input,17,FOLLOW_17_in_rule__Value__Alternatives431); 
+                    match(input,22,FOLLOW_22_in_rule__Value__Alternatives431); 
                      after(grammarAccess.getValueAccess().getFalseKeyword_0()); 
 
                     }
@@ -622,7 +622,7 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
                     // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:242:1: 'null'
                     {
                      before(grammarAccess.getValueAccess().getNullKeyword_1()); 
-                    match(input,18,FOLLOW_18_in_rule__Value__Alternatives451); 
+                    match(input,23,FOLLOW_23_in_rule__Value__Alternatives451); 
                      after(grammarAccess.getValueAccess().getNullKeyword_1()); 
 
                     }
@@ -637,7 +637,7 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
                     // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:250:1: 'true'
                     {
                      before(grammarAccess.getValueAccess().getTrueKeyword_2()); 
-                    match(input,19,FOLLOW_19_in_rule__Value__Alternatives471); 
+                    match(input,24,FOLLOW_24_in_rule__Value__Alternatives471); 
                      after(grammarAccess.getValueAccess().getTrueKeyword_2()); 
 
                     }
@@ -762,21 +762,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Value__Alternatives"
 
 
-    // $ANTLR start "rule__Number__Alternatives_3_0"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:286:1: rule__Number__Alternatives_3_0 : ( ( 'e' ) | ( 'E' ) );
-    public final void rule__Number__Alternatives_3_0() throws RecognitionException {
+    // $ANTLR start "rule__Number__Alternatives"
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:286:1: rule__Number__Alternatives : ( ( RULE_FLOAT ) | ( RULE_INT ) );
+    public final void rule__Number__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:290:1: ( ( 'e' ) | ( 'E' ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:290:1: ( ( RULE_FLOAT ) | ( RULE_INT ) )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
-            if ( (LA2_0==20) ) {
+            if ( (LA2_0==RULE_FLOAT) ) {
                 alt2=1;
             }
-            else if ( (LA2_0==21) ) {
+            else if ( (LA2_0==RULE_INT) ) {
                 alt2=2;
             }
             else {
@@ -787,14 +787,14 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
             }
             switch (alt2) {
                 case 1 :
-                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:291:1: ( 'e' )
+                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:291:1: ( RULE_FLOAT )
                     {
-                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:291:1: ( 'e' )
-                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:292:1: 'e'
+                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:291:1: ( RULE_FLOAT )
+                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:292:1: RULE_FLOAT
                     {
-                     before(grammarAccess.getNumberAccess().getEKeyword_3_0_0()); 
-                    match(input,20,FOLLOW_20_in_rule__Number__Alternatives_3_0578); 
-                     after(grammarAccess.getNumberAccess().getEKeyword_3_0_0()); 
+                     before(grammarAccess.getNumberAccess().getFLOATTerminalRuleCall_0()); 
+                    match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__Number__Alternatives577); 
+                     after(grammarAccess.getNumberAccess().getFLOATTerminalRuleCall_0()); 
 
                     }
 
@@ -802,14 +802,14 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:299:6: ( 'E' )
+                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:297:6: ( RULE_INT )
                     {
-                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:299:6: ( 'E' )
-                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:300:1: 'E'
+                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:297:6: ( RULE_INT )
+                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:298:1: RULE_INT
                     {
-                     before(grammarAccess.getNumberAccess().getEKeyword_3_0_1()); 
-                    match(input,21,FOLLOW_21_in_rule__Number__Alternatives_3_0598); 
-                     after(grammarAccess.getNumberAccess().getEKeyword_3_0_1()); 
+                     before(grammarAccess.getNumberAccess().getINTTerminalRuleCall_1()); 
+                    match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Number__Alternatives594); 
+                     after(grammarAccess.getNumberAccess().getINTTerminalRuleCall_1()); 
 
                     }
 
@@ -830,846 +830,25 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Number__Alternatives_3_0"
-
-
-    // $ANTLR start "rule__Number__Alternatives_3_1"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:312:1: rule__Number__Alternatives_3_1 : ( ( '+' ) | ( '-' ) );
-    public final void rule__Number__Alternatives_3_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:316:1: ( ( '+' ) | ( '-' ) )
-            int alt3=2;
-            int LA3_0 = input.LA(1);
-
-            if ( (LA3_0==22) ) {
-                alt3=1;
-            }
-            else if ( (LA3_0==23) ) {
-                alt3=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 3, 0, input);
-
-                throw nvae;
-            }
-            switch (alt3) {
-                case 1 :
-                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:317:1: ( '+' )
-                    {
-                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:317:1: ( '+' )
-                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:318:1: '+'
-                    {
-                     before(grammarAccess.getNumberAccess().getPlusSignKeyword_3_1_0()); 
-                    match(input,22,FOLLOW_22_in_rule__Number__Alternatives_3_1633); 
-                     after(grammarAccess.getNumberAccess().getPlusSignKeyword_3_1_0()); 
-
-                    }
-
-
-                    }
-                    break;
-                case 2 :
-                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:325:6: ( '-' )
-                    {
-                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:325:6: ( '-' )
-                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:326:1: '-'
-                    {
-                     before(grammarAccess.getNumberAccess().getHyphenMinusKeyword_3_1_1()); 
-                    match(input,23,FOLLOW_23_in_rule__Number__Alternatives_3_1653); 
-                     after(grammarAccess.getNumberAccess().getHyphenMinusKeyword_3_1_1()); 
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Number__Alternatives_3_1"
-
-
-    // $ANTLR start "rule__Number__Group__0"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:340:1: rule__Number__Group__0 : rule__Number__Group__0__Impl rule__Number__Group__1 ;
-    public final void rule__Number__Group__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:344:1: ( rule__Number__Group__0__Impl rule__Number__Group__1 )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:345:2: rule__Number__Group__0__Impl rule__Number__Group__1
-            {
-            pushFollow(FOLLOW_rule__Number__Group__0__Impl_in_rule__Number__Group__0685);
-            rule__Number__Group__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__Number__Group__1_in_rule__Number__Group__0688);
-            rule__Number__Group__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Number__Group__0"
-
-
-    // $ANTLR start "rule__Number__Group__0__Impl"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:352:1: rule__Number__Group__0__Impl : ( ( '-' )? ) ;
-    public final void rule__Number__Group__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:356:1: ( ( ( '-' )? ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:357:1: ( ( '-' )? )
-            {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:357:1: ( ( '-' )? )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:358:1: ( '-' )?
-            {
-             before(grammarAccess.getNumberAccess().getHyphenMinusKeyword_0()); 
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:359:1: ( '-' )?
-            int alt4=2;
-            int LA4_0 = input.LA(1);
-
-            if ( (LA4_0==23) ) {
-                alt4=1;
-            }
-            switch (alt4) {
-                case 1 :
-                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:360:2: '-'
-                    {
-                    match(input,23,FOLLOW_23_in_rule__Number__Group__0__Impl717); 
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getNumberAccess().getHyphenMinusKeyword_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Number__Group__0__Impl"
-
-
-    // $ANTLR start "rule__Number__Group__1"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:371:1: rule__Number__Group__1 : rule__Number__Group__1__Impl rule__Number__Group__2 ;
-    public final void rule__Number__Group__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:375:1: ( rule__Number__Group__1__Impl rule__Number__Group__2 )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:376:2: rule__Number__Group__1__Impl rule__Number__Group__2
-            {
-            pushFollow(FOLLOW_rule__Number__Group__1__Impl_in_rule__Number__Group__1750);
-            rule__Number__Group__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__Number__Group__2_in_rule__Number__Group__1753);
-            rule__Number__Group__2();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Number__Group__1"
-
-
-    // $ANTLR start "rule__Number__Group__1__Impl"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:383:1: rule__Number__Group__1__Impl : ( RULE_INT ) ;
-    public final void rule__Number__Group__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:387:1: ( ( RULE_INT ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:388:1: ( RULE_INT )
-            {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:388:1: ( RULE_INT )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:389:1: RULE_INT
-            {
-             before(grammarAccess.getNumberAccess().getINTTerminalRuleCall_1()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Number__Group__1__Impl780); 
-             after(grammarAccess.getNumberAccess().getINTTerminalRuleCall_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Number__Group__1__Impl"
-
-
-    // $ANTLR start "rule__Number__Group__2"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:400:1: rule__Number__Group__2 : rule__Number__Group__2__Impl rule__Number__Group__3 ;
-    public final void rule__Number__Group__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:404:1: ( rule__Number__Group__2__Impl rule__Number__Group__3 )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:405:2: rule__Number__Group__2__Impl rule__Number__Group__3
-            {
-            pushFollow(FOLLOW_rule__Number__Group__2__Impl_in_rule__Number__Group__2809);
-            rule__Number__Group__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__Number__Group__3_in_rule__Number__Group__2812);
-            rule__Number__Group__3();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Number__Group__2"
-
-
-    // $ANTLR start "rule__Number__Group__2__Impl"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:412:1: rule__Number__Group__2__Impl : ( ( rule__Number__Group_2__0 )? ) ;
-    public final void rule__Number__Group__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:416:1: ( ( ( rule__Number__Group_2__0 )? ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:417:1: ( ( rule__Number__Group_2__0 )? )
-            {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:417:1: ( ( rule__Number__Group_2__0 )? )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:418:1: ( rule__Number__Group_2__0 )?
-            {
-             before(grammarAccess.getNumberAccess().getGroup_2()); 
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:419:1: ( rule__Number__Group_2__0 )?
-            int alt5=2;
-            int LA5_0 = input.LA(1);
-
-            if ( (LA5_0==24) ) {
-                alt5=1;
-            }
-            switch (alt5) {
-                case 1 :
-                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:419:2: rule__Number__Group_2__0
-                    {
-                    pushFollow(FOLLOW_rule__Number__Group_2__0_in_rule__Number__Group__2__Impl839);
-                    rule__Number__Group_2__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getNumberAccess().getGroup_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Number__Group__2__Impl"
-
-
-    // $ANTLR start "rule__Number__Group__3"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:429:1: rule__Number__Group__3 : rule__Number__Group__3__Impl ;
-    public final void rule__Number__Group__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:433:1: ( rule__Number__Group__3__Impl )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:434:2: rule__Number__Group__3__Impl
-            {
-            pushFollow(FOLLOW_rule__Number__Group__3__Impl_in_rule__Number__Group__3870);
-            rule__Number__Group__3__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Number__Group__3"
-
-
-    // $ANTLR start "rule__Number__Group__3__Impl"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:440:1: rule__Number__Group__3__Impl : ( ( rule__Number__Group_3__0 )? ) ;
-    public final void rule__Number__Group__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:444:1: ( ( ( rule__Number__Group_3__0 )? ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:445:1: ( ( rule__Number__Group_3__0 )? )
-            {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:445:1: ( ( rule__Number__Group_3__0 )? )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:446:1: ( rule__Number__Group_3__0 )?
-            {
-             before(grammarAccess.getNumberAccess().getGroup_3()); 
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:447:1: ( rule__Number__Group_3__0 )?
-            int alt6=2;
-            int LA6_0 = input.LA(1);
-
-            if ( ((LA6_0>=20 && LA6_0<=21)) ) {
-                alt6=1;
-            }
-            switch (alt6) {
-                case 1 :
-                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:447:2: rule__Number__Group_3__0
-                    {
-                    pushFollow(FOLLOW_rule__Number__Group_3__0_in_rule__Number__Group__3__Impl897);
-                    rule__Number__Group_3__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getNumberAccess().getGroup_3()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Number__Group__3__Impl"
-
-
-    // $ANTLR start "rule__Number__Group_2__0"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:465:1: rule__Number__Group_2__0 : rule__Number__Group_2__0__Impl rule__Number__Group_2__1 ;
-    public final void rule__Number__Group_2__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:469:1: ( rule__Number__Group_2__0__Impl rule__Number__Group_2__1 )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:470:2: rule__Number__Group_2__0__Impl rule__Number__Group_2__1
-            {
-            pushFollow(FOLLOW_rule__Number__Group_2__0__Impl_in_rule__Number__Group_2__0936);
-            rule__Number__Group_2__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__Number__Group_2__1_in_rule__Number__Group_2__0939);
-            rule__Number__Group_2__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Number__Group_2__0"
-
-
-    // $ANTLR start "rule__Number__Group_2__0__Impl"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:477:1: rule__Number__Group_2__0__Impl : ( '.' ) ;
-    public final void rule__Number__Group_2__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:481:1: ( ( '.' ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:482:1: ( '.' )
-            {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:482:1: ( '.' )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:483:1: '.'
-            {
-             before(grammarAccess.getNumberAccess().getFullStopKeyword_2_0()); 
-            match(input,24,FOLLOW_24_in_rule__Number__Group_2__0__Impl967); 
-             after(grammarAccess.getNumberAccess().getFullStopKeyword_2_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Number__Group_2__0__Impl"
-
-
-    // $ANTLR start "rule__Number__Group_2__1"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:496:1: rule__Number__Group_2__1 : rule__Number__Group_2__1__Impl ;
-    public final void rule__Number__Group_2__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:500:1: ( rule__Number__Group_2__1__Impl )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:501:2: rule__Number__Group_2__1__Impl
-            {
-            pushFollow(FOLLOW_rule__Number__Group_2__1__Impl_in_rule__Number__Group_2__1998);
-            rule__Number__Group_2__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Number__Group_2__1"
-
-
-    // $ANTLR start "rule__Number__Group_2__1__Impl"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:507:1: rule__Number__Group_2__1__Impl : ( RULE_INT ) ;
-    public final void rule__Number__Group_2__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:511:1: ( ( RULE_INT ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:512:1: ( RULE_INT )
-            {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:512:1: ( RULE_INT )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:513:1: RULE_INT
-            {
-             before(grammarAccess.getNumberAccess().getINTTerminalRuleCall_2_1()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Number__Group_2__1__Impl1025); 
-             after(grammarAccess.getNumberAccess().getINTTerminalRuleCall_2_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Number__Group_2__1__Impl"
-
-
-    // $ANTLR start "rule__Number__Group_3__0"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:528:1: rule__Number__Group_3__0 : rule__Number__Group_3__0__Impl rule__Number__Group_3__1 ;
-    public final void rule__Number__Group_3__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:532:1: ( rule__Number__Group_3__0__Impl rule__Number__Group_3__1 )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:533:2: rule__Number__Group_3__0__Impl rule__Number__Group_3__1
-            {
-            pushFollow(FOLLOW_rule__Number__Group_3__0__Impl_in_rule__Number__Group_3__01058);
-            rule__Number__Group_3__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__Number__Group_3__1_in_rule__Number__Group_3__01061);
-            rule__Number__Group_3__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Number__Group_3__0"
-
-
-    // $ANTLR start "rule__Number__Group_3__0__Impl"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:540:1: rule__Number__Group_3__0__Impl : ( ( rule__Number__Alternatives_3_0 ) ) ;
-    public final void rule__Number__Group_3__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:544:1: ( ( ( rule__Number__Alternatives_3_0 ) ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:545:1: ( ( rule__Number__Alternatives_3_0 ) )
-            {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:545:1: ( ( rule__Number__Alternatives_3_0 ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:546:1: ( rule__Number__Alternatives_3_0 )
-            {
-             before(grammarAccess.getNumberAccess().getAlternatives_3_0()); 
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:547:1: ( rule__Number__Alternatives_3_0 )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:547:2: rule__Number__Alternatives_3_0
-            {
-            pushFollow(FOLLOW_rule__Number__Alternatives_3_0_in_rule__Number__Group_3__0__Impl1088);
-            rule__Number__Alternatives_3_0();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getNumberAccess().getAlternatives_3_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Number__Group_3__0__Impl"
-
-
-    // $ANTLR start "rule__Number__Group_3__1"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:557:1: rule__Number__Group_3__1 : rule__Number__Group_3__1__Impl rule__Number__Group_3__2 ;
-    public final void rule__Number__Group_3__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:561:1: ( rule__Number__Group_3__1__Impl rule__Number__Group_3__2 )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:562:2: rule__Number__Group_3__1__Impl rule__Number__Group_3__2
-            {
-            pushFollow(FOLLOW_rule__Number__Group_3__1__Impl_in_rule__Number__Group_3__11118);
-            rule__Number__Group_3__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__Number__Group_3__2_in_rule__Number__Group_3__11121);
-            rule__Number__Group_3__2();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Number__Group_3__1"
-
-
-    // $ANTLR start "rule__Number__Group_3__1__Impl"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:569:1: rule__Number__Group_3__1__Impl : ( ( rule__Number__Alternatives_3_1 )? ) ;
-    public final void rule__Number__Group_3__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:573:1: ( ( ( rule__Number__Alternatives_3_1 )? ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:574:1: ( ( rule__Number__Alternatives_3_1 )? )
-            {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:574:1: ( ( rule__Number__Alternatives_3_1 )? )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:575:1: ( rule__Number__Alternatives_3_1 )?
-            {
-             before(grammarAccess.getNumberAccess().getAlternatives_3_1()); 
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:576:1: ( rule__Number__Alternatives_3_1 )?
-            int alt7=2;
-            int LA7_0 = input.LA(1);
-
-            if ( ((LA7_0>=22 && LA7_0<=23)) ) {
-                alt7=1;
-            }
-            switch (alt7) {
-                case 1 :
-                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:576:2: rule__Number__Alternatives_3_1
-                    {
-                    pushFollow(FOLLOW_rule__Number__Alternatives_3_1_in_rule__Number__Group_3__1__Impl1148);
-                    rule__Number__Alternatives_3_1();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getNumberAccess().getAlternatives_3_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Number__Group_3__1__Impl"
-
-
-    // $ANTLR start "rule__Number__Group_3__2"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:586:1: rule__Number__Group_3__2 : rule__Number__Group_3__2__Impl ;
-    public final void rule__Number__Group_3__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:590:1: ( rule__Number__Group_3__2__Impl )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:591:2: rule__Number__Group_3__2__Impl
-            {
-            pushFollow(FOLLOW_rule__Number__Group_3__2__Impl_in_rule__Number__Group_3__21179);
-            rule__Number__Group_3__2__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Number__Group_3__2"
-
-
-    // $ANTLR start "rule__Number__Group_3__2__Impl"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:597:1: rule__Number__Group_3__2__Impl : ( RULE_INT ) ;
-    public final void rule__Number__Group_3__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:601:1: ( ( RULE_INT ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:602:1: ( RULE_INT )
-            {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:602:1: ( RULE_INT )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:603:1: RULE_INT
-            {
-             before(grammarAccess.getNumberAccess().getINTTerminalRuleCall_3_2()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Number__Group_3__2__Impl1206); 
-             after(grammarAccess.getNumberAccess().getINTTerminalRuleCall_3_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Number__Group_3__2__Impl"
+    // $ANTLR end "rule__Number__Alternatives"
 
 
     // $ANTLR start "rule__Object__Group__0"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:620:1: rule__Object__Group__0 : rule__Object__Group__0__Impl rule__Object__Group__1 ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:310:1: rule__Object__Group__0 : rule__Object__Group__0__Impl rule__Object__Group__1 ;
     public final void rule__Object__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:624:1: ( rule__Object__Group__0__Impl rule__Object__Group__1 )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:625:2: rule__Object__Group__0__Impl rule__Object__Group__1
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:314:1: ( rule__Object__Group__0__Impl rule__Object__Group__1 )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:315:2: rule__Object__Group__0__Impl rule__Object__Group__1
             {
-            pushFollow(FOLLOW_rule__Object__Group__0__Impl_in_rule__Object__Group__01241);
+            pushFollow(FOLLOW_rule__Object__Group__0__Impl_in_rule__Object__Group__0624);
             rule__Object__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Object__Group__1_in_rule__Object__Group__01244);
+            pushFollow(FOLLOW_rule__Object__Group__1_in_rule__Object__Group__0627);
             rule__Object__Group__1();
 
             state._fsp--;
@@ -1693,20 +872,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__Group__0__Impl"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:632:1: rule__Object__Group__0__Impl : ( RULE_OBJECT_START ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:322:1: rule__Object__Group__0__Impl : ( RULE_OBJECT_START ) ;
     public final void rule__Object__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:636:1: ( ( RULE_OBJECT_START ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:637:1: ( RULE_OBJECT_START )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:326:1: ( ( RULE_OBJECT_START ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:327:1: ( RULE_OBJECT_START )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:637:1: ( RULE_OBJECT_START )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:638:1: RULE_OBJECT_START
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:327:1: ( RULE_OBJECT_START )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:328:1: RULE_OBJECT_START
             {
              before(grammarAccess.getObjectAccess().getOBJECT_STARTTerminalRuleCall_0()); 
-            match(input,RULE_OBJECT_START,FOLLOW_RULE_OBJECT_START_in_rule__Object__Group__0__Impl1271); 
+            match(input,RULE_OBJECT_START,FOLLOW_RULE_OBJECT_START_in_rule__Object__Group__0__Impl654); 
              after(grammarAccess.getObjectAccess().getOBJECT_STARTTerminalRuleCall_0()); 
 
             }
@@ -1730,21 +909,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__Group__1"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:649:1: rule__Object__Group__1 : rule__Object__Group__1__Impl rule__Object__Group__2 ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:339:1: rule__Object__Group__1 : rule__Object__Group__1__Impl rule__Object__Group__2 ;
     public final void rule__Object__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:653:1: ( rule__Object__Group__1__Impl rule__Object__Group__2 )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:654:2: rule__Object__Group__1__Impl rule__Object__Group__2
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:343:1: ( rule__Object__Group__1__Impl rule__Object__Group__2 )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:344:2: rule__Object__Group__1__Impl rule__Object__Group__2
             {
-            pushFollow(FOLLOW_rule__Object__Group__1__Impl_in_rule__Object__Group__11300);
+            pushFollow(FOLLOW_rule__Object__Group__1__Impl_in_rule__Object__Group__1683);
             rule__Object__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Object__Group__2_in_rule__Object__Group__11303);
+            pushFollow(FOLLOW_rule__Object__Group__2_in_rule__Object__Group__1686);
             rule__Object__Group__2();
 
             state._fsp--;
@@ -1768,31 +947,31 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__Group__1__Impl"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:661:1: rule__Object__Group__1__Impl : ( ( rule__Object__Group_1__0 )? ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:351:1: rule__Object__Group__1__Impl : ( ( rule__Object__Group_1__0 )? ) ;
     public final void rule__Object__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:665:1: ( ( ( rule__Object__Group_1__0 )? ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:666:1: ( ( rule__Object__Group_1__0 )? )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:355:1: ( ( ( rule__Object__Group_1__0 )? ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:356:1: ( ( rule__Object__Group_1__0 )? )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:666:1: ( ( rule__Object__Group_1__0 )? )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:667:1: ( rule__Object__Group_1__0 )?
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:356:1: ( ( rule__Object__Group_1__0 )? )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:357:1: ( rule__Object__Group_1__0 )?
             {
              before(grammarAccess.getObjectAccess().getGroup_1()); 
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:668:1: ( rule__Object__Group_1__0 )?
-            int alt8=2;
-            int LA8_0 = input.LA(1);
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:358:1: ( rule__Object__Group_1__0 )?
+            int alt3=2;
+            int LA3_0 = input.LA(1);
 
-            if ( (LA8_0==RULE_STRING) ) {
-                alt8=1;
+            if ( (LA3_0==RULE_STRING) ) {
+                alt3=1;
             }
-            switch (alt8) {
+            switch (alt3) {
                 case 1 :
-                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:668:2: rule__Object__Group_1__0
+                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:358:2: rule__Object__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__Object__Group_1__0_in_rule__Object__Group__1__Impl1330);
+                    pushFollow(FOLLOW_rule__Object__Group_1__0_in_rule__Object__Group__1__Impl713);
                     rule__Object__Group_1__0();
 
                     state._fsp--;
@@ -1826,16 +1005,16 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__Group__2"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:678:1: rule__Object__Group__2 : rule__Object__Group__2__Impl ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:368:1: rule__Object__Group__2 : rule__Object__Group__2__Impl ;
     public final void rule__Object__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:682:1: ( rule__Object__Group__2__Impl )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:683:2: rule__Object__Group__2__Impl
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:372:1: ( rule__Object__Group__2__Impl )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:373:2: rule__Object__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Object__Group__2__Impl_in_rule__Object__Group__21361);
+            pushFollow(FOLLOW_rule__Object__Group__2__Impl_in_rule__Object__Group__2744);
             rule__Object__Group__2__Impl();
 
             state._fsp--;
@@ -1859,20 +1038,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__Group__2__Impl"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:689:1: rule__Object__Group__2__Impl : ( RULE_OBJECT_END ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:379:1: rule__Object__Group__2__Impl : ( RULE_OBJECT_END ) ;
     public final void rule__Object__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:693:1: ( ( RULE_OBJECT_END ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:694:1: ( RULE_OBJECT_END )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:383:1: ( ( RULE_OBJECT_END ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:384:1: ( RULE_OBJECT_END )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:694:1: ( RULE_OBJECT_END )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:695:1: RULE_OBJECT_END
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:384:1: ( RULE_OBJECT_END )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:385:1: RULE_OBJECT_END
             {
              before(grammarAccess.getObjectAccess().getOBJECT_ENDTerminalRuleCall_2()); 
-            match(input,RULE_OBJECT_END,FOLLOW_RULE_OBJECT_END_in_rule__Object__Group__2__Impl1388); 
+            match(input,RULE_OBJECT_END,FOLLOW_RULE_OBJECT_END_in_rule__Object__Group__2__Impl771); 
              after(grammarAccess.getObjectAccess().getOBJECT_ENDTerminalRuleCall_2()); 
 
             }
@@ -1896,21 +1075,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__Group_1__0"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:712:1: rule__Object__Group_1__0 : rule__Object__Group_1__0__Impl rule__Object__Group_1__1 ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:402:1: rule__Object__Group_1__0 : rule__Object__Group_1__0__Impl rule__Object__Group_1__1 ;
     public final void rule__Object__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:716:1: ( rule__Object__Group_1__0__Impl rule__Object__Group_1__1 )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:717:2: rule__Object__Group_1__0__Impl rule__Object__Group_1__1
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:406:1: ( rule__Object__Group_1__0__Impl rule__Object__Group_1__1 )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:407:2: rule__Object__Group_1__0__Impl rule__Object__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Object__Group_1__0__Impl_in_rule__Object__Group_1__01423);
+            pushFollow(FOLLOW_rule__Object__Group_1__0__Impl_in_rule__Object__Group_1__0806);
             rule__Object__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Object__Group_1__1_in_rule__Object__Group_1__01426);
+            pushFollow(FOLLOW_rule__Object__Group_1__1_in_rule__Object__Group_1__0809);
             rule__Object__Group_1__1();
 
             state._fsp--;
@@ -1934,23 +1113,23 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__Group_1__0__Impl"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:724:1: rule__Object__Group_1__0__Impl : ( ( rule__Object__PropertiesAssignment_1_0 ) ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:414:1: rule__Object__Group_1__0__Impl : ( ( rule__Object__PropertiesAssignment_1_0 ) ) ;
     public final void rule__Object__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:728:1: ( ( ( rule__Object__PropertiesAssignment_1_0 ) ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:729:1: ( ( rule__Object__PropertiesAssignment_1_0 ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:418:1: ( ( ( rule__Object__PropertiesAssignment_1_0 ) ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:419:1: ( ( rule__Object__PropertiesAssignment_1_0 ) )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:729:1: ( ( rule__Object__PropertiesAssignment_1_0 ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:730:1: ( rule__Object__PropertiesAssignment_1_0 )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:419:1: ( ( rule__Object__PropertiesAssignment_1_0 ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:420:1: ( rule__Object__PropertiesAssignment_1_0 )
             {
              before(grammarAccess.getObjectAccess().getPropertiesAssignment_1_0()); 
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:731:1: ( rule__Object__PropertiesAssignment_1_0 )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:731:2: rule__Object__PropertiesAssignment_1_0
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:421:1: ( rule__Object__PropertiesAssignment_1_0 )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:421:2: rule__Object__PropertiesAssignment_1_0
             {
-            pushFollow(FOLLOW_rule__Object__PropertiesAssignment_1_0_in_rule__Object__Group_1__0__Impl1453);
+            pushFollow(FOLLOW_rule__Object__PropertiesAssignment_1_0_in_rule__Object__Group_1__0__Impl836);
             rule__Object__PropertiesAssignment_1_0();
 
             state._fsp--;
@@ -1981,16 +1160,16 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__Group_1__1"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:741:1: rule__Object__Group_1__1 : rule__Object__Group_1__1__Impl ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:431:1: rule__Object__Group_1__1 : rule__Object__Group_1__1__Impl ;
     public final void rule__Object__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:745:1: ( rule__Object__Group_1__1__Impl )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:746:2: rule__Object__Group_1__1__Impl
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:435:1: ( rule__Object__Group_1__1__Impl )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:436:2: rule__Object__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Object__Group_1__1__Impl_in_rule__Object__Group_1__11483);
+            pushFollow(FOLLOW_rule__Object__Group_1__1__Impl_in_rule__Object__Group_1__1866);
             rule__Object__Group_1__1__Impl();
 
             state._fsp--;
@@ -2014,35 +1193,35 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__Group_1__1__Impl"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:752:1: rule__Object__Group_1__1__Impl : ( ( rule__Object__Group_1_1__0 )* ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:442:1: rule__Object__Group_1__1__Impl : ( ( rule__Object__Group_1_1__0 )* ) ;
     public final void rule__Object__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:756:1: ( ( ( rule__Object__Group_1_1__0 )* ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:757:1: ( ( rule__Object__Group_1_1__0 )* )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:446:1: ( ( ( rule__Object__Group_1_1__0 )* ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:447:1: ( ( rule__Object__Group_1_1__0 )* )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:757:1: ( ( rule__Object__Group_1_1__0 )* )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:758:1: ( rule__Object__Group_1_1__0 )*
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:447:1: ( ( rule__Object__Group_1_1__0 )* )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:448:1: ( rule__Object__Group_1_1__0 )*
             {
              before(grammarAccess.getObjectAccess().getGroup_1_1()); 
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:759:1: ( rule__Object__Group_1_1__0 )*
-            loop9:
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:449:1: ( rule__Object__Group_1_1__0 )*
+            loop4:
             do {
-                int alt9=2;
-                int LA9_0 = input.LA(1);
+                int alt4=2;
+                int LA4_0 = input.LA(1);
 
-                if ( (LA9_0==RULE_VALUE_SEP) ) {
-                    alt9=1;
+                if ( (LA4_0==RULE_VALUE_SEP) ) {
+                    alt4=1;
                 }
 
 
-                switch (alt9) {
+                switch (alt4) {
             	case 1 :
-            	    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:759:2: rule__Object__Group_1_1__0
+            	    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:449:2: rule__Object__Group_1_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__Object__Group_1_1__0_in_rule__Object__Group_1__1__Impl1510);
+            	    pushFollow(FOLLOW_rule__Object__Group_1_1__0_in_rule__Object__Group_1__1__Impl893);
             	    rule__Object__Group_1_1__0();
 
             	    state._fsp--;
@@ -2052,7 +1231,7 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop9;
+            	    break loop4;
                 }
             } while (true);
 
@@ -2079,21 +1258,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__Group_1_1__0"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:773:1: rule__Object__Group_1_1__0 : rule__Object__Group_1_1__0__Impl rule__Object__Group_1_1__1 ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:463:1: rule__Object__Group_1_1__0 : rule__Object__Group_1_1__0__Impl rule__Object__Group_1_1__1 ;
     public final void rule__Object__Group_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:777:1: ( rule__Object__Group_1_1__0__Impl rule__Object__Group_1_1__1 )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:778:2: rule__Object__Group_1_1__0__Impl rule__Object__Group_1_1__1
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:467:1: ( rule__Object__Group_1_1__0__Impl rule__Object__Group_1_1__1 )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:468:2: rule__Object__Group_1_1__0__Impl rule__Object__Group_1_1__1
             {
-            pushFollow(FOLLOW_rule__Object__Group_1_1__0__Impl_in_rule__Object__Group_1_1__01545);
+            pushFollow(FOLLOW_rule__Object__Group_1_1__0__Impl_in_rule__Object__Group_1_1__0928);
             rule__Object__Group_1_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Object__Group_1_1__1_in_rule__Object__Group_1_1__01548);
+            pushFollow(FOLLOW_rule__Object__Group_1_1__1_in_rule__Object__Group_1_1__0931);
             rule__Object__Group_1_1__1();
 
             state._fsp--;
@@ -2117,20 +1296,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__Group_1_1__0__Impl"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:785:1: rule__Object__Group_1_1__0__Impl : ( RULE_VALUE_SEP ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:475:1: rule__Object__Group_1_1__0__Impl : ( RULE_VALUE_SEP ) ;
     public final void rule__Object__Group_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:789:1: ( ( RULE_VALUE_SEP ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:790:1: ( RULE_VALUE_SEP )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:479:1: ( ( RULE_VALUE_SEP ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:480:1: ( RULE_VALUE_SEP )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:790:1: ( RULE_VALUE_SEP )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:791:1: RULE_VALUE_SEP
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:480:1: ( RULE_VALUE_SEP )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:481:1: RULE_VALUE_SEP
             {
              before(grammarAccess.getObjectAccess().getVALUE_SEPTerminalRuleCall_1_1_0()); 
-            match(input,RULE_VALUE_SEP,FOLLOW_RULE_VALUE_SEP_in_rule__Object__Group_1_1__0__Impl1575); 
+            match(input,RULE_VALUE_SEP,FOLLOW_RULE_VALUE_SEP_in_rule__Object__Group_1_1__0__Impl958); 
              after(grammarAccess.getObjectAccess().getVALUE_SEPTerminalRuleCall_1_1_0()); 
 
             }
@@ -2154,16 +1333,16 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__Group_1_1__1"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:802:1: rule__Object__Group_1_1__1 : rule__Object__Group_1_1__1__Impl ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:492:1: rule__Object__Group_1_1__1 : rule__Object__Group_1_1__1__Impl ;
     public final void rule__Object__Group_1_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:806:1: ( rule__Object__Group_1_1__1__Impl )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:807:2: rule__Object__Group_1_1__1__Impl
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:496:1: ( rule__Object__Group_1_1__1__Impl )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:497:2: rule__Object__Group_1_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Object__Group_1_1__1__Impl_in_rule__Object__Group_1_1__11604);
+            pushFollow(FOLLOW_rule__Object__Group_1_1__1__Impl_in_rule__Object__Group_1_1__1987);
             rule__Object__Group_1_1__1__Impl();
 
             state._fsp--;
@@ -2187,23 +1366,23 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__Group_1_1__1__Impl"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:813:1: rule__Object__Group_1_1__1__Impl : ( ( rule__Object__PropertiesAssignment_1_1_1 ) ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:503:1: rule__Object__Group_1_1__1__Impl : ( ( rule__Object__PropertiesAssignment_1_1_1 ) ) ;
     public final void rule__Object__Group_1_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:817:1: ( ( ( rule__Object__PropertiesAssignment_1_1_1 ) ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:818:1: ( ( rule__Object__PropertiesAssignment_1_1_1 ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:507:1: ( ( ( rule__Object__PropertiesAssignment_1_1_1 ) ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:508:1: ( ( rule__Object__PropertiesAssignment_1_1_1 ) )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:818:1: ( ( rule__Object__PropertiesAssignment_1_1_1 ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:819:1: ( rule__Object__PropertiesAssignment_1_1_1 )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:508:1: ( ( rule__Object__PropertiesAssignment_1_1_1 ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:509:1: ( rule__Object__PropertiesAssignment_1_1_1 )
             {
              before(grammarAccess.getObjectAccess().getPropertiesAssignment_1_1_1()); 
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:820:1: ( rule__Object__PropertiesAssignment_1_1_1 )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:820:2: rule__Object__PropertiesAssignment_1_1_1
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:510:1: ( rule__Object__PropertiesAssignment_1_1_1 )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:510:2: rule__Object__PropertiesAssignment_1_1_1
             {
-            pushFollow(FOLLOW_rule__Object__PropertiesAssignment_1_1_1_in_rule__Object__Group_1_1__1__Impl1631);
+            pushFollow(FOLLOW_rule__Object__PropertiesAssignment_1_1_1_in_rule__Object__Group_1_1__1__Impl1014);
             rule__Object__PropertiesAssignment_1_1_1();
 
             state._fsp--;
@@ -2234,21 +1413,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ObjectProperty__Group__0"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:834:1: rule__ObjectProperty__Group__0 : rule__ObjectProperty__Group__0__Impl rule__ObjectProperty__Group__1 ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:524:1: rule__ObjectProperty__Group__0 : rule__ObjectProperty__Group__0__Impl rule__ObjectProperty__Group__1 ;
     public final void rule__ObjectProperty__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:838:1: ( rule__ObjectProperty__Group__0__Impl rule__ObjectProperty__Group__1 )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:839:2: rule__ObjectProperty__Group__0__Impl rule__ObjectProperty__Group__1
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:528:1: ( rule__ObjectProperty__Group__0__Impl rule__ObjectProperty__Group__1 )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:529:2: rule__ObjectProperty__Group__0__Impl rule__ObjectProperty__Group__1
             {
-            pushFollow(FOLLOW_rule__ObjectProperty__Group__0__Impl_in_rule__ObjectProperty__Group__01665);
+            pushFollow(FOLLOW_rule__ObjectProperty__Group__0__Impl_in_rule__ObjectProperty__Group__01048);
             rule__ObjectProperty__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ObjectProperty__Group__1_in_rule__ObjectProperty__Group__01668);
+            pushFollow(FOLLOW_rule__ObjectProperty__Group__1_in_rule__ObjectProperty__Group__01051);
             rule__ObjectProperty__Group__1();
 
             state._fsp--;
@@ -2272,23 +1451,23 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ObjectProperty__Group__0__Impl"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:846:1: rule__ObjectProperty__Group__0__Impl : ( ( rule__ObjectProperty__PropNameAssignment_0 ) ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:536:1: rule__ObjectProperty__Group__0__Impl : ( ( rule__ObjectProperty__PropNameAssignment_0 ) ) ;
     public final void rule__ObjectProperty__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:850:1: ( ( ( rule__ObjectProperty__PropNameAssignment_0 ) ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:851:1: ( ( rule__ObjectProperty__PropNameAssignment_0 ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:540:1: ( ( ( rule__ObjectProperty__PropNameAssignment_0 ) ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:541:1: ( ( rule__ObjectProperty__PropNameAssignment_0 ) )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:851:1: ( ( rule__ObjectProperty__PropNameAssignment_0 ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:852:1: ( rule__ObjectProperty__PropNameAssignment_0 )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:541:1: ( ( rule__ObjectProperty__PropNameAssignment_0 ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:542:1: ( rule__ObjectProperty__PropNameAssignment_0 )
             {
              before(grammarAccess.getObjectPropertyAccess().getPropNameAssignment_0()); 
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:853:1: ( rule__ObjectProperty__PropNameAssignment_0 )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:853:2: rule__ObjectProperty__PropNameAssignment_0
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:543:1: ( rule__ObjectProperty__PropNameAssignment_0 )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:543:2: rule__ObjectProperty__PropNameAssignment_0
             {
-            pushFollow(FOLLOW_rule__ObjectProperty__PropNameAssignment_0_in_rule__ObjectProperty__Group__0__Impl1695);
+            pushFollow(FOLLOW_rule__ObjectProperty__PropNameAssignment_0_in_rule__ObjectProperty__Group__0__Impl1078);
             rule__ObjectProperty__PropNameAssignment_0();
 
             state._fsp--;
@@ -2319,21 +1498,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ObjectProperty__Group__1"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:863:1: rule__ObjectProperty__Group__1 : rule__ObjectProperty__Group__1__Impl rule__ObjectProperty__Group__2 ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:553:1: rule__ObjectProperty__Group__1 : rule__ObjectProperty__Group__1__Impl rule__ObjectProperty__Group__2 ;
     public final void rule__ObjectProperty__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:867:1: ( rule__ObjectProperty__Group__1__Impl rule__ObjectProperty__Group__2 )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:868:2: rule__ObjectProperty__Group__1__Impl rule__ObjectProperty__Group__2
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:557:1: ( rule__ObjectProperty__Group__1__Impl rule__ObjectProperty__Group__2 )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:558:2: rule__ObjectProperty__Group__1__Impl rule__ObjectProperty__Group__2
             {
-            pushFollow(FOLLOW_rule__ObjectProperty__Group__1__Impl_in_rule__ObjectProperty__Group__11725);
+            pushFollow(FOLLOW_rule__ObjectProperty__Group__1__Impl_in_rule__ObjectProperty__Group__11108);
             rule__ObjectProperty__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ObjectProperty__Group__2_in_rule__ObjectProperty__Group__11728);
+            pushFollow(FOLLOW_rule__ObjectProperty__Group__2_in_rule__ObjectProperty__Group__11111);
             rule__ObjectProperty__Group__2();
 
             state._fsp--;
@@ -2357,20 +1536,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ObjectProperty__Group__1__Impl"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:875:1: rule__ObjectProperty__Group__1__Impl : ( RULE_NAME_SEP ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:565:1: rule__ObjectProperty__Group__1__Impl : ( RULE_NAME_SEP ) ;
     public final void rule__ObjectProperty__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:879:1: ( ( RULE_NAME_SEP ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:880:1: ( RULE_NAME_SEP )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:569:1: ( ( RULE_NAME_SEP ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:570:1: ( RULE_NAME_SEP )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:880:1: ( RULE_NAME_SEP )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:881:1: RULE_NAME_SEP
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:570:1: ( RULE_NAME_SEP )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:571:1: RULE_NAME_SEP
             {
              before(grammarAccess.getObjectPropertyAccess().getNAME_SEPTerminalRuleCall_1()); 
-            match(input,RULE_NAME_SEP,FOLLOW_RULE_NAME_SEP_in_rule__ObjectProperty__Group__1__Impl1755); 
+            match(input,RULE_NAME_SEP,FOLLOW_RULE_NAME_SEP_in_rule__ObjectProperty__Group__1__Impl1138); 
              after(grammarAccess.getObjectPropertyAccess().getNAME_SEPTerminalRuleCall_1()); 
 
             }
@@ -2394,16 +1573,16 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ObjectProperty__Group__2"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:892:1: rule__ObjectProperty__Group__2 : rule__ObjectProperty__Group__2__Impl ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:582:1: rule__ObjectProperty__Group__2 : rule__ObjectProperty__Group__2__Impl ;
     public final void rule__ObjectProperty__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:896:1: ( rule__ObjectProperty__Group__2__Impl )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:897:2: rule__ObjectProperty__Group__2__Impl
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:586:1: ( rule__ObjectProperty__Group__2__Impl )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:587:2: rule__ObjectProperty__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__ObjectProperty__Group__2__Impl_in_rule__ObjectProperty__Group__21784);
+            pushFollow(FOLLOW_rule__ObjectProperty__Group__2__Impl_in_rule__ObjectProperty__Group__21167);
             rule__ObjectProperty__Group__2__Impl();
 
             state._fsp--;
@@ -2427,23 +1606,23 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ObjectProperty__Group__2__Impl"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:903:1: rule__ObjectProperty__Group__2__Impl : ( ( rule__ObjectProperty__PropValueAssignment_2 ) ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:593:1: rule__ObjectProperty__Group__2__Impl : ( ( rule__ObjectProperty__PropValueAssignment_2 ) ) ;
     public final void rule__ObjectProperty__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:907:1: ( ( ( rule__ObjectProperty__PropValueAssignment_2 ) ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:908:1: ( ( rule__ObjectProperty__PropValueAssignment_2 ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:597:1: ( ( ( rule__ObjectProperty__PropValueAssignment_2 ) ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:598:1: ( ( rule__ObjectProperty__PropValueAssignment_2 ) )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:908:1: ( ( rule__ObjectProperty__PropValueAssignment_2 ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:909:1: ( rule__ObjectProperty__PropValueAssignment_2 )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:598:1: ( ( rule__ObjectProperty__PropValueAssignment_2 ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:599:1: ( rule__ObjectProperty__PropValueAssignment_2 )
             {
              before(grammarAccess.getObjectPropertyAccess().getPropValueAssignment_2()); 
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:910:1: ( rule__ObjectProperty__PropValueAssignment_2 )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:910:2: rule__ObjectProperty__PropValueAssignment_2
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:600:1: ( rule__ObjectProperty__PropValueAssignment_2 )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:600:2: rule__ObjectProperty__PropValueAssignment_2
             {
-            pushFollow(FOLLOW_rule__ObjectProperty__PropValueAssignment_2_in_rule__ObjectProperty__Group__2__Impl1811);
+            pushFollow(FOLLOW_rule__ObjectProperty__PropValueAssignment_2_in_rule__ObjectProperty__Group__2__Impl1194);
             rule__ObjectProperty__PropValueAssignment_2();
 
             state._fsp--;
@@ -2474,21 +1653,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__0"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:926:1: rule__Array__Group__0 : rule__Array__Group__0__Impl rule__Array__Group__1 ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:616:1: rule__Array__Group__0 : rule__Array__Group__0__Impl rule__Array__Group__1 ;
     public final void rule__Array__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:930:1: ( rule__Array__Group__0__Impl rule__Array__Group__1 )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:931:2: rule__Array__Group__0__Impl rule__Array__Group__1
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:620:1: ( rule__Array__Group__0__Impl rule__Array__Group__1 )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:621:2: rule__Array__Group__0__Impl rule__Array__Group__1
             {
-            pushFollow(FOLLOW_rule__Array__Group__0__Impl_in_rule__Array__Group__01847);
+            pushFollow(FOLLOW_rule__Array__Group__0__Impl_in_rule__Array__Group__01230);
             rule__Array__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Array__Group__1_in_rule__Array__Group__01850);
+            pushFollow(FOLLOW_rule__Array__Group__1_in_rule__Array__Group__01233);
             rule__Array__Group__1();
 
             state._fsp--;
@@ -2512,20 +1691,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__0__Impl"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:938:1: rule__Array__Group__0__Impl : ( RULE_ARRAY_START ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:628:1: rule__Array__Group__0__Impl : ( RULE_ARRAY_START ) ;
     public final void rule__Array__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:942:1: ( ( RULE_ARRAY_START ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:943:1: ( RULE_ARRAY_START )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:632:1: ( ( RULE_ARRAY_START ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:633:1: ( RULE_ARRAY_START )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:943:1: ( RULE_ARRAY_START )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:944:1: RULE_ARRAY_START
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:633:1: ( RULE_ARRAY_START )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:634:1: RULE_ARRAY_START
             {
              before(grammarAccess.getArrayAccess().getARRAY_STARTTerminalRuleCall_0()); 
-            match(input,RULE_ARRAY_START,FOLLOW_RULE_ARRAY_START_in_rule__Array__Group__0__Impl1877); 
+            match(input,RULE_ARRAY_START,FOLLOW_RULE_ARRAY_START_in_rule__Array__Group__0__Impl1260); 
              after(grammarAccess.getArrayAccess().getARRAY_STARTTerminalRuleCall_0()); 
 
             }
@@ -2549,21 +1728,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__1"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:955:1: rule__Array__Group__1 : rule__Array__Group__1__Impl rule__Array__Group__2 ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:645:1: rule__Array__Group__1 : rule__Array__Group__1__Impl rule__Array__Group__2 ;
     public final void rule__Array__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:959:1: ( rule__Array__Group__1__Impl rule__Array__Group__2 )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:960:2: rule__Array__Group__1__Impl rule__Array__Group__2
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:649:1: ( rule__Array__Group__1__Impl rule__Array__Group__2 )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:650:2: rule__Array__Group__1__Impl rule__Array__Group__2
             {
-            pushFollow(FOLLOW_rule__Array__Group__1__Impl_in_rule__Array__Group__11906);
+            pushFollow(FOLLOW_rule__Array__Group__1__Impl_in_rule__Array__Group__11289);
             rule__Array__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Array__Group__2_in_rule__Array__Group__11909);
+            pushFollow(FOLLOW_rule__Array__Group__2_in_rule__Array__Group__11292);
             rule__Array__Group__2();
 
             state._fsp--;
@@ -2587,31 +1766,31 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__1__Impl"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:967:1: rule__Array__Group__1__Impl : ( ( rule__Array__Group_1__0 )? ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:657:1: rule__Array__Group__1__Impl : ( ( rule__Array__Group_1__0 )? ) ;
     public final void rule__Array__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:971:1: ( ( ( rule__Array__Group_1__0 )? ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:972:1: ( ( rule__Array__Group_1__0 )? )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:661:1: ( ( ( rule__Array__Group_1__0 )? ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:662:1: ( ( rule__Array__Group_1__0 )? )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:972:1: ( ( rule__Array__Group_1__0 )? )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:973:1: ( rule__Array__Group_1__0 )?
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:662:1: ( ( rule__Array__Group_1__0 )? )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:663:1: ( rule__Array__Group_1__0 )?
             {
              before(grammarAccess.getArrayAccess().getGroup_1()); 
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:974:1: ( rule__Array__Group_1__0 )?
-            int alt10=2;
-            int LA10_0 = input.LA(1);
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:664:1: ( rule__Array__Group_1__0 )?
+            int alt5=2;
+            int LA5_0 = input.LA(1);
 
-            if ( ((LA10_0>=RULE_INT && LA10_0<=RULE_OBJECT_START)||LA10_0==RULE_ARRAY_START||LA10_0==RULE_STRING||(LA10_0>=17 && LA10_0<=19)||LA10_0==23) ) {
-                alt10=1;
+            if ( ((LA5_0>=RULE_FLOAT && LA5_0<=RULE_OBJECT_START)||LA5_0==RULE_ARRAY_START||LA5_0==RULE_STRING||(LA5_0>=22 && LA5_0<=24)) ) {
+                alt5=1;
             }
-            switch (alt10) {
+            switch (alt5) {
                 case 1 :
-                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:974:2: rule__Array__Group_1__0
+                    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:664:2: rule__Array__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__Array__Group_1__0_in_rule__Array__Group__1__Impl1936);
+                    pushFollow(FOLLOW_rule__Array__Group_1__0_in_rule__Array__Group__1__Impl1319);
                     rule__Array__Group_1__0();
 
                     state._fsp--;
@@ -2645,16 +1824,16 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__2"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:984:1: rule__Array__Group__2 : rule__Array__Group__2__Impl ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:674:1: rule__Array__Group__2 : rule__Array__Group__2__Impl ;
     public final void rule__Array__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:988:1: ( rule__Array__Group__2__Impl )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:989:2: rule__Array__Group__2__Impl
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:678:1: ( rule__Array__Group__2__Impl )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:679:2: rule__Array__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Array__Group__2__Impl_in_rule__Array__Group__21967);
+            pushFollow(FOLLOW_rule__Array__Group__2__Impl_in_rule__Array__Group__21350);
             rule__Array__Group__2__Impl();
 
             state._fsp--;
@@ -2678,20 +1857,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__2__Impl"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:995:1: rule__Array__Group__2__Impl : ( RULE_ARRAY_END ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:685:1: rule__Array__Group__2__Impl : ( RULE_ARRAY_END ) ;
     public final void rule__Array__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:999:1: ( ( RULE_ARRAY_END ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1000:1: ( RULE_ARRAY_END )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:689:1: ( ( RULE_ARRAY_END ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:690:1: ( RULE_ARRAY_END )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1000:1: ( RULE_ARRAY_END )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1001:1: RULE_ARRAY_END
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:690:1: ( RULE_ARRAY_END )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:691:1: RULE_ARRAY_END
             {
              before(grammarAccess.getArrayAccess().getARRAY_ENDTerminalRuleCall_2()); 
-            match(input,RULE_ARRAY_END,FOLLOW_RULE_ARRAY_END_in_rule__Array__Group__2__Impl1994); 
+            match(input,RULE_ARRAY_END,FOLLOW_RULE_ARRAY_END_in_rule__Array__Group__2__Impl1377); 
              after(grammarAccess.getArrayAccess().getARRAY_ENDTerminalRuleCall_2()); 
 
             }
@@ -2715,21 +1894,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group_1__0"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1018:1: rule__Array__Group_1__0 : rule__Array__Group_1__0__Impl rule__Array__Group_1__1 ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:708:1: rule__Array__Group_1__0 : rule__Array__Group_1__0__Impl rule__Array__Group_1__1 ;
     public final void rule__Array__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1022:1: ( rule__Array__Group_1__0__Impl rule__Array__Group_1__1 )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1023:2: rule__Array__Group_1__0__Impl rule__Array__Group_1__1
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:712:1: ( rule__Array__Group_1__0__Impl rule__Array__Group_1__1 )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:713:2: rule__Array__Group_1__0__Impl rule__Array__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Array__Group_1__0__Impl_in_rule__Array__Group_1__02029);
+            pushFollow(FOLLOW_rule__Array__Group_1__0__Impl_in_rule__Array__Group_1__01412);
             rule__Array__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Array__Group_1__1_in_rule__Array__Group_1__02032);
+            pushFollow(FOLLOW_rule__Array__Group_1__1_in_rule__Array__Group_1__01415);
             rule__Array__Group_1__1();
 
             state._fsp--;
@@ -2753,23 +1932,23 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group_1__0__Impl"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1030:1: rule__Array__Group_1__0__Impl : ( ( rule__Array__ElementsAssignment_1_0 ) ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:720:1: rule__Array__Group_1__0__Impl : ( ( rule__Array__ElementsAssignment_1_0 ) ) ;
     public final void rule__Array__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1034:1: ( ( ( rule__Array__ElementsAssignment_1_0 ) ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1035:1: ( ( rule__Array__ElementsAssignment_1_0 ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:724:1: ( ( ( rule__Array__ElementsAssignment_1_0 ) ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:725:1: ( ( rule__Array__ElementsAssignment_1_0 ) )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1035:1: ( ( rule__Array__ElementsAssignment_1_0 ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1036:1: ( rule__Array__ElementsAssignment_1_0 )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:725:1: ( ( rule__Array__ElementsAssignment_1_0 ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:726:1: ( rule__Array__ElementsAssignment_1_0 )
             {
              before(grammarAccess.getArrayAccess().getElementsAssignment_1_0()); 
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1037:1: ( rule__Array__ElementsAssignment_1_0 )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1037:2: rule__Array__ElementsAssignment_1_0
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:727:1: ( rule__Array__ElementsAssignment_1_0 )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:727:2: rule__Array__ElementsAssignment_1_0
             {
-            pushFollow(FOLLOW_rule__Array__ElementsAssignment_1_0_in_rule__Array__Group_1__0__Impl2059);
+            pushFollow(FOLLOW_rule__Array__ElementsAssignment_1_0_in_rule__Array__Group_1__0__Impl1442);
             rule__Array__ElementsAssignment_1_0();
 
             state._fsp--;
@@ -2800,16 +1979,16 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group_1__1"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1047:1: rule__Array__Group_1__1 : rule__Array__Group_1__1__Impl ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:737:1: rule__Array__Group_1__1 : rule__Array__Group_1__1__Impl ;
     public final void rule__Array__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1051:1: ( rule__Array__Group_1__1__Impl )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1052:2: rule__Array__Group_1__1__Impl
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:741:1: ( rule__Array__Group_1__1__Impl )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:742:2: rule__Array__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Array__Group_1__1__Impl_in_rule__Array__Group_1__12089);
+            pushFollow(FOLLOW_rule__Array__Group_1__1__Impl_in_rule__Array__Group_1__11472);
             rule__Array__Group_1__1__Impl();
 
             state._fsp--;
@@ -2833,35 +2012,35 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group_1__1__Impl"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1058:1: rule__Array__Group_1__1__Impl : ( ( rule__Array__Group_1_1__0 )* ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:748:1: rule__Array__Group_1__1__Impl : ( ( rule__Array__Group_1_1__0 )* ) ;
     public final void rule__Array__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1062:1: ( ( ( rule__Array__Group_1_1__0 )* ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1063:1: ( ( rule__Array__Group_1_1__0 )* )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:752:1: ( ( ( rule__Array__Group_1_1__0 )* ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:753:1: ( ( rule__Array__Group_1_1__0 )* )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1063:1: ( ( rule__Array__Group_1_1__0 )* )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1064:1: ( rule__Array__Group_1_1__0 )*
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:753:1: ( ( rule__Array__Group_1_1__0 )* )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:754:1: ( rule__Array__Group_1_1__0 )*
             {
              before(grammarAccess.getArrayAccess().getGroup_1_1()); 
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1065:1: ( rule__Array__Group_1_1__0 )*
-            loop11:
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:755:1: ( rule__Array__Group_1_1__0 )*
+            loop6:
             do {
-                int alt11=2;
-                int LA11_0 = input.LA(1);
+                int alt6=2;
+                int LA6_0 = input.LA(1);
 
-                if ( (LA11_0==RULE_VALUE_SEP) ) {
-                    alt11=1;
+                if ( (LA6_0==RULE_VALUE_SEP) ) {
+                    alt6=1;
                 }
 
 
-                switch (alt11) {
+                switch (alt6) {
             	case 1 :
-            	    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1065:2: rule__Array__Group_1_1__0
+            	    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:755:2: rule__Array__Group_1_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__Array__Group_1_1__0_in_rule__Array__Group_1__1__Impl2116);
+            	    pushFollow(FOLLOW_rule__Array__Group_1_1__0_in_rule__Array__Group_1__1__Impl1499);
             	    rule__Array__Group_1_1__0();
 
             	    state._fsp--;
@@ -2871,7 +2050,7 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop11;
+            	    break loop6;
                 }
             } while (true);
 
@@ -2898,21 +2077,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group_1_1__0"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1079:1: rule__Array__Group_1_1__0 : rule__Array__Group_1_1__0__Impl rule__Array__Group_1_1__1 ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:769:1: rule__Array__Group_1_1__0 : rule__Array__Group_1_1__0__Impl rule__Array__Group_1_1__1 ;
     public final void rule__Array__Group_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1083:1: ( rule__Array__Group_1_1__0__Impl rule__Array__Group_1_1__1 )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1084:2: rule__Array__Group_1_1__0__Impl rule__Array__Group_1_1__1
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:773:1: ( rule__Array__Group_1_1__0__Impl rule__Array__Group_1_1__1 )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:774:2: rule__Array__Group_1_1__0__Impl rule__Array__Group_1_1__1
             {
-            pushFollow(FOLLOW_rule__Array__Group_1_1__0__Impl_in_rule__Array__Group_1_1__02151);
+            pushFollow(FOLLOW_rule__Array__Group_1_1__0__Impl_in_rule__Array__Group_1_1__01534);
             rule__Array__Group_1_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Array__Group_1_1__1_in_rule__Array__Group_1_1__02154);
+            pushFollow(FOLLOW_rule__Array__Group_1_1__1_in_rule__Array__Group_1_1__01537);
             rule__Array__Group_1_1__1();
 
             state._fsp--;
@@ -2936,20 +2115,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group_1_1__0__Impl"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1091:1: rule__Array__Group_1_1__0__Impl : ( RULE_VALUE_SEP ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:781:1: rule__Array__Group_1_1__0__Impl : ( RULE_VALUE_SEP ) ;
     public final void rule__Array__Group_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1095:1: ( ( RULE_VALUE_SEP ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1096:1: ( RULE_VALUE_SEP )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:785:1: ( ( RULE_VALUE_SEP ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:786:1: ( RULE_VALUE_SEP )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1096:1: ( RULE_VALUE_SEP )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1097:1: RULE_VALUE_SEP
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:786:1: ( RULE_VALUE_SEP )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:787:1: RULE_VALUE_SEP
             {
              before(grammarAccess.getArrayAccess().getVALUE_SEPTerminalRuleCall_1_1_0()); 
-            match(input,RULE_VALUE_SEP,FOLLOW_RULE_VALUE_SEP_in_rule__Array__Group_1_1__0__Impl2181); 
+            match(input,RULE_VALUE_SEP,FOLLOW_RULE_VALUE_SEP_in_rule__Array__Group_1_1__0__Impl1564); 
              after(grammarAccess.getArrayAccess().getVALUE_SEPTerminalRuleCall_1_1_0()); 
 
             }
@@ -2973,16 +2152,16 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group_1_1__1"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1108:1: rule__Array__Group_1_1__1 : rule__Array__Group_1_1__1__Impl ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:798:1: rule__Array__Group_1_1__1 : rule__Array__Group_1_1__1__Impl ;
     public final void rule__Array__Group_1_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1112:1: ( rule__Array__Group_1_1__1__Impl )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1113:2: rule__Array__Group_1_1__1__Impl
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:802:1: ( rule__Array__Group_1_1__1__Impl )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:803:2: rule__Array__Group_1_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Array__Group_1_1__1__Impl_in_rule__Array__Group_1_1__12210);
+            pushFollow(FOLLOW_rule__Array__Group_1_1__1__Impl_in_rule__Array__Group_1_1__11593);
             rule__Array__Group_1_1__1__Impl();
 
             state._fsp--;
@@ -3006,23 +2185,23 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group_1_1__1__Impl"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1119:1: rule__Array__Group_1_1__1__Impl : ( ( rule__Array__ElementsAssignment_1_1_1 ) ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:809:1: rule__Array__Group_1_1__1__Impl : ( ( rule__Array__ElementsAssignment_1_1_1 ) ) ;
     public final void rule__Array__Group_1_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1123:1: ( ( ( rule__Array__ElementsAssignment_1_1_1 ) ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1124:1: ( ( rule__Array__ElementsAssignment_1_1_1 ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:813:1: ( ( ( rule__Array__ElementsAssignment_1_1_1 ) ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:814:1: ( ( rule__Array__ElementsAssignment_1_1_1 ) )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1124:1: ( ( rule__Array__ElementsAssignment_1_1_1 ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1125:1: ( rule__Array__ElementsAssignment_1_1_1 )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:814:1: ( ( rule__Array__ElementsAssignment_1_1_1 ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:815:1: ( rule__Array__ElementsAssignment_1_1_1 )
             {
              before(grammarAccess.getArrayAccess().getElementsAssignment_1_1_1()); 
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1126:1: ( rule__Array__ElementsAssignment_1_1_1 )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1126:2: rule__Array__ElementsAssignment_1_1_1
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:816:1: ( rule__Array__ElementsAssignment_1_1_1 )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:816:2: rule__Array__ElementsAssignment_1_1_1
             {
-            pushFollow(FOLLOW_rule__Array__ElementsAssignment_1_1_1_in_rule__Array__Group_1_1__1__Impl2237);
+            pushFollow(FOLLOW_rule__Array__ElementsAssignment_1_1_1_in_rule__Array__Group_1_1__1__Impl1620);
             rule__Array__ElementsAssignment_1_1_1();
 
             state._fsp--;
@@ -3053,20 +2232,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__RootAssignment"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1141:1: rule__Model__RootAssignment : ( ruleValue ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:831:1: rule__Model__RootAssignment : ( ruleValue ) ;
     public final void rule__Model__RootAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1145:1: ( ( ruleValue ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1146:1: ( ruleValue )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:835:1: ( ( ruleValue ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:836:1: ( ruleValue )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1146:1: ( ruleValue )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1147:1: ruleValue
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:836:1: ( ruleValue )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:837:1: ruleValue
             {
              before(grammarAccess.getModelAccess().getRootValueParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleValue_in_rule__Model__RootAssignment2276);
+            pushFollow(FOLLOW_ruleValue_in_rule__Model__RootAssignment1659);
             ruleValue();
 
             state._fsp--;
@@ -3094,20 +2273,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Value__ObjectValueAssignment_3"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1156:1: rule__Value__ObjectValueAssignment_3 : ( ruleObject ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:846:1: rule__Value__ObjectValueAssignment_3 : ( ruleObject ) ;
     public final void rule__Value__ObjectValueAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1160:1: ( ( ruleObject ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1161:1: ( ruleObject )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:850:1: ( ( ruleObject ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:851:1: ( ruleObject )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1161:1: ( ruleObject )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1162:1: ruleObject
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:851:1: ( ruleObject )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:852:1: ruleObject
             {
              before(grammarAccess.getValueAccess().getObjectValueObjectParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleObject_in_rule__Value__ObjectValueAssignment_32307);
+            pushFollow(FOLLOW_ruleObject_in_rule__Value__ObjectValueAssignment_31690);
             ruleObject();
 
             state._fsp--;
@@ -3135,20 +2314,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Value__ArrayValueAssignment_4"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1171:1: rule__Value__ArrayValueAssignment_4 : ( ruleArray ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:861:1: rule__Value__ArrayValueAssignment_4 : ( ruleArray ) ;
     public final void rule__Value__ArrayValueAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1175:1: ( ( ruleArray ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1176:1: ( ruleArray )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:865:1: ( ( ruleArray ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:866:1: ( ruleArray )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1176:1: ( ruleArray )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1177:1: ruleArray
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:866:1: ( ruleArray )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:867:1: ruleArray
             {
              before(grammarAccess.getValueAccess().getArrayValueArrayParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleArray_in_rule__Value__ArrayValueAssignment_42338);
+            pushFollow(FOLLOW_ruleArray_in_rule__Value__ArrayValueAssignment_41721);
             ruleArray();
 
             state._fsp--;
@@ -3176,20 +2355,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Value__NumberValueAssignment_5"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1186:1: rule__Value__NumberValueAssignment_5 : ( ruleNumber ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:876:1: rule__Value__NumberValueAssignment_5 : ( ruleNumber ) ;
     public final void rule__Value__NumberValueAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1190:1: ( ( ruleNumber ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1191:1: ( ruleNumber )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:880:1: ( ( ruleNumber ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:881:1: ( ruleNumber )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1191:1: ( ruleNumber )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1192:1: ruleNumber
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:881:1: ( ruleNumber )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:882:1: ruleNumber
             {
              before(grammarAccess.getValueAccess().getNumberValueNumberParserRuleCall_5_0()); 
-            pushFollow(FOLLOW_ruleNumber_in_rule__Value__NumberValueAssignment_52369);
+            pushFollow(FOLLOW_ruleNumber_in_rule__Value__NumberValueAssignment_51752);
             ruleNumber();
 
             state._fsp--;
@@ -3217,20 +2396,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Value__StringValueAssignment_6"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1201:1: rule__Value__StringValueAssignment_6 : ( RULE_STRING ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:891:1: rule__Value__StringValueAssignment_6 : ( RULE_STRING ) ;
     public final void rule__Value__StringValueAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1205:1: ( ( RULE_STRING ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1206:1: ( RULE_STRING )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:895:1: ( ( RULE_STRING ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:896:1: ( RULE_STRING )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1206:1: ( RULE_STRING )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1207:1: RULE_STRING
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:896:1: ( RULE_STRING )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:897:1: RULE_STRING
             {
              before(grammarAccess.getValueAccess().getStringValueSTRINGTerminalRuleCall_6_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Value__StringValueAssignment_62400); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Value__StringValueAssignment_61783); 
              after(grammarAccess.getValueAccess().getStringValueSTRINGTerminalRuleCall_6_0()); 
 
             }
@@ -3254,20 +2433,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__PropertiesAssignment_1_0"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1216:1: rule__Object__PropertiesAssignment_1_0 : ( ruleObjectProperty ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:906:1: rule__Object__PropertiesAssignment_1_0 : ( ruleObjectProperty ) ;
     public final void rule__Object__PropertiesAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1220:1: ( ( ruleObjectProperty ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1221:1: ( ruleObjectProperty )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:910:1: ( ( ruleObjectProperty ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:911:1: ( ruleObjectProperty )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1221:1: ( ruleObjectProperty )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1222:1: ruleObjectProperty
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:911:1: ( ruleObjectProperty )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:912:1: ruleObjectProperty
             {
              before(grammarAccess.getObjectAccess().getPropertiesObjectPropertyParserRuleCall_1_0_0()); 
-            pushFollow(FOLLOW_ruleObjectProperty_in_rule__Object__PropertiesAssignment_1_02431);
+            pushFollow(FOLLOW_ruleObjectProperty_in_rule__Object__PropertiesAssignment_1_01814);
             ruleObjectProperty();
 
             state._fsp--;
@@ -3295,20 +2474,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__PropertiesAssignment_1_1_1"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1231:1: rule__Object__PropertiesAssignment_1_1_1 : ( ruleObjectProperty ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:921:1: rule__Object__PropertiesAssignment_1_1_1 : ( ruleObjectProperty ) ;
     public final void rule__Object__PropertiesAssignment_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1235:1: ( ( ruleObjectProperty ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1236:1: ( ruleObjectProperty )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:925:1: ( ( ruleObjectProperty ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:926:1: ( ruleObjectProperty )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1236:1: ( ruleObjectProperty )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1237:1: ruleObjectProperty
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:926:1: ( ruleObjectProperty )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:927:1: ruleObjectProperty
             {
              before(grammarAccess.getObjectAccess().getPropertiesObjectPropertyParserRuleCall_1_1_1_0()); 
-            pushFollow(FOLLOW_ruleObjectProperty_in_rule__Object__PropertiesAssignment_1_1_12462);
+            pushFollow(FOLLOW_ruleObjectProperty_in_rule__Object__PropertiesAssignment_1_1_11845);
             ruleObjectProperty();
 
             state._fsp--;
@@ -3336,20 +2515,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ObjectProperty__PropNameAssignment_0"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1246:1: rule__ObjectProperty__PropNameAssignment_0 : ( RULE_STRING ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:936:1: rule__ObjectProperty__PropNameAssignment_0 : ( RULE_STRING ) ;
     public final void rule__ObjectProperty__PropNameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1250:1: ( ( RULE_STRING ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1251:1: ( RULE_STRING )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:940:1: ( ( RULE_STRING ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:941:1: ( RULE_STRING )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1251:1: ( RULE_STRING )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1252:1: RULE_STRING
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:941:1: ( RULE_STRING )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:942:1: RULE_STRING
             {
              before(grammarAccess.getObjectPropertyAccess().getPropNameSTRINGTerminalRuleCall_0_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__ObjectProperty__PropNameAssignment_02493); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__ObjectProperty__PropNameAssignment_01876); 
              after(grammarAccess.getObjectPropertyAccess().getPropNameSTRINGTerminalRuleCall_0_0()); 
 
             }
@@ -3373,20 +2552,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ObjectProperty__PropValueAssignment_2"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1261:1: rule__ObjectProperty__PropValueAssignment_2 : ( ruleValue ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:951:1: rule__ObjectProperty__PropValueAssignment_2 : ( ruleValue ) ;
     public final void rule__ObjectProperty__PropValueAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1265:1: ( ( ruleValue ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1266:1: ( ruleValue )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:955:1: ( ( ruleValue ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:956:1: ( ruleValue )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1266:1: ( ruleValue )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1267:1: ruleValue
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:956:1: ( ruleValue )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:957:1: ruleValue
             {
              before(grammarAccess.getObjectPropertyAccess().getPropValueValueParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleValue_in_rule__ObjectProperty__PropValueAssignment_22524);
+            pushFollow(FOLLOW_ruleValue_in_rule__ObjectProperty__PropValueAssignment_21907);
             ruleValue();
 
             state._fsp--;
@@ -3414,20 +2593,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__ElementsAssignment_1_0"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1276:1: rule__Array__ElementsAssignment_1_0 : ( ruleValue ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:966:1: rule__Array__ElementsAssignment_1_0 : ( ruleValue ) ;
     public final void rule__Array__ElementsAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1280:1: ( ( ruleValue ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1281:1: ( ruleValue )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:970:1: ( ( ruleValue ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:971:1: ( ruleValue )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1281:1: ( ruleValue )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1282:1: ruleValue
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:971:1: ( ruleValue )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:972:1: ruleValue
             {
              before(grammarAccess.getArrayAccess().getElementsValueParserRuleCall_1_0_0()); 
-            pushFollow(FOLLOW_ruleValue_in_rule__Array__ElementsAssignment_1_02555);
+            pushFollow(FOLLOW_ruleValue_in_rule__Array__ElementsAssignment_1_01938);
             ruleValue();
 
             state._fsp--;
@@ -3455,20 +2634,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__ElementsAssignment_1_1_1"
-    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1291:1: rule__Array__ElementsAssignment_1_1_1 : ( ruleValue ) ;
+    // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:981:1: rule__Array__ElementsAssignment_1_1_1 : ( ruleValue ) ;
     public final void rule__Array__ElementsAssignment_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1295:1: ( ( ruleValue ) )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1296:1: ( ruleValue )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:985:1: ( ( ruleValue ) )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:986:1: ( ruleValue )
             {
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1296:1: ( ruleValue )
-            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:1297:1: ruleValue
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:986:1: ( ruleValue )
+            // ../org.jsonclipse.ui/src-gen/org/jsonclipse/ui/contentassist/antlr/internal/InternalJson.g:987:1: ruleValue
             {
              before(grammarAccess.getArrayAccess().getElementsValueParserRuleCall_1_1_1_0()); 
-            pushFollow(FOLLOW_ruleValue_in_rule__Array__ElementsAssignment_1_1_12586);
+            pushFollow(FOLLOW_ruleValue_in_rule__Array__ElementsAssignment_1_1_11969);
             ruleValue();
 
             state._fsp--;
@@ -3507,7 +2686,7 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__Value__Alternatives_in_ruleValue154 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleNumber_in_entryRuleNumber181 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleNumber188 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Number__Group__0_in_ruleNumber214 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Number__Alternatives_in_ruleNumber214 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleObject_in_entryRuleObject241 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleObject248 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Object__Group__0_in_ruleObject274 = new BitSet(new long[]{0x0000000000000002L});
@@ -3517,95 +2696,69 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_ruleArray_in_entryRuleArray361 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleArray368 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Array__Group__0_in_ruleArray394 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__Value__Alternatives431 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__Value__Alternatives451 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__Value__Alternatives471 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__Value__Alternatives431 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__Value__Alternatives451 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__Value__Alternatives471 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Value__ObjectValueAssignment_3_in_rule__Value__Alternatives490 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Value__ArrayValueAssignment_4_in_rule__Value__Alternatives508 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Value__NumberValueAssignment_5_in_rule__Value__Alternatives526 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Value__StringValueAssignment_6_in_rule__Value__Alternatives544 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__Number__Alternatives_3_0578 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__Number__Alternatives_3_0598 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__Number__Alternatives_3_1633 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__Number__Alternatives_3_1653 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Number__Group__0__Impl_in_rule__Number__Group__0685 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Number__Group__1_in_rule__Number__Group__0688 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__Number__Group__0__Impl717 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Number__Group__1__Impl_in_rule__Number__Group__1750 = new BitSet(new long[]{0x0000000001300000L});
-    public static final BitSet FOLLOW_rule__Number__Group__2_in_rule__Number__Group__1753 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__Number__Group__1__Impl780 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Number__Group__2__Impl_in_rule__Number__Group__2809 = new BitSet(new long[]{0x0000000001300000L});
-    public static final BitSet FOLLOW_rule__Number__Group__3_in_rule__Number__Group__2812 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Number__Group_2__0_in_rule__Number__Group__2__Impl839 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Number__Group__3__Impl_in_rule__Number__Group__3870 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Number__Group_3__0_in_rule__Number__Group__3__Impl897 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Number__Group_2__0__Impl_in_rule__Number__Group_2__0936 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Number__Group_2__1_in_rule__Number__Group_2__0939 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__Number__Group_2__0__Impl967 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Number__Group_2__1__Impl_in_rule__Number__Group_2__1998 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__Number__Group_2__1__Impl1025 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Number__Group_3__0__Impl_in_rule__Number__Group_3__01058 = new BitSet(new long[]{0x0000000000C00010L});
-    public static final BitSet FOLLOW_rule__Number__Group_3__1_in_rule__Number__Group_3__01061 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Number__Alternatives_3_0_in_rule__Number__Group_3__0__Impl1088 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Number__Group_3__1__Impl_in_rule__Number__Group_3__11118 = new BitSet(new long[]{0x0000000000C00010L});
-    public static final BitSet FOLLOW_rule__Number__Group_3__2_in_rule__Number__Group_3__11121 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Number__Alternatives_3_1_in_rule__Number__Group_3__1__Impl1148 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Number__Group_3__2__Impl_in_rule__Number__Group_3__21179 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__Number__Group_3__2__Impl1206 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Object__Group__0__Impl_in_rule__Object__Group__01241 = new BitSet(new long[]{0x0000000000000840L});
-    public static final BitSet FOLLOW_rule__Object__Group__1_in_rule__Object__Group__01244 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_OBJECT_START_in_rule__Object__Group__0__Impl1271 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Object__Group__1__Impl_in_rule__Object__Group__11300 = new BitSet(new long[]{0x0000000000000840L});
-    public static final BitSet FOLLOW_rule__Object__Group__2_in_rule__Object__Group__11303 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Object__Group_1__0_in_rule__Object__Group__1__Impl1330 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Object__Group__2__Impl_in_rule__Object__Group__21361 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_OBJECT_END_in_rule__Object__Group__2__Impl1388 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Object__Group_1__0__Impl_in_rule__Object__Group_1__01423 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_rule__Object__Group_1__1_in_rule__Object__Group_1__01426 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Object__PropertiesAssignment_1_0_in_rule__Object__Group_1__0__Impl1453 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Object__Group_1__1__Impl_in_rule__Object__Group_1__11483 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Object__Group_1_1__0_in_rule__Object__Group_1__1__Impl1510 = new BitSet(new long[]{0x0000000000000082L});
-    public static final BitSet FOLLOW_rule__Object__Group_1_1__0__Impl_in_rule__Object__Group_1_1__01545 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_rule__Object__Group_1_1__1_in_rule__Object__Group_1_1__01548 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_VALUE_SEP_in_rule__Object__Group_1_1__0__Impl1575 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Object__Group_1_1__1__Impl_in_rule__Object__Group_1_1__11604 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Object__PropertiesAssignment_1_1_1_in_rule__Object__Group_1_1__1__Impl1631 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ObjectProperty__Group__0__Impl_in_rule__ObjectProperty__Group__01665 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_rule__ObjectProperty__Group__1_in_rule__ObjectProperty__Group__01668 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ObjectProperty__PropNameAssignment_0_in_rule__ObjectProperty__Group__0__Impl1695 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ObjectProperty__Group__1__Impl_in_rule__ObjectProperty__Group__11725 = new BitSet(new long[]{0x00000000008E0A30L});
-    public static final BitSet FOLLOW_rule__ObjectProperty__Group__2_in_rule__ObjectProperty__Group__11728 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_NAME_SEP_in_rule__ObjectProperty__Group__1__Impl1755 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ObjectProperty__Group__2__Impl_in_rule__ObjectProperty__Group__21784 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ObjectProperty__PropValueAssignment_2_in_rule__ObjectProperty__Group__2__Impl1811 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group__0__Impl_in_rule__Array__Group__01847 = new BitSet(new long[]{0x00000000008E0E30L});
-    public static final BitSet FOLLOW_rule__Array__Group__1_in_rule__Array__Group__01850 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ARRAY_START_in_rule__Array__Group__0__Impl1877 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group__1__Impl_in_rule__Array__Group__11906 = new BitSet(new long[]{0x00000000008E0E30L});
-    public static final BitSet FOLLOW_rule__Array__Group__2_in_rule__Array__Group__11909 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group_1__0_in_rule__Array__Group__1__Impl1936 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group__2__Impl_in_rule__Array__Group__21967 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ARRAY_END_in_rule__Array__Group__2__Impl1994 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group_1__0__Impl_in_rule__Array__Group_1__02029 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_rule__Array__Group_1__1_in_rule__Array__Group_1__02032 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__ElementsAssignment_1_0_in_rule__Array__Group_1__0__Impl2059 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group_1__1__Impl_in_rule__Array__Group_1__12089 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group_1_1__0_in_rule__Array__Group_1__1__Impl2116 = new BitSet(new long[]{0x0000000000000082L});
-    public static final BitSet FOLLOW_rule__Array__Group_1_1__0__Impl_in_rule__Array__Group_1_1__02151 = new BitSet(new long[]{0x00000000008E0A30L});
-    public static final BitSet FOLLOW_rule__Array__Group_1_1__1_in_rule__Array__Group_1_1__02154 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_VALUE_SEP_in_rule__Array__Group_1_1__0__Impl2181 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group_1_1__1__Impl_in_rule__Array__Group_1_1__12210 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__ElementsAssignment_1_1_1_in_rule__Array__Group_1_1__1__Impl2237 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_rule__Model__RootAssignment2276 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleObject_in_rule__Value__ObjectValueAssignment_32307 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArray_in_rule__Value__ArrayValueAssignment_42338 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNumber_in_rule__Value__NumberValueAssignment_52369 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Value__StringValueAssignment_62400 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleObjectProperty_in_rule__Object__PropertiesAssignment_1_02431 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleObjectProperty_in_rule__Object__PropertiesAssignment_1_1_12462 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__ObjectProperty__PropNameAssignment_02493 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_rule__ObjectProperty__PropValueAssignment_22524 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_rule__Array__ElementsAssignment_1_02555 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_rule__Array__ElementsAssignment_1_1_12586 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__Number__Alternatives577 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__Number__Alternatives594 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Object__Group__0__Impl_in_rule__Object__Group__0624 = new BitSet(new long[]{0x0000000000001080L});
+    public static final BitSet FOLLOW_rule__Object__Group__1_in_rule__Object__Group__0627 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_OBJECT_START_in_rule__Object__Group__0__Impl654 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Object__Group__1__Impl_in_rule__Object__Group__1683 = new BitSet(new long[]{0x0000000000001080L});
+    public static final BitSet FOLLOW_rule__Object__Group__2_in_rule__Object__Group__1686 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Object__Group_1__0_in_rule__Object__Group__1__Impl713 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Object__Group__2__Impl_in_rule__Object__Group__2744 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_OBJECT_END_in_rule__Object__Group__2__Impl771 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Object__Group_1__0__Impl_in_rule__Object__Group_1__0806 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_rule__Object__Group_1__1_in_rule__Object__Group_1__0809 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Object__PropertiesAssignment_1_0_in_rule__Object__Group_1__0__Impl836 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Object__Group_1__1__Impl_in_rule__Object__Group_1__1866 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Object__Group_1_1__0_in_rule__Object__Group_1__1__Impl893 = new BitSet(new long[]{0x0000000000000102L});
+    public static final BitSet FOLLOW_rule__Object__Group_1_1__0__Impl_in_rule__Object__Group_1_1__0928 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_rule__Object__Group_1_1__1_in_rule__Object__Group_1_1__0931 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_VALUE_SEP_in_rule__Object__Group_1_1__0__Impl958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Object__Group_1_1__1__Impl_in_rule__Object__Group_1_1__1987 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Object__PropertiesAssignment_1_1_1_in_rule__Object__Group_1_1__1__Impl1014 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ObjectProperty__Group__0__Impl_in_rule__ObjectProperty__Group__01048 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_rule__ObjectProperty__Group__1_in_rule__ObjectProperty__Group__01051 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ObjectProperty__PropNameAssignment_0_in_rule__ObjectProperty__Group__0__Impl1078 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ObjectProperty__Group__1__Impl_in_rule__ObjectProperty__Group__11108 = new BitSet(new long[]{0x0000000001C01470L});
+    public static final BitSet FOLLOW_rule__ObjectProperty__Group__2_in_rule__ObjectProperty__Group__11111 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_NAME_SEP_in_rule__ObjectProperty__Group__1__Impl1138 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ObjectProperty__Group__2__Impl_in_rule__ObjectProperty__Group__21167 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ObjectProperty__PropValueAssignment_2_in_rule__ObjectProperty__Group__2__Impl1194 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group__0__Impl_in_rule__Array__Group__01230 = new BitSet(new long[]{0x0000000001C01C70L});
+    public static final BitSet FOLLOW_rule__Array__Group__1_in_rule__Array__Group__01233 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ARRAY_START_in_rule__Array__Group__0__Impl1260 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group__1__Impl_in_rule__Array__Group__11289 = new BitSet(new long[]{0x0000000001C01C70L});
+    public static final BitSet FOLLOW_rule__Array__Group__2_in_rule__Array__Group__11292 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group_1__0_in_rule__Array__Group__1__Impl1319 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group__2__Impl_in_rule__Array__Group__21350 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ARRAY_END_in_rule__Array__Group__2__Impl1377 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group_1__0__Impl_in_rule__Array__Group_1__01412 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_rule__Array__Group_1__1_in_rule__Array__Group_1__01415 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__ElementsAssignment_1_0_in_rule__Array__Group_1__0__Impl1442 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group_1__1__Impl_in_rule__Array__Group_1__11472 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group_1_1__0_in_rule__Array__Group_1__1__Impl1499 = new BitSet(new long[]{0x0000000000000102L});
+    public static final BitSet FOLLOW_rule__Array__Group_1_1__0__Impl_in_rule__Array__Group_1_1__01534 = new BitSet(new long[]{0x0000000001C01470L});
+    public static final BitSet FOLLOW_rule__Array__Group_1_1__1_in_rule__Array__Group_1_1__01537 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_VALUE_SEP_in_rule__Array__Group_1_1__0__Impl1564 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group_1_1__1__Impl_in_rule__Array__Group_1_1__11593 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__ElementsAssignment_1_1_1_in_rule__Array__Group_1_1__1__Impl1620 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_rule__Model__RootAssignment1659 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleObject_in_rule__Value__ObjectValueAssignment_31690 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleArray_in_rule__Value__ArrayValueAssignment_41721 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumber_in_rule__Value__NumberValueAssignment_51752 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Value__StringValueAssignment_61783 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleObjectProperty_in_rule__Object__PropertiesAssignment_1_01814 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleObjectProperty_in_rule__Object__PropertiesAssignment_1_1_11845 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__ObjectProperty__PropNameAssignment_01876 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_rule__ObjectProperty__PropValueAssignment_21907 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_rule__Array__ElementsAssignment_1_01938 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_rule__Array__ElementsAssignment_1_1_11969 = new BitSet(new long[]{0x0000000000000002L});
 
 }

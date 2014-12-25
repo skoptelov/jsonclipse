@@ -4,7 +4,7 @@
     editorDirectory="/org.jsonclipse.editor/src" modelPluginID="org.jsonclipse" forceOverwrite="true"
     modelName="Json" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     complianceLevel="5.0" copyrightFields="false" editPluginID="org.jsonclipse.edit"
-    editorPluginID="org.jsonclipse.editor" runtimeVersion="2.9">
+    editorPluginID="org.jsonclipse.editor" runtimeVersion="2.10">
   <genPackages prefix="Json" basePackage="org.jsonclipse" disposableProviderFactory="true"
       fileExtensions="json" ecorePackage="Json.ecore#/">
     <genClasses ecoreClass="Json.ecore#//Model">

@@ -128,9 +128,9 @@ ruleNumber
     }
 	:
 (
-{ before(grammarAccess.getNumberAccess().getGroup()); }
-(rule__Number__Group__0)
-{ after(grammarAccess.getNumberAccess().getGroup()); }
+{ before(grammarAccess.getNumberAccess().getAlternatives()); }
+(rule__Number__Alternatives)
+{ after(grammarAccess.getNumberAccess().getAlternatives()); }
 )
 
 ;
@@ -283,109 +283,18 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Number__Alternatives_3_0
+rule__Number__Alternatives
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getNumberAccess().getEKeyword_3_0_0()); }
-
-	'e' 
-
-{ after(grammarAccess.getNumberAccess().getEKeyword_3_0_0()); }
+{ before(grammarAccess.getNumberAccess().getFLOATTerminalRuleCall_0()); }
+	RULE_FLOAT
+{ after(grammarAccess.getNumberAccess().getFLOATTerminalRuleCall_0()); }
 )
 
     |(
-{ before(grammarAccess.getNumberAccess().getEKeyword_3_0_1()); }
-
-	'E' 
-
-{ after(grammarAccess.getNumberAccess().getEKeyword_3_0_1()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Number__Alternatives_3_1
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getNumberAccess().getPlusSignKeyword_3_1_0()); }
-
-	'+' 
-
-{ after(grammarAccess.getNumberAccess().getPlusSignKeyword_3_1_0()); }
-)
-
-    |(
-{ before(grammarAccess.getNumberAccess().getHyphenMinusKeyword_3_1_1()); }
-
-	'-' 
-
-{ after(grammarAccess.getNumberAccess().getHyphenMinusKeyword_3_1_1()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-
-rule__Number__Group__0
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__Number__Group__0__Impl
-	rule__Number__Group__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Number__Group__0__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getNumberAccess().getHyphenMinusKeyword_0()); }
-(
-	'-' 
-)?
-{ after(grammarAccess.getNumberAccess().getHyphenMinusKeyword_0()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__Number__Group__1
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__Number__Group__1__Impl
-	rule__Number__Group__2
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Number__Group__1__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
 { before(grammarAccess.getNumberAccess().getINTTerminalRuleCall_1()); }
 	RULE_INT
 { after(grammarAccess.getNumberAccess().getINTTerminalRuleCall_1()); }
@@ -395,225 +304,6 @@ rule__Number__Group__1__Impl
 finally {
 	restoreStackSize(stackSize);
 }
-
-
-rule__Number__Group__2
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__Number__Group__2__Impl
-	rule__Number__Group__3
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Number__Group__2__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getNumberAccess().getGroup_2()); }
-(rule__Number__Group_2__0)?
-{ after(grammarAccess.getNumberAccess().getGroup_2()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__Number__Group__3
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__Number__Group__3__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Number__Group__3__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getNumberAccess().getGroup_3()); }
-(rule__Number__Group_3__0)?
-{ after(grammarAccess.getNumberAccess().getGroup_3()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-
-
-
-
-
-
-
-
-rule__Number__Group_2__0
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__Number__Group_2__0__Impl
-	rule__Number__Group_2__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Number__Group_2__0__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getNumberAccess().getFullStopKeyword_2_0()); }
-
-	'.' 
-
-{ after(grammarAccess.getNumberAccess().getFullStopKeyword_2_0()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__Number__Group_2__1
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__Number__Group_2__1__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Number__Group_2__1__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getNumberAccess().getINTTerminalRuleCall_2_1()); }
-	RULE_INT
-{ after(grammarAccess.getNumberAccess().getINTTerminalRuleCall_2_1()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-
-
-
-
-rule__Number__Group_3__0
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__Number__Group_3__0__Impl
-	rule__Number__Group_3__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Number__Group_3__0__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getNumberAccess().getAlternatives_3_0()); }
-(rule__Number__Alternatives_3_0)
-{ after(grammarAccess.getNumberAccess().getAlternatives_3_0()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__Number__Group_3__1
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__Number__Group_3__1__Impl
-	rule__Number__Group_3__2
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Number__Group_3__1__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getNumberAccess().getAlternatives_3_1()); }
-(rule__Number__Alternatives_3_1)?
-{ after(grammarAccess.getNumberAccess().getAlternatives_3_1()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__Number__Group_3__2
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__Number__Group_3__2__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__Number__Group_3__2__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getNumberAccess().getINTTerminalRuleCall_3_2()); }
-	RULE_INT
-{ after(grammarAccess.getNumberAccess().getINTTerminalRuleCall_3_2()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-
-
-
 
 
 
@@ -1315,6 +1005,16 @@ RULE_OBJECT_END : '}';
 RULE_NAME_SEP : ':';
 
 RULE_VALUE_SEP : ',';
+
+fragment RULE_DIGIT : '0'..'9';
+
+fragment RULE_HEX : ('a'..'f'|'A'..'F'|'0'..'9');
+
+fragment RULE_E : ('e'|'E');
+
+fragment RULE_EXPONENT : RULE_E ('+'|'-')? RULE_DIGIT+;
+
+RULE_FLOAT : (RULE_INT RULE_EXPONENT|RULE_INT '.' RULE_DIGIT* RULE_EXPONENT?);
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

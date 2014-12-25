@@ -10,8 +10,8 @@ Model:
 Value:
     'false' | 'null' | 'true' | objectValue=Object | arrayValue=Array | numberValue=Number | stringValue=STRING;
 
-Number returns ecore::EString:
-    '-'? INT ('.' INT)? (('e'|'E') ('+' | '-')? INT)?;
+Number:
+    (FLOAT | INT);
 
 Object:
     OBJECT_START (properties+=ObjectProperty (VALUE_SEP properties+=ObjectProperty)*)? OBJECT_END;
@@ -39,4 +39,11 @@ terminal NAME_SEP:
 
 terminal VALUE_SEP:
     ",";
+
+terminal fragment DIGIT: '0'..'9';
+terminal fragment HEX: ('a'..'f'|'A'..'F'|'0'..'9'); 
+terminal fragment E: 'e'|'E';
+
+terminal fragment EXPONENT: E ('+'|'-')? DIGIT+;
+terminal FLOAT returns ecore::EFloat: INT EXPONENT | INT '.' DIGIT* EXPONENT?;
     

@@ -227,66 +227,22 @@ ruleNumber returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-((
-	kw='-' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getNumberAccess().getHyphenMinusKeyword_0()); 
+(    this_FLOAT_0=RULE_FLOAT    {
+		$current.merge(this_FLOAT_0);
     }
-)?    this_INT_1=RULE_INT    {
+
+    { 
+    newLeafNode(this_FLOAT_0, grammarAccess.getNumberAccess().getFLOATTerminalRuleCall_0()); 
+    }
+
+    |    this_INT_1=RULE_INT    {
 		$current.merge(this_INT_1);
     }
 
     { 
     newLeafNode(this_INT_1, grammarAccess.getNumberAccess().getINTTerminalRuleCall_1()); 
     }
-(
-	kw='.' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getNumberAccess().getFullStopKeyword_2_0()); 
-    }
-    this_INT_3=RULE_INT    {
-		$current.merge(this_INT_3);
-    }
-
-    { 
-    newLeafNode(this_INT_3, grammarAccess.getNumberAccess().getINTTerminalRuleCall_2_1()); 
-    }
-)?((
-	kw='e' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getNumberAccess().getEKeyword_3_0_0()); 
-    }
-
-    |
-	kw='E' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getNumberAccess().getEKeyword_3_0_1()); 
-    }
-)(
-	kw='+' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getNumberAccess().getPlusSignKeyword_3_1_0()); 
-    }
-
-    |
-	kw='-' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getNumberAccess().getHyphenMinusKeyword_3_1_1()); 
-    }
-)?    this_INT_8=RULE_INT    {
-		$current.merge(this_INT_8);
-    }
-
-    { 
-    newLeafNode(this_INT_8, grammarAccess.getNumberAccess().getINTTerminalRuleCall_3_2()); 
-    }
-)?)
+)
     ;
 
 
@@ -503,6 +459,16 @@ RULE_OBJECT_END : '}';
 RULE_NAME_SEP : ':';
 
 RULE_VALUE_SEP : ',';
+
+fragment RULE_DIGIT : '0'..'9';
+
+fragment RULE_HEX : ('a'..'f'|'A'..'F'|'0'..'9');
+
+fragment RULE_E : ('e'|'E');
+
+fragment RULE_EXPONENT : RULE_E ('+'|'-')? RULE_DIGIT+;
+
+RULE_FLOAT : (RULE_INT RULE_EXPONENT|RULE_INT '.' RULE_DIGIT* RULE_EXPONENT?);
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

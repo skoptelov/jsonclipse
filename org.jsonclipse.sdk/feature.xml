@@ -2,7 +2,7 @@
 <feature
       id="org.jsonclipse.sdk"
       label="JSON Editor Feature"
-      version="0.0.6"
+      version="0.0.7"
       provider-name="skoptelov@github">
 
    <description url="https://github.com/skoptelov/jsonclipse">
